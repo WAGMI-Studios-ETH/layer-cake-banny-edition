@@ -1,0 +1,73 @@
+{
+  "name": "layer-cake",
+  "version": "0.0.1",
+  "main": "./lib/index.js",
+  "keywords": [
+    "image",
+    "generative",
+    "nft",
+    "composite"
+  ],
+  "author": {
+    "name": "tankbottoms",
+    "email": "tankbottoms.eth@ethmail.cc",
+    "url": "https://tankbottoms.xyz"
+  },
+  "license": "ISC",
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "scripts": {
+    "git": "git add . && git-cz",
+    "start": "time ts-node ./src/index.ts",
+    "build": "rm -rf ./lib && tsc",
+    "clean": "rm -rf ./lib && find . -name \".DS_Store\" -delete",
+    "clean:all": "rm -rf ./lib ./node_modules",
+    "prettier": "prettier --config .prettierrc.json 'src/**/*.ts' --write",
+    "lint": "eslint \"src/**/*\""
+  },
+  "devDependencies": {
+    "@types/ffmpeg": "^1.0.4",
+    "@types/fluent-ffmpeg": "^2.1.18",
+    "@types/fs-extra": "^9.0.13",
+    "@types/gifencoder": "^2.0.1",
+    "@types/merge-images": "^1.2.1",
+    "@types/node": "^16.10.2",
+    "@types/sharp": "^0.29.2",
+    "@types/yargs": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "@yarnpkg/pnpify": "^3.1.0-rc.1",
+    "eslint": "^8.0.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@pinata/sdk": "^1.1.23",
+    "axios": "^0.22.0",
+    "canvas": "^2.8.0",
+    "crypto": "^1.0.1",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.0.1",
+    "ffmpeg": "^0.0.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^10.0.0",
+    "gifencoder": "^2.0.1",
+    "join-images": "^1.0.0",
+    "merge-images": "^2.0.0",
+    "moment": "^2.29.1",
+    "nft.storage": "^3.3.0",
+    "node-canvas": "^2.7.0",
+    "png-file-stream": "^1.2.1",
+    "sentence-engine": "^0.8.0",
+    "sharp": "^0.29.1",
+    "ts-node": "^10.3.0",
+    "winston": "^3.3.3",
+    "yargs": "^17.2.1"
+  }
+}

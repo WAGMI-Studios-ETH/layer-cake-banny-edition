@@ -1,0 +1,144 @@
+{
+   "identifier": 168,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Juicebox's Governance Banana No. 168",
+   "attributes": [
+      {
+         "trait_type": "Background",
+         "value": "100 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Eye mouth"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Pharaoh"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Pharaoh"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Anch"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Fruit-Flavor",
+         "value": 7
+      },
+      {
+         "trait_type": "Level",
+         "value": 3
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "veJBX-168",
+   "shouldPreferSymbol": false,
+   "description": "The Juicebox's Governance Banana NFT or veBanny NFT, for short, is the Juicebox DAO's governance token, but so much more. The specific veBanny you receive is a function of how much of your Juicebox DAO tokens you have locked and for how long. Never before has how cool you are been reduced to an anthropomorphic banana. You are welcome. In addition to determining the future of your social life, your specific veBanny is your golden ticket into the BannyVerse, where dreams, adventure, and fruit salad, await.  https://wagmistudios.info/ is your portal, https://bannyverse.xyz is your door, only you can step through it, but don't think too hard, there are only so many AK-47s available.  Enter the Banny Quartermaster, use your veBanny to unlock powerful, fashionable, and accessorized bananas.  Choose from the shockingly vast combinations of banana characters, cock your weapons, and immortalize your Banny configuration through minting.  Leave your meatbag behind and start your true journey.  Or be uncool forever, its probably too late for you anyway.",
+   "minter": "tankbottoms.eth",
+   "decimals": 0,
+   "creators": [
+      "@WagmiStudios"
+   ],
+   "publishers": [
+      "@WagmiStudios"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-03-25T03:26:25.595Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "100 days",
+      "Yellow",
+      "Eye mouth",
+      "Choker",
+      "Black shoes",
+      "Pharaoh",
+      "Nothing",
+      "Pharaoh",
+      "Nothing",
+      "Anch",
+      "Nothing"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeibct3ccablhtsmpngso4ptgmfzrxomsrtu5qxkvoafr3isgbrfjuu/168.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeibct3ccablhtsmpngso4ptgmfzrxomsrtu5qxkvoafr3isgbrfjuu/168.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeibct3ccablhtsmpngso4ptgmfzrxomsrtu5qxkvoafr3isgbrfjuu/168s.png",
+   "externalUri": "https://wagmistudios.xyz",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeibct3ccablhtsmpngso4ptgmfzrxomsrtu5qxkvoafr3isgbrfjuu/168.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeibct3ccablhtsmpngso4ptgmfzrxomsrtu5qxkvoafr3isgbrfjuu/168.png",
+   "imageSize": 134868,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeibct3ccablhtsmpngso4ptgmfzrxomsrtu5qxkvoafr3isgbrfjuu/168s.png",
+         "hash": "1db9b1e5569b92c7260708b7a5c423cab38004a29f6bdb822c08d779a406dc4f",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeibct3ccablhtsmpngso4ptgmfzrxomsrtu5qxkvoafr3isgbrfjuu/168.png",
+         "hash": "ec3afee20921ec186fa947800eaa88ceb811e5a38650c3fec9cc8436a4adf011",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "wagmistudios.eth",
+      "artist_percentage": 5
+   },
+   "rights": "© 2022 All Banana Rights Reserved."
+}
