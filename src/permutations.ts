@@ -110,13 +110,13 @@ const return_first_rand_array_index_that_passes = <T>(array: T[], f: (param: T) 
   return aux(array.length);
 };
 
-/* 
-* @ dev sample_purmutations randomly select members from the input set, 
-* hashing to make sure we only emit novel combinations.
-* diamond_hands_r#1.png - absolute, only generate n images
-* unicorn_horn_r#1%.png - percentage of total, generate n images
-* TODO: figure a clearer way to do this from the project config level
-*/
+/*
+ * @ dev sample_purmutations randomly select members from the input set,
+ * hashing to make sure we only emit novel combinations.
+ * diamond_hands_r#1.png - absolute, only generate n images
+ * unicorn_horn_r#1%.png - percentage of total, generate n images
+ * TODO: figure a clearer way to do this from the project config level
+ */
 export function sample_permutations_from_many_with_priority(arrays: Array<Array<Trait>>, max: number): any[][] {
   let total_permutations = 1;
   arrays.forEach(a => {
@@ -181,13 +181,13 @@ export function sample_permutations_from_many_with_priority(arrays: Array<Array<
   }
 }
 
-/* 
-* @ dev sample_purmutations_with_new_optimizations randomly select members from the input set, 
-* hashing to make sure we only emit novel combinations.
-* diamond_hands_r#1.png - absolute, only generate n images
-* unicorn_horn_r#1%.png - percentage of total, generate n images
-* TODO: figure a clearer way to do this from the project config level
-*/
+/*
+ * @ dev sample_purmutations_with_new_optimizations randomly select members from the input set,
+ * hashing to make sure we only emit novel combinations.
+ * diamond_hands_r#1.png - absolute, only generate n images
+ * unicorn_horn_r#1%.png - percentage of total, generate n images
+ * TODO: figure a clearer way to do this from the project config level
+ */
 export function sample_permutations_from_many_with_new_optimization(arrays: Array<Array<Trait>>, max: number): any[][] {
   let total_permutations = 1;
   arrays.forEach(a => {

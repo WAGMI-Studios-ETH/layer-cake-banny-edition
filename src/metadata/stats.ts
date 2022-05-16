@@ -19,8 +19,8 @@ export function random_birthday(min_years: number, max_years: number): number {
   const d = new Date();
   d.setDate(d.getDate() - days_ago);
   return d.getTime();
-};
+}
 
-export function fourtwenty_birthday(): number {  
+export function fourtwenty_birthday(): number {
   return -22100400;
-};
+}

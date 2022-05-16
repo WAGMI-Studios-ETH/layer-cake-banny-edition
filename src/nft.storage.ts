@@ -17,7 +17,7 @@ let nft_storage = new NFTStorage({ token: NFT_STORAGE_API_KEYS[NFT_STORAGE_API_K
 
 function image_cid_checker(asset: Asset) {
   return asset.images_cid.length > 0;
-};
+}
 
 function image_paths_selector(asset: Asset) {
   const paths = [];
@@ -28,27 +28,27 @@ function image_paths_selector(asset: Asset) {
     }
   }
   return paths;
-};
+}
 
 function image_cid_distributor(asset: Asset, cid: string, thumb_tag: string) {
   asset.images_cid = cid;
   asset.image_url = `${IPFS_BASE_URL}${cid}/${asset.base_name}.png`;
   asset.thumb_url = `${IPFS_BASE_URL}${cid}/${asset.base_name}${thumb_tag}.png`;
-};
+}
 
 function metadata_cid_checker(asset: Asset) {
   // return false;
   return asset.metadata_cid.length > 0;
-};
+}
 
 function metadata_path_selector(asset: Asset) {
   return [`${asset.json_folder}/tezos/${asset.base_name.replace(/^0+/, '')}.json`];
-};
+}
 
 function metadata_cid_distributor(asset: Asset, cid: string, thumb_tag: string) {
   asset.metadata_cid = cid;
   asset.metadata_url = `${IPFS_BASE_URL}${cid}/${asset.base_name.replace(/^0+/, '')}.json`;
-};
+}
 
 type CidChecker = (asset: Asset) => boolean;
 type PathSelector = (asset: Asset) => string[];
@@ -67,7 +67,7 @@ function init_storages() {
       storages.push(new NFTStorage({ token: NFT_STORAGE_API_KEYS[i] }));
     }
   }
-};
+}
 
 async function upload_all_asset_artifacts(
   assets: Asset[],
@@ -87,11 +87,11 @@ async function upload_all_asset_artifacts(
   }
   await Promise.all(promises);
   save_assets_state(assets);
-};
+}
 
 function wait(milliseconds: number) {
   return new Promise(resolve => setTimeout(resolve, milliseconds));
-};
+}
 
 async function upload_asset_artifacts(
   assets: Asset[],
@@ -156,15 +156,15 @@ async function upload_asset_artifacts(
       logger.error('batch cid missing');
     }
   }
-};
+}
 
 export async function upload_all_images(assets: Asset[]) {
   await upload_all_asset_artifacts(assets, image_cid_checker, image_paths_selector, image_cid_distributor);
-};
+}
 
 export async function upload_all_metadata(assets: Asset[]) {
   await upload_all_asset_artifacts(assets, metadata_cid_checker, metadata_path_selector, metadata_cid_distributor);
-};
+}
 
 // works up to 64MB
 const MINIMAL_FILES = false;
@@ -202,7 +202,7 @@ export async function wrap_and_pin_folders_to_ipfs(content_folders: string[]) {
       ipfs_status: undefined,
     };
   }
-};
+}
 
 function get_size_of_asset_files(asset: Asset) {
   let size = 0;
@@ -228,7 +228,7 @@ function get_size_of_asset_files(asset: Asset) {
     }
   }
   return size;
-};
+}
 
 const UPLOAD_TIMEOUT = 30_000;
 async function upload_files(paths: string[]) {
@@ -277,4 +277,4 @@ async function upload_files(paths: string[]) {
       cid: undefined,
     };
   }
-};
+}

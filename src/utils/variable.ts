@@ -6,7 +6,7 @@ export function getVariableName<TResult>(getVar: () => TResult) {
   let fullMemberName = m[1];
   let memberParts = fullMemberName.split('.');
   return memberParts[memberParts.length - 1];
-};
+}
 
 async () => {
   const foo = { very_long_variable_name: 'short value' };

@@ -93,21 +93,21 @@ function get_trait_arrays(population: Population) {
   }
   false && log_traits_arrays(ordering, traits_arrays);
   return traits_arrays;
-};
+}
 
 export function save_assets_state(all_assets: Asset[]) {
   logger.info(`saving assets state`);
   const path = `${the_project.output_folder}/assets.json`;
   if (fs.existsSync(path)) fs.rmSync(path);
   fs.writeFileSync(path, JSON.stringify(all_assets));
-};
+}
 
 function load_assets_state() {
   const path = `${the_project.output_folder}/assets.json`;
   if (fs.existsSync(path)) {
     return JSON.parse(fs.readFileSync(path).toString());
   }
-};
+}
 
 async function get_all_assets(
   asset_index_origin = 1,
@@ -188,7 +188,7 @@ async function get_all_assets(
     logger.info(`loaded ${all_assets.length} assets for upload`);
   }
   return { all_assets, all_trait_names };
-};
+}
 
 function output_provenance_hash(all_assets: Asset[]) {
   const files = all_assets.map(asset => {
@@ -249,7 +249,7 @@ const run = async () => {
   // @ts-ignore
   if (the_project?.config?.upload_metadata_to_ipfs) await upload_all_metadata(all_assets);
   console.log('metadata uploaded to IPFS');
-  
+
   calculate_stats(all_assets);
   await output_csv(
     all_assets,

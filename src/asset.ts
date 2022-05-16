@@ -31,7 +31,7 @@ export class Asset {
     this.json_path = `${this.json_folder}/${this.base_name}.json`;
     this.trait_dir = `${layered_assets_dir}/Traits`;
   }
-};
+}
 
 export function create_assets(
   project: Project,
@@ -54,4 +54,4 @@ export function create_assets(
     );
   }
   return assets;
-};
+}

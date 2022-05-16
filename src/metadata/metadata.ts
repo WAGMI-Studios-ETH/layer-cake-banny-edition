@@ -26,7 +26,7 @@ export async function generate_metadata(asset: Asset) {
       }
     }
   }
-};
+}
 
 export const strip_extension = (value: string): string => {
   return value.slice(0, value.lastIndexOf('.'));
@@ -48,15 +48,15 @@ function write_metadata_to_file(asset: Asset, md: Dynamic, sub_folder: string) {
   } catch (err) {
     logger.error(`error writing json to ${p} ${JSON.stringify(err)}`);
   }
-};
+}
 
 export function replace_underscores(input: string) {
   return input.replace(/_/g, ' ');
-};
+}
 
 export function change_to_sentence_case(input: string) {
   return input.toLowerCase().replace(/^\w/, c => c.toUpperCase());
-};
+}
 
 export function trait_boost(trait: Trait, stats: Stat[]) {
   for (const boost of stats) {
@@ -77,4 +77,4 @@ export function trait_boost(trait: Trait, stats: Stat[]) {
       }
     }
   }
-};
+}

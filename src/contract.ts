@@ -12,4 +12,4 @@ export async function invoke_contract(assets: Asset[]) {
 
   logger.warn(`name, symbol, population, sale start_block`);
   logger.warn(`setting base url`);
-};
+}

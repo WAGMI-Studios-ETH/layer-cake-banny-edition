@@ -70,10 +70,7 @@ export const sub_populations = ['10_Days', '50_Days', '100_Days', '500_Days', '1
 
 export const population_size = 1;
 
-export const population_template = (
-  population_name: string, 
-  layer_order: string[], 
-  population_size: number) => {
+export const population_template = (population_name: string, layer_order: string[], population_size: number) => {
   return {
     name: population_name,
     layer_order: layer_order,
@@ -100,8 +97,7 @@ export function generate_populations(verbose: boolean = false) {
     if (index != -1) {
       for (let j = 0; j < sub_populations.length; j++) {
         ordered_characters.push(
-          population_template(`${characters[index]}${sub_populations[j]}`, 
-            layer_order, population_size),
+          population_template(`${characters[index]}${sub_populations[j]}`, layer_order, population_size),
         );
       }
     } else if (index == -1) {
@@ -135,8 +131,7 @@ export function generate_populations_from_template(verbose: boolean = false) {
     if (index != -1) {
       for (let j = 0; j < sub_populations.length; j++) {
         ordered_characters.push(
-          population_template(`${characters[index]}${sub_populations[j]}`, 
-            layer_order, population_size),
+          population_template(`${characters[index]}${sub_populations[j]}`, layer_order, population_size),
         );
       }
     } else {
@@ -157,7 +152,7 @@ Array.from(ordered).map(m => console.log(m.name));
 
 const layered_assets_folder = `veBanny`;
 export const bannyConfig: ProjectConfig = {
-  name: layered_assets_folder,  
+  name: layered_assets_folder,
   upload_images_to_ipfs: false,
   upload_metadata_to_ipfs: false,
   shuffle_assets: false,
@@ -197,9 +192,8 @@ export const bannyConfig: ProjectConfig = {
       // https://docs.opensea.io/docs/contract-level-metadata
       name: nft_name,
       description: nft_description,
-      image:
-        'https://cloudflare-ipfs.com/ipfs/QmNSK1RScZZNEk1m7upuXBXGxvvZuyuvJqzV5imo9d7Fes', 
-        /* 'ipfs://QmZDHNcQZcZkPeECgSzW1wtLDgo7VsQYs5gjqSW6Y6SwUa', */ // random gif as profile picture
+      image: 'https://cloudflare-ipfs.com/ipfs/QmNSK1RScZZNEk1m7upuXBXGxvvZuyuvJqzV5imo9d7Fes',
+      /* 'ipfs://QmZDHNcQZcZkPeECgSzW1wtLDgo7VsQYs5gjqSW6Y6SwUa', */ // random gif as profile picture
       external_link: nft_more_info_link,
       seller_fee_basis_points: 250, // Indicates a 1% seller fee.
       fee_recipient: nft_artist_address,

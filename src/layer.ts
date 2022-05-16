@@ -21,7 +21,7 @@ export async function generate_all_outputs(assets: Asset[], population: Populati
   start = getTime();
   await generate_all_videos(assets);
   logger.info(`animation generation took ${getElapsed(start)} sec(s)`);
-};
+}
 
 export async function compute_asset_hash(assets: Asset[]) {
   let icon_tag = 's';
@@ -37,7 +37,7 @@ export async function compute_asset_hash(assets: Asset[]) {
     const icon_path = `${asset.image_folder}/icon/${asset.base_name}${icon_tag}.png`;
     asset.thumb_hash = await compute_file_hash(icon_path);
   }
-};
+}
 
 export async function generate_all_collages(asset: Asset) {
   for (const output of the_project.config.collage_outputs) {
@@ -54,7 +54,7 @@ export async function generate_all_collages(asset: Asset) {
       output.shuffle,
     );
   }
-};
+}
 
 export async function generate_all_stacked_gifs(assets: Asset[]) {
   for (const output of the_project.config.stacked_gif_outputs) {
@@ -68,7 +68,7 @@ export async function generate_all_stacked_gifs(assets: Asset[]) {
       await combine_icon_gif(a, output);
     }
   }
-};
+}
 
 async function generate_all_videos(assets: Asset[]) {
   let count = 0;
@@ -76,7 +76,7 @@ async function generate_all_videos(assets: Asset[]) {
     logger.info(`animating video ${count++}`);
     await generate_dynamic_images(asset);
   }
-};
+}
 
 const WORKERS = 5;
 /*
@@ -112,7 +112,7 @@ async function generate_images_for_range(assets: Asset[], is_leader: boolean) {
       logger.warn(`${msToTime(remaining)} remaining`);
     }
   }
-};
+}
 
 async function generate_dynamic_images(asset: Asset) {
   const timer = getTime();
@@ -127,7 +127,7 @@ async function generate_dynamic_images(asset: Asset) {
     delete_animation_files(asset, output);
     logger.warn(`video gen took ${getElapsed(timer) / 1000} sec(s)`);
   }
-};
+}
 
 async function generate_static_images(asset: Asset) {
   const { traits, trait_dir } = asset;
@@ -193,4 +193,4 @@ async function generate_static_images(asset: Asset) {
     }
     logger.error(JSON.stringify(e));
   }
-};
+}

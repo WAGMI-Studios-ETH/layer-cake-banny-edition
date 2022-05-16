@@ -8,7 +8,7 @@ import { banny_stats } from './banny-stats';
 import { test_stats } from './test-stats';
 import { change_to_sentence_case, replace_underscores, strip_extension, trait_boost } from './metadata';
 
-export const default_stats: Stat[] = [  
+export const default_stats: Stat[] = [
   {
     stat_name: 'Banana Strength',
     trigger_keywords: ['color'],
@@ -35,9 +35,9 @@ export function generate_ethereum_metadata(asset: Asset) {
       stats = banny_stats;
       break;
     }
-    default: {            
+    default: {
       logger.warn('using default project stats for metadata');
-      stats = default_stats;            
+      stats = default_stats;
       break;
     }
   }
@@ -55,7 +55,7 @@ export function generate_ethereum_metadata(asset: Asset) {
     if (!!boost) {
       asset_boosts.push(boost);
     }
-    const cleaned_trait_name =  replace_underscores(trait.trait_type);
+    const cleaned_trait_name = replace_underscores(trait.trait_type);
     traits.push({ trait_type: cleaned_trait_name, value: stripped_value });
     tags.push(stripped_value);
   });

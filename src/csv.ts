@@ -101,7 +101,7 @@ export async function output_rarity_report_csv(assets: Asset[], all_trait_names:
   } else {
     logger.warn(`image/metadata minting returning nothing`);
   }
-};
+}
 
 export const output_csv = async (assets: Asset[], all_trait_names: string[], dest_path: string) => {
   logger.warn(`generating csv`);

@@ -3,13 +3,13 @@ import { OpenSeaStoreInformation } from './metadata';
 
 export interface IHash {
   [k: string]: string;
-};
+}
 
 export interface TraitStat {
   count: number;
   percent: number;
   rarity: string;
-};
+}
 
 export interface Trait {
   trait_type: string;
@@ -19,20 +19,20 @@ export interface Trait {
   unique: boolean;
   percent_rarity: number; // the percent of the population allowed to possess this.
   rarity_name: string; // epic
-};
+}
 
 export interface PopulationConfig {
   name: string;
   population_size: number;
   layer_order: string[];
-};
+}
 
 export interface Population {
   config: PopulationConfig;
   input_folder: string;
   traits_folder: string;
   assets: Asset[];
-};
+}
 
 export interface MetadataInput {
   name: string;
@@ -55,7 +55,7 @@ export interface MetadataInput {
   decimals: number;
   generation: number;
   edition: number;
-};
+}
 
 /*
 export interface RoyaltyConfig {
@@ -87,19 +87,19 @@ export interface ProjectConfig {
   shuffle_assets: boolean;
   excluded_layers_from_metadata: string[];
   re_generate_metadata_cid: boolean;
-};
+}
 
 export interface ImageOutput {
   width: number;
   height: number;
   tag: string;
   ipfs_tag: string;
-};
+}
 
 export interface AnimOutput extends ImageOutput {
   background_animation?: string;
   foreground_anmiation?: string;
-};
+}
 
 export interface CollageOutput {
   tag: string;
@@ -111,26 +111,26 @@ export interface CollageOutput {
   max_sheets: number;
   skip_mostly_empty: boolean;
   shuffle: boolean;
-};
+}
 
 export interface StackedGifOutput {
   tag: string;
   source_image_type: string;
   images_per_stack: number;
   max_stacks: number;
-};
+}
 
 export interface Resolution {
   type: string;
   width: number;
   height: number;
-};
+}
 
 export interface Edition {
   edition_size: number;
   resolutions: Resolution[];
   layers_order: Trait[];
-};
+}
 
 export interface Base_Configuration {
   instance: Edition;
@@ -138,4 +138,4 @@ export interface Base_Configuration {
   output_path: string;
   token_urls: string;
   traits_directories: string[];
-};
+}

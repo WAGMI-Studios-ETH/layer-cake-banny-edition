@@ -7,4 +7,4 @@ export function shuffle_array(a: any[]) {
     [a[currentIndex], a[randomIndex]] = [a[randomIndex], a[currentIndex]];
   }
   return a;
-};
+}

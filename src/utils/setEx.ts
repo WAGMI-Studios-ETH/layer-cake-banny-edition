@@ -60,4 +60,4 @@ export class SetEx extends Set {
     }
     return true;
   }
-};
+}

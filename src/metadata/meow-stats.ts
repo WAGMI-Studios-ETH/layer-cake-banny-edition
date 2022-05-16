@@ -1,7 +1,7 @@
 import { Stat } from './stats';
 
 /*
- * Addiitional metadata displayed in Opensea beyond attributes are proposed and computed as follows. based on keywords found 
+ * Addiitional metadata displayed in Opensea beyond attributes are proposed and computed as follows. based on keywords found
  * in the attributes the stat would randomize. Certain attributes which are visual would thus be required to be tied to a stat.
  * These stats need to be brought to the project-config front-end.
  */

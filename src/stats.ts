@@ -34,4 +34,4 @@ export function calculate_stats(assets: Asset[]) {
       trait.rarity_name = r;
     });
   });
-};
+}

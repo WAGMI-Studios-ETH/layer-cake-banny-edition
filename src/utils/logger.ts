@@ -11,7 +11,7 @@ const datetime = `${moment(new Date()).format('YYYYMMDD-HHmmssSS').toString()}`;
 
 export const logger = winston.createLogger({
   level: 'debug',
-  transports: [    
+  transports: [
     new winston.transports.Console({
       handleExceptions: true,
       format: format.combine(
@@ -37,7 +37,7 @@ export function log_traits_arrays(priorities: any[], arrays: any[][]) {
       logger.info(` ${trait.value}`);
     });
   });
-};
+}
 
 export function log_backgrounds(backgrounds: any[]) {
   logger.info(`Backgrounds`);
@@ -45,4 +45,4 @@ export function log_backgrounds(backgrounds: any[]) {
     logger.info(`  ${b}`);
   });
   logger.info(`\n`);
-};
+}

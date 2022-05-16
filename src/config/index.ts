@@ -74,7 +74,7 @@ const PROCESS_ENV: string[] = [];
 /*
  * @dev Exposing Infura and Pinata keys is bad practice, but they were additional accounts to improve throughput
  * and to avoid having the application not work for anyone needing to regenerate the assets
-*/
+ */
 
 export const IPFS_BASE_URL = process.env.IPFS_BASE_URL || 'ipfs://';
 export const PINATA_API_KEY = process.env.PINATA_API_KEY || 'd11f5e71d1b8fbaae998';

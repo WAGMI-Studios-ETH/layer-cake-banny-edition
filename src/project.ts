@@ -6,11 +6,11 @@ import { logger, create_path_folders } from './utils';
 import { ProjectConfig, Population } from './interfaces';
 
 /*
- * @dev project definition 
+ * @dev project definition
  */
 const enum projects {
   'veBanny',
-};
+}
 
 const current_project = project_config[0];
 
@@ -47,12 +47,12 @@ export class Project {
       });
     }
   }
-};
+}
 
 function create_project(project: ProjectConfig) {
   false && logger.warn(`creating ${project.name} project`);
   return new Project(project);
-};
+}
 
 export const the_project = create_project(current_project);
 
@@ -60,6 +60,8 @@ export function ensure_folders_exist(folders: string[]) {
   folders.map(f => {
     create_path_folders(f);
   });
-};
+}
 
-(async () => { console.log(the_project); });
+async () => {
+  console.log(the_project);
+};

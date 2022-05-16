@@ -17,10 +17,8 @@ const metadata = {
 };
 
 (async () => {
-  
   const tags: string[] = [];
   Object.keys(metadata.attributes).map((a: string) => tags.push(a));
   Object.values(metadata.attributes).map((a: string) => tags.push(a));
   logger.info(`${tags}`);
-  
 })();

@@ -14,7 +14,7 @@ export function validate_all_assets_for_ipfs(assets: Asset[]) {
     logger.error(`invalid asset detected, aborting ipfs pin`);
     process.exit();
   }
-};
+}
 
 export function validate_asset_for_ipfs(asset: Asset): boolean {
   let valid = true;
@@ -30,7 +30,7 @@ export function validate_asset_for_ipfs(asset: Asset): boolean {
     }
   }
   return valid;
-};
+}
 
 function file_exists_and_non_empty(path: string) {
   if (fs.existsSync(path)) {
@@ -43,7 +43,7 @@ function file_exists_and_non_empty(path: string) {
   } else {
     return false;
   }
-};
+}
 
 export function validate_all_assets_for_contract(assets: Asset[]) {
   let valid = true;
@@ -57,7 +57,7 @@ export function validate_all_assets_for_contract(assets: Asset[]) {
     logger.error(`invalid asset detected, aborting contract`);
     process.exit();
   }
-};
+}
 
 export function validate_asset_for_contract(asset: Asset): boolean {
   const h = asset.image_hash;
@@ -71,4 +71,4 @@ export function validate_asset_for_contract(asset: Asset): boolean {
   }
   logger.error(`couldn't find ${json_path} or file too small`);
   return false;
-};
+}
