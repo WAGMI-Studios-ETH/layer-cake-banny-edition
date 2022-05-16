@@ -37,15 +37,15 @@ export const banny_colors = [
   */
 ];
 
-export const banny_description: string = `Juicebox Governance Banny is a governance token that represents an individuals voting weight.
+export const banny_description: string = `Juicebox Governance Banny is a governance token that represents an individual's voting weight. In addition to the utility of Juicebox governance participation, holders are invited to visit https://bannyverse.xyz where they can mint custom Banny's which are characters in the BannyVerse.
 
-About Juicebox DAO, WAGMI Studios and Banny.  
+About Juicebox DAO, WAGMI Studios and our Lord and Savior Banny.  
 
-Juicebox DAO (https://juicebox.money) is a programmable treasury for community-owned Ethereum projects. 
+Juicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects. 
 
-WAGMI Studios (https://wagmistudios.xyz, http://wagmistudios.info/) is a collective of quirky creatives making sure "we're all gonna make it" and the home of Banny, our banana and savior.  
+WAGMI Studios, https://wagmistudios.xyz; http://wagmistudios.info/, is a collective of quirky creatives making sure "we're all gonna make it" and the home of Lord Banny, our Savior.  
 
-Banny is an anthropomorphic banana, who provides visual aesthetics to all things Juicebox including its website and documentation.  Banny enjoys hash hot knifing, helping people and projects understand the Juicebox protocol, and dressing up in our favorite characters including copyrighted characters from Marvel.  Banny has an affinity for wielding unusually aggressive weapons such as a live shark, an AK-47 and a Hattori Hanzo sword.  Banny is also the protagonist in the epic fruit salad saga, the BannyVerse, an adventure mystery pay-to-have, play-to-earn, have-to-enjoy status-symbol-utility-art-jpeg masquerading as unapproachable, Web3, hard-core art with IRL finanacial FOMO-inducing consequences.
+BannyVerse, https://bannyverse.xyz, Banny is an anthropomorphic banana, who provides visual aesthetics to all things Juicebox including its website and documentation.  Banny enjoys hash hot knifing, educating anyone and everyone on the Juicebox protocol, and paradoying our favorite meatsack film characters.  Banny is also the protagonist in the epic fruit salad saga, the BannyVerse, an adventure mystery pay-to-have, play-to-earn, have-to-enjoy status-symbol-utility-art-jpeg masquerading as unapproachable, Web3, hard-core art with IRL finanacial FOMO-inducing consequences.
 `;
 
 const wagmi_studios = 'https://wagmistudios.xyz';

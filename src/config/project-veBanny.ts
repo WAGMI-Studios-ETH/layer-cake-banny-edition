@@ -24,13 +24,24 @@ const iso_datetime_now = new Date().toISOString();
 
 const nft_name = `Juicebox's Governance Banana`;
 const nft_symbol = `veJBX-`;
-const nft_description: string = `The Juicebox's Governance Banana NFT or veBanny NFT, for short, is the Juicebox DAO's governance token, but so much more. The specific veBanny you receive is a function of how much of your Juicebox DAO tokens you have locked and for how long. Never before has how cool you are been reduced to an anthropomorphic banana. You are welcome. In addition to determining the future of your social life, your specific veBanny is your golden ticket into the BannyVerse, where dreams, adventure, and fruit salad, await.  https://wagmistudios.info/ is your portal, https://bannyverse.xyz is your door, only you can step through it, but don't think too hard, there are only so many AK-47s available.  Enter the Banny Quartermaster, use your veBanny to unlock powerful, fashionable, and accessorized bananas.  Choose from the shockingly vast combinations of banana characters, cock your weapons, and immortalize your Banny configuration through minting.  Leave your meatbag behind and start your true journey.  Or be uncool forever, its probably too late for you anyway.`;
-const nft_more_info_link = 'https://wagmistudios.xyz';
+
+const nft_description: string = `Juicebox Governance Banny is a governance token that represents an individual's voting weight. In addition to the utility of Juicebox governance participation, holders are invited to visit https://bannyverse.xyz where they can mint custom Banny's which are characters in the BannyVerse.
+
+About Juicebox DAO, WAGMI Studios and our Lord and Savior Banny.  
+
+Juicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects. 
+
+WAGMI Studios, https://wagmistudios.xyz; http://wagmistudios.info/, is a collective of quirky creatives making sure "we're all gonna make it" and the home of Lord Banny, our Savior.  
+
+BannyVerse, https://bannyverse.xyz, Banny is an anthropomorphic banana, who provides visual aesthetics to all things Juicebox including its website and documentation.  Banny enjoys hash hot knifing, educating anyone and everyone on the Juicebox protocol, and paradoying our favorite meatsack film characters.  Banny is also the protagonist in the epic fruit salad saga, the BannyVerse, an adventure mystery pay-to-have, play-to-earn, have-to-enjoy status-symbol-utility-art-jpeg masquerading as unapproachable, Web3, hard-core art with IRL finanacial FOMO-inducing consequences.
+`;
+
+const nft_more_info_link = 'https://bannyverse.xyz';
 const nft_minter = `tankbottoms.eth`;
-const nft_creators = [`@WagmiStudios`];
-const nft_publishers = [`@WagmiStudios`];
+const nft_creators = [`@BannyVerse`];
+const nft_publishers = [`@BannyVerse`];
 const nft_genres = [`veNFT`, `Juicebox`, `Banny`, `banana`, `character`, `profile`, `DAO`];
-const nft_artist_address = `wagmistudios.eth`;
+const nft_artist_address = `bannyverse.eth`;
 const nft_artist_royality = 5;
 /*
 const nft_additional_payee = `natasha-pankina.eth`;

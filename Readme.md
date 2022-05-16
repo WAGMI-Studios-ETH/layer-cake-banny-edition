@@ -29,6 +29,37 @@ yarn build
 yarn run start
 ```
 
+#### Project environment variables
+
+It is not necessary to populate the following environment variables with different endpoints, however the system expects there to be at least 5, although it may not use it. This was done during experiment with robust pinning services and how offensive software could be in order to increase throughput in pinning. Note to create a 10k PFP project on a single machine expect to wait 6 hours for the entire process. Latest updates implement the layering code on Kubernetes pods which massively scales the solution, but pinning remains the bottleneck.
+
+```bash
+IPFS_BASE_URL='https://gateway.pinata.cloud/ipfs/'
+PINATA_API_KEY=
+PINATA_API_SECRET=
+INFURA_API_KEY_000=
+INFURA_API_KEY_001=
+INFURA_API_KEY_002=
+INFURA_API_KEY_003=
+INFURA_API_KEY_004=
+INFURA_API_KEY_005=
+INFURA_API_KEY_006=
+INFURA_API_KEY_007=
+INFURA_API_KEY_008=
+INFURA_API_KEY_009=
+INFURA_API_KEY_010=
+INFURA_INFURA_API_END_POINT=
+INFURA_INFURA_API_KEY_PROJECT_ID=
+INFURA_INFURA_API_KEY_PROJECT_SECRET=
+NFT_STORAGE_API_KEY_000=
+NFT_STORAGE_API_KEY_001=
+NFT_STORAGE_API_KEY_002=
+NFT_STORAGE_API_KEY_003=
+NFT_STORAGE_API_KEY_004=
+NFT_STORAGE_API_KEY_005=
+UV_THREADPOOL_SIZE=25
+```
+
 ---
 
 #### [Layers](Layering.md)
@@ -44,13 +75,13 @@ Layer-cake has generated a fuck-ton of NFTs. I apologize to the Earth. I will of
 - [Meows(DAO)](https://gallery.so/meowsdao)
 - [Movement DAO's Apes](https://opensea.io/collection/movement-daos-ascended-ape-collection)
 
-#### [Typical Project config](Example.md) - MeowsDAO
+#### [Example project config](Example.md) - MeowsDAO
 
 <p align="center">
-  <img width=30% src="meowsdao.png" />
+  <img width=30% src="docs/images/meowsdao.png" />
 </p>
 
-Following the project config link reveals a complete example, however, once files are placed in `layer_assets` specifying the order the layers are to be composed is pretty useful. Note within the `Project Config` `layer order` must correspond with `trait folders`.
+Following the project-config link reveals a complete example, however, once files are placed in `layer_assets` specifying the order the layers are to be composed is pretty useful. Note within the project-config `layer order` must correspond with `trait folders`. Within the project-config populations enable users to create rich diverse content.
 
 ```typescript
 ...
@@ -69,6 +100,10 @@ Following the project config link reveals a complete example, however, once file
       ],
 ...
 ```
+
+---
+
+Additional thoughts...
 
 ### resume_folder
 
