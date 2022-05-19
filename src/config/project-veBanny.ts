@@ -117,7 +117,6 @@ Array.from(ordered).map(m => console.log(m.name));
 const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
   name: layered_assets_folder,
-  // additional_metadata: `./layered-assets/${layered_assets_folder}/metadata.json`,
   upload_images_to_ipfs: false,
   upload_metadata_to_ipfs: false,
   shuffle_assets: false,
@@ -145,6 +144,22 @@ export const bannyConfig: ProjectConfig = {
     native_size: '1000x1000',
     more_info_link: nft_more_info_link,
     include_total_population_in_name: true,
+    /*
+    population_metadata: {
+      specific_to_population: true, 
+      metadata_source: `./layered-assets/${layered_assets_folder}/metadata.json`,
+      match_key: `folder_name`,
+      include_columns: [`Arcana`,`Comms`,`Grind`,`Perception`,`Strength`,`Shadowiness`,`History`,`Motto`],
+      rename_columes_attributes: [`Arcana`,`Communications`,`Grind`,`Perception`,`Strength`,`Shadowiness`,`History`,`Motto`],
+      metadata_type:{
+        attribute: false,
+        levels:  [`Arcana`,`Comms`,`Grind`,`Perception`,`Strength`,`Shadowiness`,`History`,`Motto`],
+        boosts: false,
+
+    },
+      
+
+    */
     royalties: {
       artist_address: nft_artist_address,
       artist_percentage: nft_artist_royality,
