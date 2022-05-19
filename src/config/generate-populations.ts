@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { layer_order, sub_populations, population_template } from './project-vebanny';
+import { layer_order, sub_populations, population_template } from './project-veBanny';
 import { PopulationConfig } from '../interfaces';
 import { SetEx } from '../utils/setEx';
 

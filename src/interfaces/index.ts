@@ -1,5 +1,6 @@
 import { Asset } from '../asset';
 import { OpenSeaStoreInformation } from './metadata';
+export { OpenSeaStoreInformation } from './metadata';
 
 export interface IHash {
   [k: string]: string;

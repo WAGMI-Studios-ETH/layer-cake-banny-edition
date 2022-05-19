@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import moment from 'moment';
 import { CollageOutput, ProjectConfig, PopulationConfig } from '../interfaces';
 import { random, SetEx } from '../utils';
-import { population_order } from './vebanny-order';
+import { population_order } from './veBanny-order';
 import {
   collage300,
   collage1600,

@@ -1,4 +1,3 @@
-import { ethers } from 'hardhat';
 import { promises as fs } from 'fs';
 import path from 'path';
 

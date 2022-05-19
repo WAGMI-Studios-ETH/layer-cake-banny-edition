@@ -27,5 +27,5 @@ export const folder_names = {
 
   import { bannyConfig } from './project-banny';
 */
-import { bannyConfig } from './project-vebanny';
+import { bannyConfig } from './project-veBanny';
 export const project_config: ProjectConfig[] = [bannyConfig];

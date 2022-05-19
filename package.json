@@ -62,10 +62,10 @@
     "merge-images": "^2.0.0",
     "moment": "^2.29.1",
     "nft.storage": "^3.3.0",
-    "node-canvas": "^2.7.0",
+    "node-canvas": "^2.9.0",
     "png-file-stream": "^1.2.1",
     "sentence-engine": "^0.8.0",
-    "sharp": "^0.29.1",
+    "sharp": "^0.30.4",
     "ts-node": "^10.3.0",
     "winston": "^3.3.3",
     "yargs": "^17.2.1"
