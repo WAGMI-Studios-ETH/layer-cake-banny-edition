@@ -26,6 +26,7 @@ export interface Metadata {
   icon?: string;
   thumbnail?: string;
   description?: string;
+  // additiona_metadata?: string;
 }
 
 export type Extra_Metadata = {};

@@ -117,6 +117,7 @@ Array.from(ordered).map(m => console.log(m.name));
 const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
   name: layered_assets_folder,
+  // additional_metadata: `./layered-assets/${layered_assets_folder}/metadata.json`,
   upload_images_to_ipfs: false,
   upload_metadata_to_ipfs: false,
   shuffle_assets: false,

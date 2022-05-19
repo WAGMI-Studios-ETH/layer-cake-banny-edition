@@ -39,6 +39,7 @@ export interface MetadataInput {
   symbol: string;
   description: string;
   opensea: OpenSeaStoreInformation;
+  additiona_metadata?: string;
   birthdate?: string;
   background_colors?: string[];
   minter: string;
