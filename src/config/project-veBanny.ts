@@ -3,9 +3,7 @@ import * as fs from 'fs';
 import moment from 'moment';
 import { CollageOutput, ProjectConfig, PopulationConfig } from '../interfaces';
 import { random, SetEx } from '../utils';
-import { static_veBanny_populations } from './veBanny-populations';
-import { population_order } from './veBanny-order';
-import { generate_veBanny_populations, generate_veBanny_populations_names_only } from './generate-populations';
+import { population_order } from './vebanny-order';
 import {
   collage300,
   collage1600,
@@ -22,33 +20,23 @@ import {
 
 const iso_datetime_now = new Date().toISOString();
 
-const nft_name = `Juicebox's Governance Banana`;
+const nft_name = `Juicebox's Governance Token`;
 const nft_symbol = `veJBX-`;
-
-const nft_description: string = `Juicebox Governance Banny is a governance token that represents an individual's voting weight. In addition to the utility of Juicebox governance participation, holders are invited to visit https://bannyverse.xyz where they can mint custom Banny's which are characters in the BannyVerse.
-
-About Juicebox DAO, WAGMI Studios and our Lord and Savior Banny.  
-
-Juicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects. 
-
-WAGMI Studios, https://wagmistudios.xyz; http://wagmistudios.info/, is a collective of quirky creatives making sure "we're all gonna make it" and the home of Lord Banny, our Savior.  
-
-BannyVerse, https://bannyverse.xyz, Banny is an anthropomorphic banana, who provides visual aesthetics to all things Juicebox including its website and documentation.  Banny enjoys hash hot knifing, educating anyone and everyone on the Juicebox protocol, and paradoying our favorite meatsack film characters.  Banny is also the protagonist in the epic fruit salad saga, the BannyVerse, an adventure mystery pay-to-have, play-to-earn, have-to-enjoy status-symbol-utility-art-jpeg masquerading as unapproachable, Web3, hard-core art with IRL finanacial FOMO-inducing consequences.
+const nft_description: string = `Juicebox Governance Token or veBanny is a voting escrow token that represents an individual's voting weight based on the amount of tokens locked over a set duration. Benefits bestowed upon each holder, in addition to ongoing governance, is the exclusive ability to generate custom Bannys at https://bannyverse.xyz - every genesis Banny character generated during this period has unique characteristics exploitable within the BannyVerse.
+About Juicebox, WAGMI Studios and our Lord and Savior, OG Banny.
+Juicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.
+WAGMI Studios, https://wagmistudios.xyz, is a collective of quirky creatives making sure "we're all gonna make it" and the home of Lord Banny, our Savior.
+The BannyVerse, https://bannyverse.xyz, home to the OG Banny who is an anthropomorphic banana, who provides visual aesthetics to all things Juicebox including its website and documentation.  Banny enjoys hot knifing hash, educating communities on the Juicebox protocol, and parodying pop-culture characters and historical heavyweights.  OG Banny is also the protagonist in the epic fruit-salad saga, the BannyVerse, an IRL mystery pay-to-have, play-to-earn, have-to-enjoy status-symbol-utility-art wallet-accessory masquerading as unapproachable, Web3, hard-core zinc filled cartoon nutrient toying with flex-seeking crypto-whales by dispensing FOMO. LOL.
 `;
 
 const nft_more_info_link = 'https://bannyverse.xyz';
 const nft_minter = `tankbottoms.eth`;
-const nft_creators = [`@BannyVerse`];
-const nft_publishers = [`@BannyVerse`];
+const nft_creators = [`@bannyverse`];
+const nft_publishers = [`@bannyverse`];
 const nft_genres = [`veNFT`, `Juicebox`, `Banny`, `banana`, `character`, `profile`, `DAO`];
 const nft_artist_address = `bannyverse.eth`;
 const nft_artist_royality = 5;
-/*
-const nft_additional_payee = `natasha-pankina.eth`;
-const nft_additional_royality = 5;
-*/
-
-const nft_rights = `© 2022 All Banana Rights Reserved.`;
+const nft_rights = `© 2022 Bannyverse Rights Reserved.`;
 
 const nft_colors = [];
 
@@ -81,13 +69,19 @@ export const population_template = (population_name: string, layer_order: string
 export function generate_populations(verbose: boolean = false) {
   const population_size = 1;
   const populations = new SetEx();
-  const file_path = `layered-assets/veBanny`;
-  const veBanny_populations = fs.readdirSync(`layered-assets/veBanny`);
-  veBanny_populations.forEach(p => populations.add(p.split(/\d/)[0]));
+  const file_path = `layered-assets/vebanny`;
+  const veBanny_populations = fs.readdirSync(`layered-assets/vebanny`);
+
+  console.warn(`layered-assets folder located ${veBanny_populations.length}`);
+  veBanny_populations.forEach(p => populations.add(p.split(/\d/)[0].trim()));
 
   const characters = Array.from(populations);
+  console.log(characters);
+
   const ordered_characters: {}[] = [];
   const configured_population = new SetEx();
+
+  let not_found = 0;
 
   for (let i = 0; i < population_order.length; i++) {
     const index = characters.findIndex(e => {
@@ -102,55 +96,25 @@ export function generate_populations(verbose: boolean = false) {
       }
     } else if (index == -1) {
       console.warn(`${population_order[i]} was not found`);
+      not_found++;
     } else {
       console.error(`Impossible, generate_populations errored unexpectedly`);
     }
   }
 
   false && console.log(ordered_characters, ordered_characters.length);
+  console.warn(`Total number of characters not found: ${not_found}`);
   return ordered_characters as unknown as PopulationConfig[];
 }
 
 const ordered = generate_populations(false) as PopulationConfig[];
-
-export function generate_populations_from_template(verbose: boolean = false) {
-  const population_size = 1;
-  const populations = new SetEx();
-  const file_path = `layered-assets/veBanny`;
-  const veBanny_populations = fs.readdirSync(`layered-assets/veBanny`);
-  veBanny_populations.forEach(p => populations.add(p.split(/\d/)[0]));
-
-  const characters = Array.from(populations);
-  const ordered_characters: {}[] = [];
-  const configured_population = new SetEx();
-
-  for (let i = 0; i < population_order.length; i++) {
-    const index = characters.findIndex(e => {
-      return e.toLowerCase().includes(population_order[i].trim().toLowerCase());
-    });
-    if (index != -1) {
-      for (let j = 0; j < sub_populations.length; j++) {
-        ordered_characters.push(
-          population_template(`${characters[index]}${sub_populations[j]}`, layer_order, population_size),
-        );
-      }
-    } else {
-      console.warn(`${population_order[i]} not found`);
-    }
-  }
-
-  return configured_population as unknown as PopulationConfig[];
-}
-
-false && generate_populations_from_template(false);
-false && generate_veBanny_populations_names_only(false);
 
 /*
 const ordered = generate_veBanny_populations(false) as PopulationConfig[];
 Array.from(ordered).map(m => console.log(m.name));
 */
 
-const layered_assets_folder = `veBanny`;
+const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
   name: layered_assets_folder,
   upload_images_to_ipfs: false,
@@ -193,7 +157,6 @@ export const bannyConfig: ProjectConfig = {
       name: nft_name,
       description: nft_description,
       image: 'https://cloudflare-ipfs.com/ipfs/QmNSK1RScZZNEk1m7upuXBXGxvvZuyuvJqzV5imo9d7Fes',
-      /* 'ipfs://QmZDHNcQZcZkPeECgSzW1wtLDgo7VsQYs5gjqSW6Y6SwUa', */ // random gif as profile picture
       external_link: nft_more_info_link,
       seller_fee_basis_points: 250, // Indicates a 1% seller fee.
       fee_recipient: nft_artist_address,
@@ -217,16 +180,18 @@ export const bannyConfig: ProjectConfig = {
         if the population generation doesn't have enough images, exposions ensue 
       */
       max_stacks: 5,
-      images_per_stack: 25,
+      images_per_stack: 50,
     },
   ],
   populations: generate_populations(false) as PopulationConfig[],
   anim_outputs: [],
   collage_outputs: [
     collage300,
+    /*
     collage1600,
     collage4444,
     collage4000,
+    */
     collageOpenSea1200x75,
     collageDiscord600x240,
     collageTwitter1200x675,

@@ -2,9 +2,9 @@ import { ethers } from 'hardhat';
 import { promises as fs } from 'fs';
 import path from 'path';
 
-const project_name = `Voting Escrow Banny`;
-const project_symbol = `veBanny`;
-const project_description = `The voting escrow Banny or veBanny character represents a specific token amount and locked duration.`;
+const project_name = `Juicebox's Governace Token`;
+const project_symbol = `veJBX`;
+const project_description = `Juicebox Governance Token or veBanny is a voting escrow token that represents an individual's voting weight based on the amount of tokens locked over a set duration. Benefits bestowed upon each holder, in addition to ongoing governance, is the exclusive ability to generate custom Bannys at https://bannyverse.xyz - every genesis Banny character generated during this period has unique characteristics exploitable within the BannyVerse.`;
 
 const project_image_gif = 'ipfs://CID';
 const project_base_uri = `https://stake.juicebox.money`;

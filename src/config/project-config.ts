@@ -22,9 +22,10 @@ export const folder_names = {
 };
 
 /*
-TODO: project-banny experiments with a bunch of banny permuations much like how individuals will create their own,
-veBanny is for the voting escrow banny goverannce NFT
-import { bannyConfig } from './project-banny';
+  banny - accessorized bannys  
+  vebanny - token generation
+
+  import { bannyConfig } from './project-banny';
 */
-import { bannyConfig } from './project-veBanny';
+import { bannyConfig } from './project-vebanny';
 export const project_config: ProjectConfig[] = [bannyConfig];
