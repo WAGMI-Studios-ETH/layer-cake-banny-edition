@@ -57,6 +57,19 @@ export interface MetadataInput {
   decimals: number;
   generation: number;
   edition: number;
+
+  population_metadata?: {
+    specific_to_population: boolean;
+    metadata_source: string;
+    match_key: string;
+    include_columns: string[];
+    rename_columes_attributes: string[];
+    metadata_type: {
+      attribute: boolean;
+      levels: string[];
+      boosts: boolean;
+    };
+  };
 }
 
 /*
