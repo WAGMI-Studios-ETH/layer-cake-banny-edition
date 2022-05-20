@@ -1,0 +1,136 @@
+{
+   "identifier": 114,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Juicebox's Governance Token No. 114",
+   "attributes": [
+      {
+         "trait_type": "Background",
+         "value": "500 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Eye mouth"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "No choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Chokha"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "No hat"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Dagger"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "veJBX-114",
+   "shouldPreferSymbol": false,
+   "description": "Juicebox Governance Token or veBanny is a voting escrow token that represents an individual's voting weight based on the amount of tokens locked over a set duration. Benefits bestowed upon each holder, in addition to ongoing governance, is the exclusive ability to generate custom Bannys at https://bannyverse.xyz - every genesis Banny character generated during this period has unique characteristics exploitable within the BannyVerse.\nAbout Juicebox, WAGMI Studios and our Lord and Savior, OG Banny.\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\nWAGMI Studios, https://wagmistudios.xyz, is a collective of quirky creatives making sure \"we're all gonna make it\" and the home of Lord Banny, our Savior.\nThe BannyVerse, https://bannyverse.xyz, home to the OG Banny who is an anthropomorphic banana, who provides visual aesthetics to all things Juicebox including its website and documentation.  Banny enjoys hot knifing hash, educating communities on the Juicebox protocol, and parodying pop-culture characters and historical heavyweights.  OG Banny is also the protagonist in the epic fruit-salad saga, the BannyVerse, an IRL mystery pay-to-have, play-to-earn, have-to-enjoy status-symbol-utility-art wallet-accessory masquerading as unapproachable, Web3, hard-core zinc filled cartoon nutrient toying with flex-seeking crypto-whales by dispensing FOMO. LOL.\n",
+   "minter": "tankbottoms.eth",
+   "decimals": 0,
+   "creators": [
+      "@bannyverse"
+   ],
+   "publishers": [
+      "@bannyverse"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-20T15:39:06.898Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "500 days",
+      "Yellow",
+      "Eye mouth",
+      "No choker",
+      "Black shoes",
+      "Chokha",
+      "Nothing",
+      "No hat",
+      "Nothing",
+      "Dagger",
+      "Nothing"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/114.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/114.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/114s.png",
+   "externalUri": "https://bannyverse.xyz",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/114.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/114.png",
+   "imageSize": 145848,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/114s.png",
+         "hash": "143914d3d4b783db14580cc6f1b4ebd9ace0f9018ad2d44f63fbba8f56d2a600",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/114.png",
+         "hash": "2d5fe7fc90dffe43028af8a43980b25fa25aa9e60e3053fd66207164cef78bbd",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "bannyverse.eth",
+      "artist_percentage": 5
+   },
+   "rights": "© 2022 Bannyverse Rights Reserved."
+}

@@ -58,16 +58,15 @@ export const sub_populations = ['10_Days', '50_Days', '100_Days', '500_Days', '1
 
 export const population_size = 1;
 
-export const population_template = (population_name: string, layer_order: string[], population_size: number) => {
+export const population_template = (population_name: string, _layer_order: string[], _population_size: number) => {
   return {
     name: population_name,
-    layer_order: layer_order,
-    population_size: population_size,
+    layer_order: _layer_order,
+    population_size: _population_size,
   };
 };
 
 export function generate_populations(verbose: boolean = false) {
-  const population_size = 1;
   const populations = new SetEx();
   const file_path = `layered-assets/vebanny`;
   const veBanny_populations = fs.readdirSync(`layered-assets/vebanny`);
@@ -107,7 +106,7 @@ export function generate_populations(verbose: boolean = false) {
   return ordered_characters as unknown as PopulationConfig[];
 }
 
-const ordered = generate_populations(false) as PopulationConfig[];
+const ordered = generate_populations(false);
 
 /*
 const ordered = generate_veBanny_populations(false) as PopulationConfig[];
@@ -206,7 +205,7 @@ export const bannyConfig: ProjectConfig = {
       images_per_stack: 50,
     },
   ],
-  populations: generate_populations(false) as PopulationConfig[],
+  populations: generate_populations(false),
   anim_outputs: [],
   collage_outputs: [
     collage300,

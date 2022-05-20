@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs, { existsSync } from 'fs';
 import { Asset } from './asset';
 import { basename } from 'path';
 import { readdir, readFile } from 'fs/promises';
@@ -13,7 +13,7 @@ import { boolean } from 'yargs';
 // TODO: experiment with more or less to get stable and faster build
 const MAX_BATCH_ASSETS = 20;
 
-let nft_storage = new NFTStorage({ token: NFT_STORAGE_API_KEYS[NFT_STORAGE_API_KEYS.length - 1] });
+const nft_storage = new NFTStorage({ token: NFT_STORAGE_API_KEYS[NFT_STORAGE_API_KEYS.length - 1] });
 
 function image_cid_checker(asset: Asset) {
   return asset.images_cid.length > 0;
@@ -42,7 +42,7 @@ function metadata_cid_checker(asset: Asset) {
 }
 
 function metadata_path_selector(asset: Asset) {
-  return [`${asset.json_folder}/tezos/${asset.base_name.replace(/^0+/, '')}.json`];
+  return [`${asset.json_folder}/ethereum/${asset.base_name.replace(/^0+/, '')}`];
 }
 
 function metadata_cid_distributor(asset: Asset, cid: string, thumb_tag: string) {
@@ -236,10 +236,12 @@ async function upload_files(paths: string[]) {
   let filenames = '';
   try {
     for (const path of paths) {
-      const filename = basename(path);
-      console.log(path);
-      filenames += `${filename},  `;
-      files_with_contents.push(new File([await readFile(path)], filename));
+      if (existsSync(path)) {
+        const filename = basename(path);
+        console.log(path);
+        filenames += `${filename},  `;
+        files_with_contents.push(new File([await readFile(path)], filename));
+      }
     }
     const track_time = async <A>(asyncFn: () => Promise<A>, id: string | undefined = undefined) => {
       const starttime = new Date().getTime();
@@ -259,7 +261,7 @@ async function upload_files(paths: string[]) {
     const storage_promise = nft_storage.storeDirectory(files_with_contents);
   */
     const result = await track_time(() => nft_storage.storeDirectory(files_with_contents), filenames);
-    const cid_string = result as CIDString;
+    const cid_string: CIDString = result;
     const status = await nft_storage.status(cid_string);
     console.log(`nft_storage status => `);
     console.log(status);

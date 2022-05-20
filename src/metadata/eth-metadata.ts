@@ -89,13 +89,13 @@ export function generate_ethereum_metadata(asset: Asset) {
   const birthday_ms = fourtwenty_birthday();
   const birthday_attribute = { trait_type: 'Birthday', display_type: 'date', value: birthday_ms };
 
+  const History = asset.attribs.find(attr => attr.trait_type === 'History');
+  const Motto = asset.attribs.find(attr => attr.trait_type === 'Motto');
+
   const all_attributes = [
+    ...asset.attribs.filter(attr => [History, Motto].indexOf(attr) === -1),
     ...traits,
-    ...base_stat_attributes,
-    ...boost_attributes,
-    level_attribute,
     birthday_attribute,
-    ...asset.attribs,
   ];
 
   const i = the_project.config.metadata_input;
@@ -109,7 +109,9 @@ export function generate_ethereum_metadata(asset: Asset) {
     attributes: all_attributes,
     symbol: `${i.symbol}${asset.base_name}`,
     shouldPreferSymbol: false,
-    description: i.description,
+    description: `${i.description}${History?.value ? ' ' + History?.value : ''}${
+      Motto?.value ? ' ' + Motto?.value : ''
+    }`,
     minter: i.minter,
     decimals: i.decimals,
     creators: i.creators,

@@ -1,0 +1,160 @@
+{
+   "identifier": 65,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Juicebox's Governance Token No. 065",
+   "attributes": [
+      {
+         "trait_type": "Arcana",
+         "value": 4
+      },
+      {
+         "trait_type": "Communications",
+         "value": 2
+      },
+      {
+         "trait_type": "Grind",
+         "value": 3
+      },
+      {
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "trait_type": "Strength",
+         "value": 2
+      },
+      {
+         "trait_type": "Shadowiness",
+         "value": 4
+      },
+      {
+         "trait_type": "Background",
+         "value": "1000 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Eye mouth"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Vampire girl"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "No hat"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "veJBX-065",
+   "shouldPreferSymbol": false,
+   "description": "Juicebox Governance Token or veBanny is a voting escrow token that represents an individual's voting weight based on the amount of tokens locked over a set duration. Benefits bestowed upon each holder, in addition to ongoing governance, is the exclusive ability to generate custom Bannys at https://bannyverse.xyz - every genesis Banny character generated during this period has unique characteristics exploitable within the BannyVerse.\nAbout Juicebox, WAGMI Studios and our Lord and Savior, OG Banny.\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\nWAGMI Studios, https://wagmistudios.xyz, is a collective of quirky creatives making sure \"we're all gonna make it\" and the home of Lord Banny, our Savior.\nThe BannyVerse, https://bannyverse.xyz, home to the OG Banny who is an anthropomorphic banana, who provides visual aesthetics to all things Juicebox including its website and documentation.  Banny enjoys hot knifing hash, educating communities on the Juicebox protocol, and parodying pop-culture characters and historical heavyweights.  OG Banny is also the protagonist in the epic fruit-salad saga, the BannyVerse, an IRL mystery pay-to-have, play-to-earn, have-to-enjoy status-symbol-utility-art wallet-accessory masquerading as unapproachable, Web3, hard-core zinc filled cartoon nutrient toying with flex-seeking crypto-whales by dispensing FOMO. LOL.\n A she-devil if there ever was one, Ms. Bhaoban Sith will charm you and disarm you in a heartbeat. She enjoys few things more than a nice scotch and good, supple company. You may see here from afar, glimmering in a nice sequin dress, or hear her angelic voice from beyond some nice idyllic hillside, and as if under a magnetic trance be attracted to this beautiful buxom vamp. The old adage rings doubly true for Ms. B: if it looks too good to be true, it is. Why don’t you stay for just one more drink?",
+   "minter": "tankbottoms.eth",
+   "decimals": 0,
+   "creators": [
+      "@bannyverse"
+   ],
+   "publishers": [
+      "@bannyverse"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-20T15:39:06.898Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "1000 days",
+      "Yellow",
+      "Eye mouth",
+      "Choker",
+      "Black shoes",
+      "Vampire girl",
+      "Nothing",
+      "No hat",
+      "Nothing",
+      "Nothing",
+      "Nothing"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeid6ndtddwzwutvtho4epvhw2dwwjmqpro7qmayyag2p6pltw737ie/065.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeid6ndtddwzwutvtho4epvhw2dwwjmqpro7qmayyag2p6pltw737ie/065.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeid6ndtddwzwutvtho4epvhw2dwwjmqpro7qmayyag2p6pltw737ie/065s.png",
+   "externalUri": "https://bannyverse.xyz",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeid6ndtddwzwutvtho4epvhw2dwwjmqpro7qmayyag2p6pltw737ie/065.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeid6ndtddwzwutvtho4epvhw2dwwjmqpro7qmayyag2p6pltw737ie/065.png",
+   "imageSize": 158338,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeid6ndtddwzwutvtho4epvhw2dwwjmqpro7qmayyag2p6pltw737ie/065s.png",
+         "hash": "2918d8e534a15f38fd3d5bffc9f8a056a88dcc6de009ee38d16ad403cfa66dba",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeid6ndtddwzwutvtho4epvhw2dwwjmqpro7qmayyag2p6pltw737ie/065.png",
+         "hash": "bc85a370a7c95cff66af7dbee12341f421125bff911902170ae2614463ce66f4",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "bannyverse.eth",
+      "artist_percentage": 5
+   },
+   "rights": "© 2022 Bannyverse Rights Reserved."
+}
