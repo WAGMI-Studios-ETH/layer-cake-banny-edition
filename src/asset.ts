@@ -1,7 +1,9 @@
 import { Project, the_project } from './project';
 import { Trait, Population } from './interfaces';
-import { BLANK, zero_pad } from './utils';
+import { BLANK, parse_csv, zero_pad } from './utils';
 import { MARGIN_FOR_ERROR } from './config';
+import fs from 'fs';
+import path from 'path';
 
 export class Asset {
   image_folder: string;
@@ -20,10 +22,18 @@ export class Asset {
   metadata_cid = BLANK;
   metadata_url = BLANK;
   traits: Array<Trait>;
+  attribs: Array<Trait>;
   rotation = 0;
-  constructor(batch_index: number, traits: Array<Trait>, layered_assets_dir: string, output_dir: string) {
+  constructor(
+    batch_index: number,
+    traits: Array<Trait>,
+    layered_assets_dir: string,
+    output_dir: string,
+    attribs: any[] = [],
+  ) {
     const population_digits = the_project.total_populations_size.toString().length;
     this.traits = traits;
+    this.attribs = attribs;
     this.batch_index = batch_index;
     this.base_name = zero_pad(this.batch_index + 1, population_digits);
     this.image_folder = `${output_dir}/assets`;
@@ -33,7 +43,7 @@ export class Asset {
   }
 }
 
-export function create_assets(
+export async function create_assets(
   project: Project,
   population: Population,
   combinations: any[][],
@@ -43,6 +53,30 @@ export function create_assets(
   let i = asset_index_origin;
   const target = Math.ceil(population.config.population_size * MARGIN_FOR_ERROR);
   const assets: Asset[] = [];
+  const attribs: any[] = [];
+  if (project.config.metadata_input.population_metadata?.metadata_source) {
+    const jsonMetadata = (await parse_csv(
+      path.join(__dirname, '..', project.config.metadata_input.population_metadata?.metadata_source),
+    )) as any[];
+    const name = population.config.name
+      .replace(/Character_?/, '')
+      .replace(/_/g, ' ')
+      .split(/\d+/)?.[0]
+      ?.trim();
+    const matched = jsonMetadata.find(item => name === item['Banny Name']);
+    if (matched) {
+      for (let j = 0; j < project.config.metadata_input.population_metadata?.include_columns?.length; j++) {
+        const column = project.config.metadata_input.population_metadata?.include_columns?.[j];
+        const renamed_column = project.config.metadata_input.population_metadata?.rename_columes_attributes?.[j];
+        if (column && renamed_column && typeof matched[column] !== 'undefined') {
+          attribs.push({
+            trait_type: renamed_column,
+            value: matched[column].match(/^\d+$/) ? Number(matched[column]) : matched[column],
+          });
+        }
+      }
+    }
+  }
   for (const combo of combinations) {
     assets.push(
       new Asset(
@@ -50,6 +84,7 @@ export function create_assets(
         combo,
         `${population.input_folder}/${project.config.name}/${population.config.name}`,
         project.output_folder,
+        attribs,
       ),
     );
   }

@@ -89,7 +89,14 @@ export function generate_ethereum_metadata(asset: Asset) {
   const birthday_ms = fourtwenty_birthday();
   const birthday_attribute = { trait_type: 'Birthday', display_type: 'date', value: birthday_ms };
 
-  const all_attributes = [...traits, ...base_stat_attributes, ...boost_attributes, level_attribute, birthday_attribute];
+  const all_attributes = [
+    ...traits,
+    ...base_stat_attributes,
+    ...boost_attributes,
+    level_attribute,
+    birthday_attribute,
+    ...asset.attribs,
+  ];
 
   const i = the_project.config.metadata_input;
   const name = `${i.name} No. ${asset.base_name}`;

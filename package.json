@@ -51,6 +51,7 @@
     "axios": "^0.22.0",
     "canvas": "^2.8.0",
     "crypto": "^1.0.1",
+    "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
     "dotenv": "^16.0.1",
     "ffmpeg": "^0.0.4",

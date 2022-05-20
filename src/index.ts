@@ -151,7 +151,13 @@ async function get_all_assets(
         `${the_project.output_folder}/assets`,
       ]);
 
-      population.assets = create_assets(the_project, population, combinations, asset_index_origin, shuffled_ordering);
+      population.assets = await create_assets(
+        the_project,
+        population,
+        combinations,
+        asset_index_origin,
+        shuffled_ordering,
+      );
       all_assets.push(...population.assets);
 
       const { assets } = population;

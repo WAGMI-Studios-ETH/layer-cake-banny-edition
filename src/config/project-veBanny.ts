@@ -2,7 +2,7 @@
 import * as fs from 'fs';
 import moment from 'moment';
 import { CollageOutput, ProjectConfig, PopulationConfig } from '../interfaces';
-import { random, SetEx } from '../utils';
+import { parse_csv, random, SetEx } from '../utils';
 import { population_order } from './veBanny-order';
 import {
   collage300,
@@ -76,7 +76,7 @@ export function generate_populations(verbose: boolean = false) {
   veBanny_populations.forEach(p => populations.add(p.split(/\d/)[0].trim()));
 
   const characters = Array.from(populations);
-  console.log(characters);
+  // console.log(characters);
 
   const ordered_characters: {}[] = [];
   const configured_population = new SetEx();
@@ -147,7 +147,7 @@ export const bannyConfig: ProjectConfig = {
 
     population_metadata: {
       specific_to_population: true,
-      metadata_source: `./layered-assets/${layered_assets_folder}/metadata.json`,
+      metadata_source: `./layered-assets/${layered_assets_folder}/metadata.csv`,
       match_key: `folder_name`,
       include_columns: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`, `History`, `Motto`],
       rename_columes_attributes: [

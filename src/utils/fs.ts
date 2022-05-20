@@ -2,12 +2,13 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { bytes, MB, logger } from '.';
 import { readdir, writeFile, readFile } from 'fs/promises';
+import csv from 'csv-parser';
 
 export const isPathExist = (filePath: string) => fs.existsSync(filePath);
 export const is_path_exists = isPathExist;
 
 export const rmdir = (dir: string) => {
-  let list = fs.readdirSync(dir);
+  const list = fs.readdirSync(dir);
   for (let i = 0; i < list.length; i++) {
     let filename = path.join(dir, list[i]);
     let stat = fs.statSync(filename);
@@ -21,8 +22,8 @@ export const rmdir = (dir: string) => {
   fs.rmdirSync(dir);
 };
 
-export const create_path_folders = (path: string) => {
-  fs.mkdirSync(path, { recursive: true });
+export const create_path_folders = (_path: string) => {
+  fs.mkdirSync(_path, { recursive: true });
 };
 
 export const saveToFilesystemHelper = (input: any, directory: string, filename: string) => {
@@ -90,7 +91,19 @@ export const getDirectories = (source: string) =>
 
 export const get_directories = getDirectories;
 
-export const get_file_size = (path: string) => {
-  const stat = fs.statSync(path);
+export const get_file_size = (_path: string) => {
+  const stat = fs.statSync(_path);
   return stat.size;
+};
+
+export const parse_csv = (_path: string) => {
+  const results: any[] = [];
+  return new Promise((resolve, reject) => {
+    fs.createReadStream(_path)
+      .pipe(csv())
+      .on('data', data => results.push(data))
+      .on('end', () => {
+        resolve(results);
+      });
+  });
 };
