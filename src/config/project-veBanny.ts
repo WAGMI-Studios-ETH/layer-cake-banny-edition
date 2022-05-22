@@ -4,7 +4,7 @@ import * as fs from 'fs';
 import moment from 'moment';
 import { CollageOutput, ProjectConfig, PopulationConfig } from '../interfaces';
 import { parse_csv, random, SetEx } from '../utils';
-import { population_order } from './veBanny-order';
+import { population_order } from './vebanny-order';
 import {
   collage300,
   collage1600,
@@ -64,10 +64,7 @@ export const sub_populations = ['10_Days', '50_Days', '100_Days', '500_Days', '1
 
 export const population_size = 1;
 
-export const population_template = (
-  population_name: string, 
-  layer_order: string[], 
-  population_size: number) => {
+export const population_template = (population_name: string, layer_order: string[], population_size: number) => {
   return {
     name: population_name,
     layer_order: layer_order,
