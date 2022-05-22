@@ -109,8 +109,8 @@ export function generate_ethereum_metadata(asset: Asset) {
     attributes: all_attributes,
     symbol: `${i.symbol}${asset.base_name}`,
     shouldPreferSymbol: false,
-    description: `${i.description}${History?.value ? ' ' + History?.value : ''}${
-      Motto?.value ? ' ' + Motto?.value : ''
+    description: `${i.description}${History?.value ? '\n' + History?.value : ''}${
+      Motto?.value ? '\n' + Motto?.value : ''
     }`,
     minter: i.minter,
     decimals: i.decimals,
@@ -129,6 +129,7 @@ export function generate_ethereum_metadata(asset: Asset) {
     externalUri: i.more_info_link,
     uri: asset.image_url,
     image: asset.image_url,
+    animation_url: asset.animation_url,
     imageSize: asset.image_size,
     formats: [
       {

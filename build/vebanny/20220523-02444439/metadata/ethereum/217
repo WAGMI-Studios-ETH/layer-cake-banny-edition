@@ -1,0 +1,161 @@
+{
+   "identifier": 217,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Juicebox's Governance Token No. 217",
+   "attributes": [
+      {
+         "trait_type": "Arcana",
+         "value": 5
+      },
+      {
+         "trait_type": "Communications",
+         "value": 2
+      },
+      {
+         "trait_type": "Grind",
+         "value": 3
+      },
+      {
+         "trait_type": "Perception",
+         "value": 3
+      },
+      {
+         "trait_type": "Strength",
+         "value": 4
+      },
+      {
+         "trait_type": "Shadowiness",
+         "value": 5
+      },
+      {
+         "trait_type": "Background",
+         "value": "50 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Eye mouth"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Shiningbody"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Shining"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "veJBX-217",
+   "shouldPreferSymbol": false,
+   "description": "Juicebox Governance Token or veBanny is a voting escrow token that represents an individual's voting weight based on the amount of tokens locked over a set duration. Benefits bestowed upon each holder, in addition to ongoing governance, is the exclusive ability to generate custom Bannys at https://bannyverse.xyz - every genesis Banny character generated during this period has unique characteristics exploitable within the BannyVerse.\nAbout Juicebox, WAGMI Studios and our Lord and Savior, OG Banny.\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\nWAGMI Studios, https://wagmistudios.xyz, is a collective of quirky creatives making sure \"we're all gonna make it\" and the home of Lord Banny, our Savior.\nThe BannyVerse, https://bannyverse.xyz, home to the OG Banny who is an anthropomorphic banana, who provides visual aesthetics to all things Juicebox including its website and documentation.  Banny enjoys hot knifing hash, educating communities on the Juicebox protocol, and parodying pop-culture characters and historical heavyweights.  OG Banny is also the protagonist in the epic fruit-salad saga, the BannyVerse, an IRL mystery pay-to-have, play-to-earn, have-to-enjoy status-symbol-utility-art wallet-accessory masquerading as unapproachable, Web3, hard-core zinc filled cartoon nutrient toying with flex-seeking crypto-whales by dispensing FOMO. LOL.\n\nLouise is cute as a button. A little girl banny about 8 years old, she loves to people watch. You can find her in dark long hallways, particularly after a long night of strange occurrences. Her only friend seems to be her twin sister, and she loves her bright blue dress, both clean and blood stained. Most of her other friends have been a bit odd, so she’s always happy to meet new people. At the end of the day she’s not unlike most kids— she just wants to play. Won’t you come play with her?\nCome play with me.",
+   "minter": "tankbottoms.eth",
+   "decimals": 0,
+   "creators": [
+      "@bannyverse"
+   ],
+   "publishers": [
+      "@bannyverse"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-22T21:44:44.390Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "50 days",
+      "Yellow",
+      "Eye mouth",
+      "Choker",
+      "Black shoes",
+      "Shiningbody",
+      "Nothing",
+      "Shining",
+      "Nothing",
+      "Nothing",
+      "Nothing"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeientfu4v7cvp5ja4jbz2jnltw46ep7sp2n6id7w5eg6hdppc6lxby/217.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeientfu4v7cvp5ja4jbz2jnltw46ep7sp2n6id7w5eg6hdppc6lxby/217.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeientfu4v7cvp5ja4jbz2jnltw46ep7sp2n6id7w5eg6hdppc6lxby/217s.png",
+   "externalUri": "https://bannyverse.xyz",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeientfu4v7cvp5ja4jbz2jnltw46ep7sp2n6id7w5eg6hdppc6lxby/217.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeientfu4v7cvp5ja4jbz2jnltw46ep7sp2n6id7w5eg6hdppc6lxby/217.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeigl3hb2gjrju5daxxmjrrrcwz2p4cu4xucrxo3l5r5eudijyaayvy/index.html",
+   "imageSize": 121358,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeientfu4v7cvp5ja4jbz2jnltw46ep7sp2n6id7w5eg6hdppc6lxby/217s.png",
+         "hash": "322d0e571f2fd5ce30d4de40d1666a36da39cb36ce9d65b917de57c3904e300b",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeientfu4v7cvp5ja4jbz2jnltw46ep7sp2n6id7w5eg6hdppc6lxby/217.png",
+         "hash": "1fa064a6227f5929c2bafcfd7a882eb38adc374466ea5fe6ccd012febcfdb542",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "bannyverse.eth",
+      "artist_percentage": 5
+   },
+   "rights": "© 2022 Bannyverse Rights Reserved."
+}

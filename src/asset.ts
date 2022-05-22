@@ -24,6 +24,7 @@ export class Asset {
   traits: Array<Trait>;
   attribs: Array<Trait>;
   rotation = 0;
+  animation_url = '';
   constructor(
     batch_index: number,
     traits: Array<Trait>,

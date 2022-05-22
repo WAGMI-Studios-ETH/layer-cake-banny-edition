@@ -1,6 +1,6 @@
 import fs, { existsSync } from 'fs';
 import { Asset } from './asset';
-import { basename } from 'path';
+import path, { basename } from 'path';
 import { readdir, readFile } from 'fs/promises';
 import { the_project } from './project';
 import { delay, logger } from './utils';
@@ -34,6 +34,12 @@ function image_cid_distributor(asset: Asset, cid: string, thumb_tag: string) {
   asset.images_cid = cid;
   asset.image_url = `${IPFS_BASE_URL}${cid}/${asset.base_name}.png`;
   asset.thumb_url = `${IPFS_BASE_URL}${cid}/${asset.base_name}${thumb_tag}.png`;
+}
+
+function animation_url_distributor(asset: Asset, cid: string) {
+  if (the_project.config.metadata_input.animation_file) {
+    asset.animation_url = `${IPFS_BASE_URL}${cid}/${path.basename(the_project.config.metadata_input.animation_file)}`;
+  }
 }
 
 function metadata_cid_checker(asset: Asset) {
@@ -160,6 +166,18 @@ async function upload_asset_artifacts(
 
 export async function upload_all_images(assets: Asset[]) {
   await upload_all_asset_artifacts(assets, image_cid_checker, image_paths_selector, image_cid_distributor);
+}
+
+export async function upload_all_animation(assets: Asset[]) {
+  function animation_cid_checker(asset: Asset) {
+    return asset.animation_url?.length > 0;
+  }
+  await upload_all_asset_artifacts(
+    assets,
+    animation_cid_checker,
+    () => [path.resolve(__dirname, './index.html')],
+    animation_url_distributor,
+  );
 }
 
 export async function upload_all_metadata(assets: Asset[]) {

@@ -1,0 +1,161 @@
+{
+   "identifier": 133,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Juicebox's Governance Token No. 133",
+   "attributes": [
+      {
+         "trait_type": "Arcana",
+         "value": 4
+      },
+      {
+         "trait_type": "Communications",
+         "value": 4
+      },
+      {
+         "trait_type": "Grind",
+         "value": 4
+      },
+      {
+         "trait_type": "Perception",
+         "value": 3
+      },
+      {
+         "trait_type": "Strength",
+         "value": 3
+      },
+      {
+         "trait_type": "Shadowiness",
+         "value": 4
+      },
+      {
+         "trait_type": "Background",
+         "value": "100 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Eye mouth"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Witchbelt"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Witchcraft"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Witchbroom"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "veJBX-133",
+   "shouldPreferSymbol": false,
+   "description": "Juicebox Governance Token or veBanny is a voting escrow token that represents an individual's voting weight based on the amount of tokens locked over a set duration. Benefits bestowed upon each holder, in addition to ongoing governance, is the exclusive ability to generate custom Bannys at https://bannyverse.xyz - every genesis Banny character generated during this period has unique characteristics exploitable within the BannyVerse.\nAbout Juicebox, WAGMI Studios and our Lord and Savior, OG Banny.\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\nWAGMI Studios, https://wagmistudios.xyz, is a collective of quirky creatives making sure \"we're all gonna make it\" and the home of Lord Banny, our Savior.\nThe BannyVerse, https://bannyverse.xyz, home to the OG Banny who is an anthropomorphic banana, who provides visual aesthetics to all things Juicebox including its website and documentation.  Banny enjoys hot knifing hash, educating communities on the Juicebox protocol, and parodying pop-culture characters and historical heavyweights.  OG Banny is also the protagonist in the epic fruit-salad saga, the BannyVerse, an IRL mystery pay-to-have, play-to-earn, have-to-enjoy status-symbol-utility-art wallet-accessory masquerading as unapproachable, Web3, hard-core zinc filled cartoon nutrient toying with flex-seeking crypto-whales by dispensing FOMO. LOL.\n\nShe’s got all the answers, but do you really want them? The Witch of Endor is a banana most mysterious; always willing to offer advice, but with the very important caveat that she can never promise where it will take you. What is fate, really? Are her prophesies the stuff of the divine, or is the very fact that she vocalizes them enough to make them self-fulfilling? Bannies seek her out when they are in need, especially when they don’t want to turn to a more discerning source. But beware— you just may get what you wish for.\nBe careful what you wish for.",
+   "minter": "tankbottoms.eth",
+   "decimals": 0,
+   "creators": [
+      "@bannyverse"
+   ],
+   "publishers": [
+      "@bannyverse"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-22T21:44:44.390Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "100 days",
+      "Yellow",
+      "Eye mouth",
+      "Choker",
+      "Black shoes",
+      "Witchbelt",
+      "Nothing",
+      "Witchcraft",
+      "Nothing",
+      "Witchbroom",
+      "Nothing"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeih4y55vzxxtvgvsqgg2wpmj5u3tqvb7xyhwmvaaspesvx5jqjsqk4/133.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeih4y55vzxxtvgvsqgg2wpmj5u3tqvb7xyhwmvaaspesvx5jqjsqk4/133.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeih4y55vzxxtvgvsqgg2wpmj5u3tqvb7xyhwmvaaspesvx5jqjsqk4/133s.png",
+   "externalUri": "https://bannyverse.xyz",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeih4y55vzxxtvgvsqgg2wpmj5u3tqvb7xyhwmvaaspesvx5jqjsqk4/133.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeih4y55vzxxtvgvsqgg2wpmj5u3tqvb7xyhwmvaaspesvx5jqjsqk4/133.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeigl3hb2gjrju5daxxmjrrrcwz2p4cu4xucrxo3l5r5eudijyaayvy/index.html",
+   "imageSize": 125702,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeih4y55vzxxtvgvsqgg2wpmj5u3tqvb7xyhwmvaaspesvx5jqjsqk4/133s.png",
+         "hash": "057343e71e9bf43fa27547e72597ed9d9f925f2592893242025c18c8bfaf3326",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeih4y55vzxxtvgvsqgg2wpmj5u3tqvb7xyhwmvaaspesvx5jqjsqk4/133.png",
+         "hash": "f8416cdf485110f7bad5799688708942d1e4ae04321dd9fce76a2523e39c6612",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "bannyverse.eth",
+      "artist_percentage": 5
+   },
+   "rights": "© 2022 Bannyverse Rights Reserved."
+}

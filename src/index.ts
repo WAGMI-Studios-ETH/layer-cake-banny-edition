@@ -17,7 +17,7 @@ import { calculate_stats } from './stats';
 import { delay, logger, log_traits_arrays } from './utils';
 import { output_contract_csv, output_csv, output_rarity_report_csv } from './csv';
 import { Asset, create_assets } from './asset';
-import { upload_all_images, upload_all_metadata } from './nft.storage';
+import { upload_all_animation, upload_all_images, upload_all_metadata } from './nft.storage';
 import { createHash } from 'crypto';
 import { shuffle_array } from './utils/randomize';
 
@@ -246,6 +246,8 @@ const run = async () => {
   await compute_asset_hashes(all_assets);
 
   if (the_project.config.upload_images_to_ipfs) await upload_all_images(all_assets);
+
+  if (the_project.config.metadata_input.animation_file) await upload_all_animation(all_assets);
 
   // @ts-ignore
   console.warn(`generating metadata`);
