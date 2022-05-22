@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 /* eslint-disable max-len */
 import * as fs from 'fs';
 import moment from 'moment';
@@ -23,9 +24,14 @@ const iso_datetime_now = new Date().toISOString();
 const nft_name = `Juicebox's Governance Token`;
 const nft_symbol = `veJBX-`;
 const nft_description: string = `Juicebox Governance Token or veBanny is a voting escrow token that represents an individual's voting weight based on the amount of tokens locked over a set duration. Benefits bestowed upon each holder, in addition to ongoing governance, is the exclusive ability to generate custom Bannys at https://bannyverse.xyz - every genesis Banny character generated during this period has unique characteristics exploitable within the BannyVerse.
+
+
 About Juicebox, WAGMI Studios and our Lord and Savior, OG Banny.
+
 Juicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.
+
 WAGMI Studios, https://wagmistudios.xyz, is a collective of quirky creatives making sure "we're all gonna make it" and the home of Lord Banny, our Savior.
+
 The BannyVerse, https://bannyverse.xyz, home to the OG Banny who is an anthropomorphic banana, who provides visual aesthetics to all things Juicebox including its website and documentation.  Banny enjoys hot knifing hash, educating communities on the Juicebox protocol, and parodying pop-culture characters and historical heavyweights.  OG Banny is also the protagonist in the epic fruit-salad saga, the BannyVerse, an IRL mystery pay-to-have, play-to-earn, have-to-enjoy status-symbol-utility-art wallet-accessory masquerading as unapproachable, Web3, hard-core zinc filled cartoon nutrient toying with flex-seeking crypto-whales by dispensing FOMO. LOL.
 `;
 
@@ -58,7 +64,10 @@ export const sub_populations = ['10_Days', '50_Days', '100_Days', '500_Days', '1
 
 export const population_size = 1;
 
-export const population_template = (population_name: string, layer_order: string[], population_size: number) => {
+export const population_template = (
+  population_name: string, 
+  layer_order: string[], 
+  population_size: number) => {
   return {
     name: population_name,
     layer_order: layer_order,
@@ -83,12 +92,14 @@ export function generate_populations(verbose: boolean = false) {
 
   let not_found = 0;
 
+  // eslint-disable-next-line @typescript-eslint/prefer-for-of
   for (let i = 0; i < population_order.length; i++) {
     const index = characters.findIndex(e => {
       return e.toLowerCase().includes(population_order[i].trim().toLowerCase());
     });
 
     if (index != -1) {
+      // eslint-disable-next-line @typescript-eslint/prefer-for-of
       for (let j = 0; j < sub_populations.length; j++) {
         ordered_characters.push(
           population_template(`${characters[index]}${sub_populations[j]}`, layer_order, population_size),
@@ -107,6 +118,7 @@ export function generate_populations(verbose: boolean = false) {
   return ordered_characters as unknown as PopulationConfig[];
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
 const ordered = generate_populations(false) as PopulationConfig[];
 
 /*
@@ -144,7 +156,9 @@ export const bannyConfig: ProjectConfig = {
     native_size: '1000x1000',
     more_info_link: nft_more_info_link,
     include_total_population_in_name: true,
-
+    /*
+      if this is specific to population then note below within populations which one its for
+    */
     population_metadata: {
       specific_to_population: true,
       metadata_source: `./layered-assets/${layered_assets_folder}/metadata.csv`,
@@ -165,8 +179,13 @@ export const bannyConfig: ProjectConfig = {
         levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`, `History`, `Motto`],
         boosts: false,
       },
+      /*
+        animation_url: {
+          token_type: token, // music_single, music_album, music_generative, membership 
+          tempate_file: `./layered-assets/${layered_assets_folder}/token.html`,
+        }
+      */
     },
-
     royalties: {
       artist_address: nft_artist_address,
       artist_percentage: nft_artist_royality,
@@ -206,7 +225,16 @@ export const bannyConfig: ProjectConfig = {
       images_per_stack: 50,
     },
   ],
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
   populations: generate_populations(false) as PopulationConfig[],
+  /*
+  // match to the above metadata so that different population can have different csv files for them
+  populations: {
+    population_metadata {
+      insert_into: true;
+    }
+  }
+  */
   anim_outputs: [],
   collage_outputs: [
     collage300,
