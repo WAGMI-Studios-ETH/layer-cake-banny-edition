@@ -5,7 +5,7 @@ import * as fs from 'fs';
 import moment from 'moment';
 import { CollageOutput, ProjectConfig, PopulationConfig } from '../interfaces';
 import { parse_csv, random, SetEx } from '../utils';
-import { population_order } from './veBanny-order';
+import { population_order } from './vebanny-order';
 import {
   collage300,
   collage1600,
@@ -24,26 +24,27 @@ const iso_datetime_now = new Date().toISOString();
 
 const nft_name = `Juicebox's Governance Token`;
 const nft_symbol = `veJBX-`;
-const nft_description: string = `Juicebox Governance Token or veBanny is a voting escrow token that represents an individual's voting weight based on the amount of tokens locked over a set duration. Benefits bestowed upon each holder, in addition to ongoing governance, is the exclusive ability to generate custom Bannys at https://bannyverse.xyz - every genesis Banny character generated during this period has unique characteristics exploitable within the BannyVerse.
+const nft_description: string = `#CHARACTER_MOTTO
 
+#CHARACTER_HISTORY
 
-About Juicebox, WAGMI Studios and our Lord and Savior, OG Banny.
+Juicebox Governance Token or veBanny is a voting escrow token that represents an individual's voting weight based on the amount of tokens locked over a set duration.
+
+About Juicebox and WAGMI Studios.
 
 Juicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.
 
-WAGMI Studios, https://wagmistudios.xyz, is a collective of quirky creatives making sure "we're all gonna make it" and the home of Lord Banny, our Savior.
-
-The BannyVerse, https://bannyverse.xyz, home to the OG Banny who is an anthropomorphic banana, who provides visual aesthetics to all things Juicebox including its website and documentation.  Banny enjoys hot knifing hash, educating communities on the Juicebox protocol, and parodying pop-culture characters and historical heavyweights.  OG Banny is also the protagonist in the epic fruit-salad saga, the BannyVerse, an IRL mystery pay-to-have, play-to-earn, have-to-enjoy status-symbol-utility-art wallet-accessory masquerading as unapproachable, Web3, hard-core zinc filled cartoon nutrient toying with flex-seeking crypto-whales by dispensing FOMO. LOL.
+WAGMI Studios, https://wagmistudios.xyz, is a collective of quirky creatives making sure "we're all gonna make it" and the home of Banny.
 `;
 
-const nft_more_info_link = 'https://bannyverse.xyz';
-const nft_minter = `tankbottoms.eth`;
-const nft_creators = [`@bannyverse`];
-const nft_publishers = [`@bannyverse`];
+const nft_more_info_link = 'https://juicebox.money';
+const nft_minter = `0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`;
+const nft_creators = [`@juiceboxETH`];
+const nft_publishers = [`@juiceboxETH`];
 const nft_genres = [`veNFT`, `Juicebox`, `Banny`, `banana`, `character`, `profile`, `DAO`];
-const nft_artist_address = `bannyverse.eth`;
+const nft_artist_address = `0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`;
 const nft_artist_royality = 5;
-const nft_rights = `© 2022 Bannyverse Rights Reserved.`;
+const nft_rights = `Juicebox Rights Reserved.`;
 
 const nft_colors = [];
 
