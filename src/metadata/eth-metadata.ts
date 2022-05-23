@@ -3,16 +3,18 @@ import { Dynamic, IHash, logger, random } from '../utils';
 import { the_project } from '../project';
 import { strip_rarity } from '../csv';
 import { random_birthday, fourtwenty_birthday, Stat } from './stats';
+
 import { meow_stats } from './meow-stats';
 import { banny_stats } from './banny-stats';
 import { test_stats } from './test-stats';
+
 import { change_to_sentence_case, replace_underscores, strip_extension, trait_boost } from './metadata';
 
 export const default_stats: Stat[] = [
   {
-    stat_name: 'Banana Strength',
-    trigger_keywords: ['color'],
-    max_keywords: ['white', 'yellow'],
+    stat_name: 'Keyboard Skillz',
+    trigger_keywords: [''],
+    max_keywords: [''],
   },
 ];
 
@@ -30,13 +32,9 @@ export function generate_ethereum_metadata(asset: Asset) {
     case 'meowsdao': {
       stats = meow_stats;
       break;
-    }
-    case 'veBanny': {
-      stats = banny_stats;
-      break;
-    }
+    }    
     default: {
-      logger.warn('using default project stats for metadata');
+      logger.warn('generate_ethereum_metadata default should fetch metadata.csv from layer-assets unimplemented');
       stats = default_stats;
       break;
     }
@@ -76,6 +74,7 @@ export function generate_ethereum_metadata(asset: Asset) {
   }
 
   const base_stat_attributes = [];
+  
   let stats_sum = 0;
   for (const stat_name in my_stats) {
     const val = Math.floor(my_stats[stat_name]);

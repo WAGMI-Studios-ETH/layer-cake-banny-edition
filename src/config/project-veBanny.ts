@@ -5,7 +5,7 @@ import * as fs from 'fs';
 import moment from 'moment';
 import { CollageOutput, ProjectConfig, PopulationConfig } from '../interfaces';
 import { parse_csv, random, SetEx } from '../utils';
-import { population_order } from './veBanny-order';
+import { population_order } from './vebanny-order';
 import {
   collage300,
   collage1600,
@@ -25,7 +25,6 @@ const iso_datetime_now = new Date().toISOString();
 const nft_name = `Juicebox's Governance Token`;
 const nft_symbol = `veJBX-`;
 const nft_description: string = `Juicebox Governance Token or veBanny is a voting escrow token that represents an individual's voting weight based on the amount of tokens locked over a set duration. Benefits bestowed upon each holder, in addition to ongoing governance, is the exclusive ability to generate custom Bannys at https://bannyverse.xyz - every genesis Banny character generated during this period has unique characteristics exploitable within the BannyVerse.
-
 
 About Juicebox, WAGMI Studios and our Lord and Savior, OG Banny.
 
