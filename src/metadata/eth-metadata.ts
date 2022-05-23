@@ -8,6 +8,12 @@ import { banny_stats } from './banny-stats';
 import { test_stats } from './test-stats';
 import { change_to_sentence_case, replace_underscores, strip_extension, trait_boost } from './metadata';
 
+/*
+
+  TODO: bring metadata definition to project-config
+
+*/
+
 export const default_stats: Stat[] = [
   {
     stat_name: 'Banana Strength',
