@@ -118,7 +118,7 @@ export function generate_ethereum_metadata(asset: Asset) {
     publishers: i.publishers,
     genre: i.genres,
     date: i.drop_date,
-    tags: tags,
+    tags: [...new Set(tags)],
     background_color:
       i.background_colors !== undefined ? i.background_colors[random(i.background_colors.length)] : 'FFFFFF',
     language: `en`,
