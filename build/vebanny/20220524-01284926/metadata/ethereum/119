@@ -1,0 +1,157 @@
+{
+   "identifier": 119,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "#CHARACTER_NAME No. 119",
+   "attributes": [
+      {
+         "trait_type": "Arcana",
+         "value": 3
+      },
+      {
+         "trait_type": "Communications",
+         "value": 5
+      },
+      {
+         "trait_type": "Grind",
+         "value": 5
+      },
+      {
+         "trait_type": "Perception",
+         "value": 2
+      },
+      {
+         "trait_type": "Strength",
+         "value": 2
+      },
+      {
+         "trait_type": "Shadowiness",
+         "value": 3
+      },
+      {
+         "trait_type": "Background",
+         "value": "500 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Harley quinn"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Dolly"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Blondie"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY119",
+   "shouldPreferSymbol": false,
+   "description": "#CHARACTER_MOTTO\n\n#CHARACTER_HISTORY\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n\nThis wholesome banny is quite the talent. Whether she’s throwing down an impromptu concert or throwing back a shot of bourbon, she does it in style. She works a guitar with carefully manicured nails that effortlessly finger pick in travis or other styles, and a sweet smile that tells you everything's okay. Undoubtedly the best banana to ever grow in Tennessee, she takes the fruitcake ten out of ten times. If Elvis was The King, then surely Dolly is The Queen.\nIt costs a lot of money to look this sweet.",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-24T05:28:49.263Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "500 days",
+      "Yellow",
+      "Harley quinn",
+      "Black shoes",
+      "Dolly",
+      "Nothing",
+      "Blondie"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/119.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/119.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/119s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/119.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/119.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeidmloxqpwm2f2sqnigoo2dtycjzctxy4phirybvwjtn3uwdm5pi3i/119.html",
+   "imageSize": 140458,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/119s.png",
+         "hash": "d89e971d90f8faf894c71bf50957d2c49bd8220b9fd73a59e0730307471513a7",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeigwab5k4bry5dnsq3xdx6d7wmzfcpm2zdargpy7crh2orcthzadca/119.png",
+         "hash": "7fd38dd1f7d87329a28060cd87c38b70c02853b9b889835a439d7dfe8cbd47fc",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

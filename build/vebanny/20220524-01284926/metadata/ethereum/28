@@ -1,0 +1,133 @@
+{
+   "identifier": 28,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "#CHARACTER_NAME No. 028",
+   "attributes": [
+      {
+         "trait_type": "Background",
+         "value": "100 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Pink"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Pink girl"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Brown hair"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY028",
+   "shouldPreferSymbol": false,
+   "description": "#CHARACTER_MOTTO\n\n#CHARACTER_HISTORY\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-24T05:28:49.263Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "100 days",
+      "Pink",
+      "Original",
+      "Black shoes",
+      "Pink girl",
+      "Nothing",
+      "Brown hair"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeiggo52nrnj22j7s6iirh2wsufjo4jirn6yal5neyfjxu7u3foi2hq/028.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeiggo52nrnj22j7s6iirh2wsufjo4jirn6yal5neyfjxu7u3foi2hq/028.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeiggo52nrnj22j7s6iirh2wsufjo4jirn6yal5neyfjxu7u3foi2hq/028s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeiggo52nrnj22j7s6iirh2wsufjo4jirn6yal5neyfjxu7u3foi2hq/028.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeiggo52nrnj22j7s6iirh2wsufjo4jirn6yal5neyfjxu7u3foi2hq/028.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeidmloxqpwm2f2sqnigoo2dtycjzctxy4phirybvwjtn3uwdm5pi3i/28.html",
+   "imageSize": 125453,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeiggo52nrnj22j7s6iirh2wsufjo4jirn6yal5neyfjxu7u3foi2hq/028s.png",
+         "hash": "53ebb72ad3ae2e97470f5fb70d35c9874f26acc689c214c2ce2d7bff68a661db",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeiggo52nrnj22j7s6iirh2wsufjo4jirn6yal5neyfjxu7u3foi2hq/028.png",
+         "hash": "64391dd300511768d1e7028293897108336832d23ed9f25f28368cd3a7432dc7",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

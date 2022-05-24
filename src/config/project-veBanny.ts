@@ -122,6 +122,7 @@ Array.from(ordered).map(m => console.log(m.name));
 const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
   name: layered_assets_folder,
+  stunt_populations_to: 10,
   upload_images_to_ipfs: true,
   upload_metadata_to_ipfs: true,
   shuffle_assets: false,
@@ -168,7 +169,7 @@ export const bannyConfig: ProjectConfig = {
         `Motto`,
       ],
       metadata_type: {
-        attributes: [`$JBX Range`, `Range width`],
+        attribute: false /*[`$JBX Range`, `Range width`]*/,
         levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`, `History`, `Motto`],
         boosts: false,
       },

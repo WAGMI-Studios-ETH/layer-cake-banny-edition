@@ -1,0 +1,132 @@
+{
+   "identifier": 206,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "#CHARACTER_NAME No. 206",
+   "attributes": [
+      {
+         "trait_type": "Background",
+         "value": "10 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Professor"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Professor"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY206",
+   "shouldPreferSymbol": false,
+   "description": "#CHARACTER_MOTTO\n\n#CHARACTER_HISTORY\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-24T05:28:49.263Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "10 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Professor",
+      "Nothing"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeielzoqyt5szpfcccuoszwqs7v4mtwgrdsh5uq6adpeyjurxdtrmey/206.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeielzoqyt5szpfcccuoszwqs7v4mtwgrdsh5uq6adpeyjurxdtrmey/206.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeielzoqyt5szpfcccuoszwqs7v4mtwgrdsh5uq6adpeyjurxdtrmey/206s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeielzoqyt5szpfcccuoszwqs7v4mtwgrdsh5uq6adpeyjurxdtrmey/206.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeielzoqyt5szpfcccuoszwqs7v4mtwgrdsh5uq6adpeyjurxdtrmey/206.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeidmloxqpwm2f2sqnigoo2dtycjzctxy4phirybvwjtn3uwdm5pi3i/206.html",
+   "imageSize": 122912,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeielzoqyt5szpfcccuoszwqs7v4mtwgrdsh5uq6adpeyjurxdtrmey/206s.png",
+         "hash": "56718a290c4317fb2d438b68f1c5286159fcbb3f8cd7969d7ae692443b593962",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeielzoqyt5szpfcccuoszwqs7v4mtwgrdsh5uq6adpeyjurxdtrmey/206.png",
+         "hash": "e3936879d9c9928ffb84e9653af8aeb0bca75ff5702da966c604363d000516b7",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

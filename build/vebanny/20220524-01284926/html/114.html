@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/114.css" />
+<script>
+  let animating = false;
+  function spin() {
+    animating = true;
+    const [animation] = [coin, sparkles].map(elm =>
+      elm.animate([{ transform: 'rotateY(0deg)' }, { transform: 'rotateY(360deg)' }], {
+        duration: 3000,
+        iterations: 1,
+        easing: 'cubic-bezier(0.42, 0, 0.58, 1)',
+      }),
+    );
+    animation.onfinish = event => {
+      if (animating) spin();
+    };
+  }
+</script>
+
+<div class="intro"></div>
+<div class="purse" onpointerenter="spin()" onpointerleave="animating = false;">
+  <div id="coin" class="coin" style="pointer-events: none">
+    <div class="front"></div>
+    <div class="back"></div>
+    <div class="side">
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+    </div>
+  </div>
+  <div id="sparkles" class="sparkles" style="pointer-events: none">
+    <img src="/sparkles.gif" alt="" />
+  </div>
+</div>
+
+<script src="/script.js"></script>
