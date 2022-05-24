@@ -60,8 +60,8 @@
    ],
    "symbol": "veJBX-01",
    "shouldPreferSymbol": false,
-   "description": "The Juicebox's Governance Banana NFT or veBanny NFT, for short, is the Juicebox DAO's governance token, but so much more. The specific veBanny you receive is a function of how much of your Juicebox DAO tokens you have locked and for how long. Never before has how cool you are been reduced to an anthropomorphic banana. You are welcome. In addition to determining the future of your social life, your specific veBanny is your golden ticket into the BannyVerse, where dreams, adventure, and fruit salad, await.  https://wagmistudios.info/ is your portal, https://bannyverse.xyz is your door, only you can step through it, but don't think too hard, there are only so many AK-47s available.  Enter the Banny Quartermaster, use your veBanny to unlock powerful, fashionable, and accessorized bananas.  Choose from the shockingly vast combinations of banana characters, cock your weapons, and immortalize your Banny configuration through minting.  Leave your meatbag behind and start your true journey.  Or be uncool forever, its probably too late for you anyway.",
-   "minter": "tankbottoms.eth",
+   "description": "",
+   "minter": "",
    "decimals": 0,
    "creators": [
       "@WagmiStudios"
@@ -96,10 +96,7 @@
       "Black shoes",
       "No outfit",
       "Nothing",
-      "No hat",
-      "Nothing",
-      "Nothing",
-      "Nothing"
+      "No hat"      
    ],
    "language": "en",
    "mimeType": "image/png",
