@@ -22,8 +22,8 @@ import {
 
 const iso_datetime_now = new Date().toISOString();
 
-const nft_name = `Juicebox's Governance Token`;
-const nft_symbol = `veJBX-`;
+const nft_name = `#CHARACTER_NAME`;
+const nft_symbol = `VEBANNY`;
 const nft_description: string = `#CHARACTER_MOTTO
 
 #CHARACTER_HISTORY
