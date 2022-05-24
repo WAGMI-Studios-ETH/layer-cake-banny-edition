@@ -22,11 +22,11 @@ import {
 
 const iso_datetime_now = new Date().toISOString();
 
-const nft_name = `#CHARACTER_NAME`;
+const nft_name = `{{Banny Name}}`;
 const nft_symbol = `VEBANNY`;
-const nft_description: string = `#CHARACTER_MOTTO
+const nft_description: string = `{{MOTTO}}
 
-#CHARACTER_HISTORY
+{{HISTORY}}
 
 Juicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.
 
@@ -123,14 +123,14 @@ const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
   name: layered_assets_folder,
   stunt_populations_to: 10,
-  upload_images_to_ipfs: true,
-  upload_metadata_to_ipfs: true,
-  shuffle_assets: false,
-  resume_folder: '',
+  upload_images_to_ipfs: false,
+  upload_metadata_to_ipfs: false,
+  resume_folder: '20220524-01284926',
   re_generate_collages: false,
   re_generate_metadata_cid: false,
   metadata_outputs: ['ethereum'],
   metadata_file_extension: false,
+  shuffle_assets: false,
   hide_rarity_names: true,
   rotated_images_allowed: 0,
   mirror_images_allowed: 0,
@@ -169,9 +169,10 @@ export const bannyConfig: ProjectConfig = {
         `Motto`,
       ],
       metadata_type: {
-        attribute: false /*[`$JBX Range`, `Range width`]*/,
-        levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`, `History`, `Motto`],
+        attribute: false /* [`$JBX Range`, `Range width`] */,
+        levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`],
         boosts: false,
+        /* template: [`Banny Name`, `History`, `Motto`], */
       },
       /*
         animation_url: {
