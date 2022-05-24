@@ -28,13 +28,9 @@ const nft_description: string = `#CHARACTER_MOTTO
 
 #CHARACTER_HISTORY
 
-Juicebox Governance Token or veBanny is a voting escrow token that represents an individual's voting weight based on the amount of tokens locked over a set duration.
-
-About Juicebox and WAGMI Studios.
+Juicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.
 
 Juicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.
-
-WAGMI Studios, https://wagmistudios.xyz, is a collective of quirky creatives making sure "we're all gonna make it" and the home of Banny.
 `;
 
 const nft_more_info_link = 'https://juicebox.money';
@@ -153,7 +149,6 @@ export const bannyConfig: ProjectConfig = {
     native_size: '1000x1000',
     more_info_link: nft_more_info_link,
     include_total_population_in_name: true,
-
     /*
       if this is specific to population then note below within populations which one its for
     */
@@ -196,12 +191,12 @@ export const bannyConfig: ProjectConfig = {
       // https://docs.opensea.io/docs/contract-level-metadata
       name: nft_name,
       description: nft_description,
-      image: 'https://cloudflare-ipfs.com/ipfs/QmNSK1RScZZNEk1m7upuXBXGxvvZuyuvJqzV5imo9d7Fes',
+      image: '',
       external_link: nft_more_info_link,
       seller_fee_basis_points: 250, // Indicates a 1% seller fee.
       fee_recipient: nft_artist_address,
     },
-    rights: nft_rights,
+    rights: nft_rights,    
     decimals: 0,
     generation: 0,
     edition: 0,
