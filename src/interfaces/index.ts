@@ -57,7 +57,6 @@ export interface MetadataInput {
   decimals: number;
   generation: number;
   edition: number;
-  animation_file?: string;
 
   population_metadata?: {
     specific_to_population: boolean;

@@ -14,7 +14,7 @@ type CompileContext = {
   [key: string]: BasicTypes | ((context: Context) => BasicTypes);
 };
 
-function getPath(relativePath: string) {
+export function getPath(relativePath: string) {
   return path.resolve(__dirname, '..', relativePath);
 }
 
@@ -29,7 +29,7 @@ function fillVars(vars: CompileContext, template: string, context?: Context) {
   return result;
 }
 
-function readDirectory(_path: string, files: string[] = []): string[] {
+export function readDirectory(_path: string, files: string[] = []): string[] {
   readdirSync(getPath(_path)).map(filePath => {
     const absolutePath = getPath(`${_path}/${filePath}`);
     const stats = fs.statSync(absolutePath);
@@ -103,13 +103,13 @@ export default function compileTemplate(options: CompileContext | CompileContext
   }
 }
 
-const compilerOptions: CompileContext[] = Array(3)
-  .fill(0)
-  .map((_, index) => ({
-    tokenId: index,
-    filename: ({ dist }) => {
-      return `File: ${dist?.file}:${index}`;
-    },
-  }));
+// const compilerOptions: CompileContext[] = Array(3)
+//   .fill(0)
+//   .map((_, index) => ({
+//     tokenId: index,
+//     filename: ({ dist }) => {
+//       return `File: ${dist?.file}:${index}`;
+//     },
+//   }));
 
-compileTemplate(compilerOptions, 'src/template', 'build/vebanny/template');
+// compileTemplate(compilerOptions, 'src/template', 'build/vebanny/template');

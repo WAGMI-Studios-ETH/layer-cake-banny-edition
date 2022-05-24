@@ -1,4 +1,4 @@
-import fs, { existsSync } from 'fs';
+import fs, { existsSync, readdirSync, statSync } from 'fs';
 import { Asset } from './asset';
 import path, { basename } from 'path';
 import { readdir, readFile } from 'fs/promises';
@@ -7,8 +7,9 @@ import { delay, logger } from './utils';
 import { NFTStorage, File } from 'nft.storage';
 import { IPFS_BASE_URL, NFT_STORAGE_API_KEYS } from './config';
 import { save_assets_state } from '.';
-import { CIDString } from 'nft.storage/dist/src/lib/interface';
+import type { CIDString } from 'nft.storage/dist/src/lib/interface';
 import { boolean } from 'yargs';
+import { readDirectory } from './compile-template';
 
 // TODO: experiment with more or less to get stable and faster build
 const MAX_BATCH_ASSETS = 20;
@@ -37,9 +38,7 @@ function image_cid_distributor(asset: Asset, cid: string, thumb_tag: string) {
 }
 
 function animation_url_distributor(asset: Asset, cid: string) {
-  if (the_project.config.metadata_input.animation_file) {
-    asset.animation_url = `${IPFS_BASE_URL}${cid}/${path.basename(the_project.config.metadata_input.animation_file)}`;
-  }
+  asset.animation_url = `${IPFS_BASE_URL}${cid}/${asset.base_name.replace(/^0+/, '')}.html`;
 }
 
 function metadata_cid_checker(asset: Asset) {
@@ -53,7 +52,7 @@ function metadata_path_selector(asset: Asset) {
 
 function metadata_cid_distributor(asset: Asset, cid: string, thumb_tag: string) {
   asset.metadata_cid = cid;
-  asset.metadata_url = `${IPFS_BASE_URL}${cid}/${asset.base_name.replace(/^0+/, '')}.json`;
+  asset.metadata_url = `${IPFS_BASE_URL}${cid}/${asset.base_name.replace(/^0+/, '')}`;
 }
 
 type CidChecker = (asset: Asset) => boolean;
@@ -131,7 +130,7 @@ async function upload_asset_artifacts(
         for (const upload_asset of batch_assets) {
           paths.push(...path_selector(upload_asset));
         }
-        const result = await upload_files(paths);
+        const result = await upload_files([...new Set(paths)]);
         await wait(1000);
         if (result.cid) {
           for (const upload_asset of batch_assets) {
@@ -172,12 +171,23 @@ export async function upload_all_animation(assets: Asset[]) {
   function animation_cid_checker(asset: Asset) {
     return asset.animation_url?.length > 0;
   }
-  await upload_all_asset_artifacts(
-    assets,
-    animation_cid_checker,
-    () => [path.resolve(__dirname, './index.html')],
-    animation_url_distributor,
-  );
+  if (assets.length) {
+    const files = readdirSync(assets[0].html_folder)
+      .map(name => `${assets[0].html_folder}/${name}`)
+      .filter(file => {
+        const matchedAsset = assets.find(
+          asset => `${asset.html_folder}/${asset.base_name.replace(/^0+/g, '')}.html` === file,
+        );
+        if (matchedAsset) {
+          return !matchedAsset?.animation_url;
+        }
+        return true;
+      });
+    const { cid, success } = await wrap_and_pin_folders_and_files_to_ipfs(files);
+    if (cid && success) {
+      await Promise.all(assets.map(async asset => await animation_url_distributor(asset, cid)));
+    }
+  }
 }
 
 export async function upload_all_metadata(assets: Asset[]) {
@@ -202,6 +212,51 @@ export async function wrap_and_pin_folders_to_ipfs(content_folders: string[]) {
         files_with_contents.push(new File([await readFile(`${content_folder}/${filename}`)], filename));
       }
       logger.debug(`directory (${filenames.length}):${content_folder}`);
+    }
+    logger.debug(`loaded ${files_with_contents.length} files into memory`);
+    const cid = await storage.storeDirectory(files_with_contents);
+    const status = await storage.status(cid);
+    logger.debug(status);
+    return {
+      cid: cid,
+      ipfs_status: status,
+      success: true,
+    };
+  } catch (e) {
+    logger.error(`error loading to ipfs: ${JSON.stringify(e)}`);
+    return {
+      success: false,
+      cid: undefined,
+      ipfs_status: undefined,
+    };
+  }
+}
+
+export async function wrap_and_pin_folders_and_files_to_ipfs(paths: string[]) {
+  const api_key = NFT_STORAGE_API_KEYS[NFT_STORAGE_API_KEYS.length - 1];
+  const storage = new NFTStorage({ token: api_key });
+  const files_with_contents: any[] = [];
+  try {
+    for (const _path of paths) {
+      const stats = statSync(_path);
+      const filenames: string[] = [];
+      if (stats.isDirectory()) {
+        (await readdir(_path)).map(filename => filenames.push(filename));
+        logger.debug(`folder:${_path}` + `\n` + `total files:${filenames.length} files` + `\n` + `\n`);
+        logger.debug(filenames);
+        const n = MINIMAL_FILES ? 3 : filenames.length;
+        for (let i = 0; i < n; i++) {
+          const filename = filenames[i];
+          logger.debug(`${_path}/${filename}\n`);
+          files_with_contents.push(new File([await readFile(`${_path}/${filename}`)], filename));
+        }
+        logger.debug(`directory (${filenames.length}):${_path}`);
+      } else if (stats.isFile()) {
+        const filename = basename(_path);
+        console.log(_path);
+        filenames.push(filename);
+        files_with_contents.push(new File([await readFile(_path)], filename));
+      }
     }
     logger.debug(`loaded ${files_with_contents.length} files into memory`);
     const cid = await storage.storeDirectory(files_with_contents);
@@ -253,12 +308,12 @@ async function upload_files(paths: string[]) {
   const files_with_contents: File[] = [];
   let filenames = '';
   try {
-    for (const path of paths) {
-      if (existsSync(path)) {
-        const filename = basename(path);
-        console.log(path);
+    for (const _path of new Set(paths)) {
+      if (existsSync(_path)) {
+        const filename = basename(_path);
+        console.log(_path);
         filenames += `${filename},  `;
-        files_with_contents.push(new File([await readFile(path)], filename));
+        files_with_contents.push(new File([await readFile(_path)], filename));
       }
     }
     const track_time = async <A>(asyncFn: () => Promise<A>, id: string | undefined = undefined) => {

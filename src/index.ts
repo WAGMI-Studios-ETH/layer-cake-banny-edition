@@ -20,6 +20,7 @@ import { Asset, create_assets } from './asset';
 import { upload_all_animation, upload_all_images, upload_all_metadata } from './nft.storage';
 import { createHash } from 'crypto';
 import { shuffle_array } from './utils/randomize';
+import compileTemplate from './compile-template';
 
 async function flip_image_file(path: string) {
   /* TODO: if configured, flip a few of the images */
@@ -112,7 +113,7 @@ function load_assets_state() {
 async function get_all_assets(
   asset_index_origin = 1,
 ): Promise<{ all_assets: Array<Asset>; all_trait_names: Array<string> }> {
-  let all_assets = [];
+  let all_assets: Asset[] = [];
   const all_trait_names = [];
 
   the_project.total_populations_size = 0;
@@ -193,6 +194,15 @@ async function get_all_assets(
     }
     logger.info(`loaded ${all_assets.length} assets for upload`);
   }
+
+  console.log('#########################################################');
+  await compileTemplate(
+    all_assets.map((asset, index) => ({ tokenId: asset.base_name.replace(/^0+/, '') })),
+    'src/template',
+    `${the_project.output_folder}/html/`,
+  );
+  console.log('#########################################################');
+
   return { all_assets, all_trait_names };
 }
 
@@ -245,9 +255,8 @@ const run = async () => {
   validate_all_assets_for_ipfs(all_assets);
   await compute_asset_hashes(all_assets);
 
+  if (the_project.config.upload_images_to_ipfs) await upload_all_animation(all_assets);
   if (the_project.config.upload_images_to_ipfs) await upload_all_images(all_assets);
-
-  if (the_project.config.metadata_input.animation_file) await upload_all_animation(all_assets);
 
   // @ts-ignore
   console.warn(`generating metadata`);
