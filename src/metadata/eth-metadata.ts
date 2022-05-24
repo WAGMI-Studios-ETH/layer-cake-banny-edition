@@ -10,6 +10,12 @@ import { test_stats } from './test-stats';
 
 import { change_to_sentence_case, replace_underscores, strip_extension, trait_boost } from './metadata';
 
+/*
+  metadata here should output to the below template but also to 
+  https://docs.opensea.io/docs/metadata-standards
+  
+*/
+
 export const default_stats: Stat[] = [
   {
     stat_name: 'Keyboard Skillz',
