@@ -168,7 +168,7 @@ export const bannyConfig: ProjectConfig = {
         `Motto`,
       ],
       metadata_type: {
-        attribute: false,
+        attributes: [`$JBX Range`, `Range width`],
         levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`, `History`, `Motto`],
         boosts: false,
       },
@@ -196,7 +196,7 @@ export const bannyConfig: ProjectConfig = {
       seller_fee_basis_points: 250, // Indicates a 1% seller fee.
       fee_recipient: nft_artist_address,
     },
-    rights: nft_rights,    
+    rights: nft_rights,
     decimals: 0,
     generation: 0,
     edition: 0,
