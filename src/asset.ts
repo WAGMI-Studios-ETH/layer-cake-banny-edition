@@ -1,5 +1,5 @@
 import { Project, the_project } from './project';
-import { Trait, Population } from './interfaces';
+import { Trait, Population, MetadataType } from './interfaces';
 import { BLANK, parse_csv, zero_pad } from './utils';
 import { MARGIN_FOR_ERROR } from './config';
 import fs from 'fs';
@@ -50,6 +50,18 @@ export class Asset {
   }
 }
 
+function getDisplayType(column: string, config: MetadataType): string | undefined {
+  if (config.levels.indexOf(column) !== -1) {
+    return 'number';
+  }
+  if (config.boosts.indexOf(column) !== -1) {
+    return 'boost_number';
+  }
+  if (config.boosts_percentage.indexOf(column) !== -1) {
+    return 'boost_percentage';
+  }
+}
+
 export async function create_assets(
   project: Project,
   population: Population,
@@ -76,7 +88,9 @@ export async function create_assets(
         const column = project.config.metadata_input.population_metadata?.include_columns?.[j];
         const renamed_column = project.config.metadata_input.population_metadata?.rename_columes_attributes?.[j];
         if (column && renamed_column && typeof matched[column] !== 'undefined') {
+          const display_type = getDisplayType(column, project.config.metadata_input.population_metadata.metadata_type);
           attribs.push({
+            display_type,
             trait_type: renamed_column,
             value: matched[column].match(/^\d+$/) ? Number(matched[column]) : matched[column],
           });

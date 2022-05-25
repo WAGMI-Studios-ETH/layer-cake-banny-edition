@@ -157,12 +157,12 @@ export async function generate_ethereum_metadata(asset: Asset) {
     md.rights = i.rights;
   }
 
-  let propertiesToReplace = i.population_metadata?.metadata_type.properties;
-  if (propertiesToReplace && propertiesToReplace.length > 0) {
+  let variablesToReplace = i.population_metadata?.substitute_variables;
+  if (variablesToReplace && variablesToReplace.length > 0) {
     const metadataRow = await getMetadataRow(the_project, asset.nftName);
-    propertiesToReplace.forEach((property) => {
-      if (metadataRow && md[property]) {
-        md[property] = replaceTemplateText(metadataRow, md[property]);
+    variablesToReplace.forEach((variable) => {
+      if (metadataRow && md[variable]) {
+        md[variable] = replaceTemplateText(metadataRow, md[variable]);
       }
     })
   }

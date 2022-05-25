@@ -64,13 +64,16 @@ export interface MetadataInput {
     match_key: string;
     include_columns: string[];
     rename_columes_attributes: string[];
-    metadata_type: {
-      attributes: string[];
-      levels: string[];
-      boosts: string[];
-      properties: string[];
-    };
+    metadata_type: MetadataType;
+    substitute_variables: string[];
   };
+}
+
+export interface MetadataType {
+  attributes: string[];
+  levels: string[];
+  boosts: string[];
+  boosts_percentage: string[];
 }
 
 /*

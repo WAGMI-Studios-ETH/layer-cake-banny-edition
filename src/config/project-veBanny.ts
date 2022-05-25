@@ -157,7 +157,7 @@ export const bannyConfig: ProjectConfig = {
       specific_to_population: true,
       metadata_source: `./layered-assets/${layered_assets_folder}/metadata.csv`,
       match_key: `folder_name`,
-      include_columns: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`],
+      include_columns: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`, `$JBX Range`, `Range width`],
       rename_columes_attributes: [
         `Arcana`,
         `Communications`,
@@ -165,12 +165,15 @@ export const bannyConfig: ProjectConfig = {
         `Perception`,
         `Strength`,
         `Shadowiness`,
+        `$JBX Range`,
+        `Range width`
       ],
+      substitute_variables: [`description`], /* name is constructed differently */
       metadata_type: {
-        attributes: [] /* [`$JBX Range`, `Range width`] */,
-        levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`],
-        boosts: [],
-        properties: ['description'] /* name is constructed differently */
+        attributes: [`$JBX Range`], /* nothing */
+        levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`], /* number */
+        boosts: [`Range width`], /* boost_number */
+        boosts_percentage: [], /* boost_percentage */
       },
       /*
         animation_url: {
