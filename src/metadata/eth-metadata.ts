@@ -9,6 +9,7 @@ import { banny_stats } from './banny-stats';
 import { test_stats } from './test-stats';
 
 import { change_to_sentence_case, replace_underscores, strip_extension, trait_boost } from './metadata';
+import { getMetadataRow, replaceTemplateText } from '../utils/stringVariables';
 
 export const default_stats: Stat[] = [
   {
@@ -18,7 +19,7 @@ export const default_stats: Stat[] = [
   },
 ];
 
-export function generate_ethereum_metadata(asset: Asset) {
+export async function generate_ethereum_metadata(asset: Asset) {
   logger.info(`generating metadata for ${asset.base_name}`);
   const traits: IHash[] = [];
   const asset_boosts: { stat_name: string; maxxed: boolean }[] = [];
@@ -108,7 +109,7 @@ export function generate_ethereum_metadata(asset: Asset) {
     attributes: all_attributes,
     symbol: `${i.symbol}${asset.base_name}`,
     shouldPreferSymbol: false,
-    description: asset.description,
+    description: i.description,
     minter: i.minter,
     decimals: i.decimals,
     creators: i.creators,
@@ -154,6 +155,16 @@ export function generate_ethereum_metadata(asset: Asset) {
   }
   if (!!i.rights) {
     md.rights = i.rights;
+  }
+
+  let propertiesToReplace = i.population_metadata?.metadata_type.properties;
+  if (propertiesToReplace && propertiesToReplace.length > 0) {
+    const metadataRow = await getMetadataRow(the_project, asset.nftName);
+    propertiesToReplace.forEach((property) => {
+      if (metadataRow && md[property]) {
+        md[property] = replaceTemplateText(metadataRow, md[property]);
+      }
+    })
   }
   return md;
 }

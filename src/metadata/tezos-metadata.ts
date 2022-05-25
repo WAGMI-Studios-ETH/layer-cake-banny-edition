@@ -3,8 +3,9 @@ import { IHash, logger } from '../utils';
 import { the_project } from '../project';
 import { strip_rarity } from '../csv';
 import { replace_underscores, strip_extension } from './metadata';
+import { getMetadataRow, replaceTemplateText } from '../utils/stringVariables';
 
-export function generate_tezos_metadata(asset: Asset, excluded_layers_from_metadata: string[] = []) {
+export async function generate_tezos_metadata(asset: Asset, excluded_layers_from_metadata: string[] = []) {
   logger.info(`generating metadata for ${asset.base_name}`);
   const attributes: {}[] = [];
   const tags: string[] = [];
@@ -38,7 +39,7 @@ export function generate_tezos_metadata(asset: Asset, excluded_layers_from_metad
     uri: asset.image_url,
     externalUri: i.more_info_link,
     hash: asset.image_hash,
-    description: asset.description,
+    description: i.description,
     minter: i.minter,
     decimals: i.decimals,
     generation: i.generation,
@@ -80,6 +81,16 @@ export function generate_tezos_metadata(asset: Asset, excluded_layers_from_metad
   }
   if (!!i.rights) {
     md.rights = i.rights;
+  }
+
+  let propertiesToReplace = i.population_metadata?.metadata_type.properties;
+  if (propertiesToReplace && propertiesToReplace.length > 0) {
+    const metadataRow = await getMetadataRow(the_project, asset.nftName);
+    propertiesToReplace.forEach((property) => {
+      if (metadataRow && md[property]) {
+        md[property] = replaceTemplateText(metadataRow, md[property]);
+      }
+    })
   }
 
   return md;

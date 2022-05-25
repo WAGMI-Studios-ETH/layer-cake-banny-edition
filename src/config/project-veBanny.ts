@@ -167,9 +167,10 @@ export const bannyConfig: ProjectConfig = {
         `Shadowiness`,
       ],
       metadata_type: {
-        attribute: false /* [`$JBX Range`, `Range width`] */,
+        attributes: [] /* [`$JBX Range`, `Range width`] */,
         levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`],
-        boosts: false,
+        boosts: [],
+        properties: ['description'] /* name is constructed differently */
       },
       /*
         animation_url: {
