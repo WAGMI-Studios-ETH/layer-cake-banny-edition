@@ -23,8 +23,8 @@ export function generate_tezos_metadata(asset: Asset, excluded_layers_from_metad
   });
   const i = the_project.config.metadata_input;
   const name = i.include_total_population_in_name
-    ? `${i.name} ${asset.base_name}/${the_project.total_populations_size}`
-    : `${i.name} ${asset.base_name}`;
+    ? `${asset.nftName} ${asset.base_name}/${the_project.total_populations_size}`
+    : `${asset.nftName} ${asset.base_name}`;
   const md: IHash = {
     identifier: asset.batch_index + 1, // `0..n`
     name: name,
@@ -38,7 +38,7 @@ export function generate_tezos_metadata(asset: Asset, excluded_layers_from_metad
     uri: asset.image_url,
     externalUri: i.more_info_link,
     hash: asset.image_hash,
-    description: i.description,
+    description: asset.description,
     minter: i.minter,
     decimals: i.decimals,
     generation: i.generation,

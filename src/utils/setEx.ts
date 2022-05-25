@@ -9,6 +9,7 @@ export const setUnion = (...iterables: any) => {
 };
 
 export class SetEx extends Set {
+  // @ts-ignore
   ['constructor']: typeof SetEx;
 
   constructor(...iterables: any[]) {

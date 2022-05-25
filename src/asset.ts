@@ -26,12 +26,16 @@ export class Asset {
   attribs: Array<Trait>;
   rotation = 0;
   animation_url = '';
+  nftName: string;
+  description: string;
   constructor(
     batch_index: number,
     traits: Array<Trait>,
     layered_assets_dir: string,
     output_dir: string,
     attribs: any[] = [],
+    nftName: string = '',
+    description: string = ''
   ) {
     const population_digits = the_project.total_populations_size.toString().length;
     this.traits = traits;
@@ -43,7 +47,20 @@ export class Asset {
     this.html_folder = `${output_dir}/html`;
     this.json_path = `${this.json_folder}/${this.base_name}`;
     this.trait_dir = `${layered_assets_dir}/Traits`;
+    this.nftName = nftName;
+    this.description = description
   }
+}
+
+function replaceTemplateText(tableRow: any, template: string) {
+  const descriptionColumns = template.match(/[^{\{]+(?=}\})/g);
+  let result = template;
+  if (descriptionColumns && descriptionColumns.length > 0) {
+    descriptionColumns.forEach((column) => {
+      result = result.replace(`{{${column}}}`, tableRow[column]);
+    })
+  }
+  return result;
 }
 
 export async function create_assets(
@@ -57,6 +74,8 @@ export async function create_assets(
   const target = Math.ceil(population.config.population_size * MARGIN_FOR_ERROR);
   const assets: Asset[] = [];
   const attribs: any[] = [];
+  let nftName = project.config.metadata_input.name;
+  let description = project.config.metadata_input.description;
   if (project.config.metadata_input.population_metadata?.metadata_source) {
     const jsonMetadata = (await parse_csv(
       path.join(__dirname, '..', project.config.metadata_input.population_metadata?.metadata_source),
@@ -66,16 +85,22 @@ export async function create_assets(
       .replace(/_/g, ' ')
       .split(/\d+/)?.[0]
       ?.trim();
-    const matched = jsonMetadata.find(item => name === item['Banny Name']);
-    if (matched) {
-      for (let j = 0; j < project.config.metadata_input.population_metadata?.include_columns?.length; j++) {
-        const column = project.config.metadata_input.population_metadata?.include_columns?.[j];
-        const renamed_column = project.config.metadata_input.population_metadata?.rename_columes_attributes?.[j];
-        if (column && renamed_column && typeof matched[column] !== 'undefined') {
-          attribs.push({
-            trait_type: renamed_column,
-            value: matched[column].match(/^\d+$/) ? Number(matched[column]) : matched[column],
-          });
+
+    const nameColumn = project.config.metadata_input.name.match(/[^{\{]+(?=}\})/g)?.[0];
+    if (nameColumn) {
+      const matched = jsonMetadata.find(item => name === item[nameColumn]);
+      if (matched) {
+        nftName = matched[nameColumn];
+        description = replaceTemplateText(matched, description);
+        for (let j = 0; j < project.config.metadata_input.population_metadata?.include_columns?.length; j++) {
+          const column = project.config.metadata_input.population_metadata?.include_columns?.[j];
+          const renamed_column = project.config.metadata_input.population_metadata?.rename_columes_attributes?.[j];
+          if (column && renamed_column && typeof matched[column] !== 'undefined') {
+            attribs.push({
+              trait_type: renamed_column,
+              value: matched[column].match(/^\d+$/) ? Number(matched[column]) : matched[column],
+            });
+          }
         }
       }
     }
@@ -88,6 +113,8 @@ export async function create_assets(
         `${population.input_folder}/${project.config.name}/${population.config.name}`,
         project.output_folder,
         attribs,
+        nftName,
+        description
       ),
     );
   }

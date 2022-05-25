@@ -65,9 +65,9 @@ export interface MetadataInput {
     include_columns: string[];
     rename_columes_attributes: string[];
     metadata_type: {
-      attribute: boolean;
-      levels: string[];
-      boosts: boolean;
+      attribute: boolean | string[];
+      levels: boolean | string[];
+      boosts: boolean | string[];
     };
   };
 }

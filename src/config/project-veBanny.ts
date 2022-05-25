@@ -5,7 +5,7 @@ import * as fs from 'fs';
 import moment from 'moment';
 import { CollageOutput, ProjectConfig, PopulationConfig } from '../interfaces';
 import { parse_csv, random, SetEx } from '../utils';
-import { population_order } from './vebanny-order';
+import { population_order } from './veBanny-order';
 import {
   collage300,
   collage1600,
@@ -22,11 +22,11 @@ import {
 
 const iso_datetime_now = new Date().toISOString();
 
-const nft_name = `#CHARACTER_NAME`;
+const nft_name = `{{Banny Name}}`;
 const nft_symbol = `VEBANNY`;
-const nft_description: string = `#CHARACTER_MOTTO
+const nft_description: string = `{{Motto}}
 
-#CHARACTER_HISTORY
+{{History}}
 
 Juicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.
 
@@ -123,8 +123,8 @@ const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
   name: layered_assets_folder,
   stunt_populations_to: 10,
-  upload_images_to_ipfs: true,
-  upload_metadata_to_ipfs: true,
+  upload_images_to_ipfs: false,
+  upload_metadata_to_ipfs: false,
   shuffle_assets: false,
   resume_folder: '',
   re_generate_collages: false,
@@ -157,7 +157,7 @@ export const bannyConfig: ProjectConfig = {
       specific_to_population: true,
       metadata_source: `./layered-assets/${layered_assets_folder}/metadata.csv`,
       match_key: `folder_name`,
-      include_columns: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`, `History`, `Motto`],
+      include_columns: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`],
       rename_columes_attributes: [
         `Arcana`,
         `Communications`,
@@ -165,12 +165,10 @@ export const bannyConfig: ProjectConfig = {
         `Perception`,
         `Strength`,
         `Shadowiness`,
-        `History`,
-        `Motto`,
       ],
       metadata_type: {
-        attribute: false /*[`$JBX Range`, `Range width`]*/,
-        levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`, `History`, `Motto`],
+        attribute: false /* [`$JBX Range`, `Range width`] */,
+        levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`],
         boosts: false,
       },
       /*

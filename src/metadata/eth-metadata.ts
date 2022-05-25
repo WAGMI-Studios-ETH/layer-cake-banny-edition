@@ -32,7 +32,7 @@ export function generate_ethereum_metadata(asset: Asset) {
     case 'meowsdao': {
       stats = meow_stats;
       break;
-    }    
+    }
     default: {
       logger.warn('generate_ethereum_metadata default should fetch metadata.csv from layer-assets unimplemented');
       stats = default_stats;
@@ -74,7 +74,7 @@ export function generate_ethereum_metadata(asset: Asset) {
   }
 
   const base_stat_attributes = [];
-  
+
   let stats_sum = 0;
   for (const stat_name in my_stats) {
     const val = Math.floor(my_stats[stat_name]);
@@ -98,7 +98,7 @@ export function generate_ethereum_metadata(asset: Asset) {
   ];
 
   const i = the_project.config.metadata_input;
-  const name = `${i.name} No. ${asset.base_name}`;
+  const name = `${asset.nftName} No. ${asset.base_name}`;
 
   let md: IHash = {
     identifier: asset.batch_index + 1, // `0..n`
@@ -108,9 +108,7 @@ export function generate_ethereum_metadata(asset: Asset) {
     attributes: all_attributes,
     symbol: `${i.symbol}${asset.base_name}`,
     shouldPreferSymbol: false,
-    description: `${i.description}${History?.value ? '\n' + History?.value : ''}${
-      Motto?.value ? '\n' + Motto?.value : ''
-    }`,
+    description: asset.description,
     minter: i.minter,
     decimals: i.decimals,
     creators: i.creators,
