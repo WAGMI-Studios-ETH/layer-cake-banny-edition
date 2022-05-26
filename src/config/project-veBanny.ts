@@ -19,6 +19,7 @@ import {
   collageTwitter1200x675,
   collageTwitter1500x500,
 } from './collages';
+import { AnimationTemplate } from '../interfaces/animation-template';
 
 const iso_datetime_now = new Date().toISOString();
 
@@ -124,6 +125,7 @@ export const bannyConfig: ProjectConfig = {
   name: layered_assets_folder,
   stunt_populations_to: 10,
   upload_images_to_ipfs: false,
+  upload_animations_to_ipfs: false,
   upload_metadata_to_ipfs: false,
   shuffle_assets: false,
   resume_folder: '',
@@ -170,17 +172,12 @@ export const bannyConfig: ProjectConfig = {
       ],
       substitute_variables: [`description`], /* name is constructed differently */
       metadata_type: {
-        attributes: [`$JBX Range`], /* nothing */
-        levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`], /* number */
-        boosts: [`Range width`], /* boost_number */
-        boosts_percentage: [], /* boost_percentage */
+        attributes: [`$JBX Range`],
+        levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`],
+        boosts: [`Range width`],
+        boosts_percentage: [],
       },
-      /*
-        animation_url: {
-          token_type: token, // music_single, music_album, music_generative, membership 
-          tempate_file: `./layered-assets/${layered_assets_folder}/token.html`,
-        }
-      */
+      animation_url: AnimationTemplate.TOKEN
     },
     royalties: {
       artist_address: nft_artist_address,

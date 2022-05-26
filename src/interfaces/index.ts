@@ -1,4 +1,5 @@
 import { Asset } from '../asset';
+import { AnimationTemplate } from './animation-template';
 import { OpenSeaStoreInformation } from './metadata';
 export { OpenSeaStoreInformation } from './metadata';
 
@@ -66,6 +67,7 @@ export interface MetadataInput {
     rename_columes_attributes: string[];
     metadata_type: MetadataType;
     substitute_variables: string[];
+    animation_url: AnimationTemplate
   };
 }
 
@@ -95,6 +97,7 @@ export interface ProjectConfig {
   collage_outputs: CollageOutput[];
   stacked_gif_outputs: StackedGifOutput[];
   upload_images_to_ipfs: boolean;
+  upload_animations_to_ipfs: boolean;
   upload_metadata_to_ipfs: boolean;
   resume_folder: string;
   re_generate_collages: boolean;

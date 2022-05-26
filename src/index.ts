@@ -20,7 +20,8 @@ import { Asset, create_assets } from './asset';
 import { upload_all_animation, upload_all_images, upload_all_metadata } from './nft.storage';
 import { createHash } from 'crypto';
 import { shuffle_array } from './utils/randomize';
-import compileTemplate from './compile-template';
+import compileTemplate, { CompileContext } from './compile-template';
+import { AnimationTemplate, templatePaths } from './interfaces/animation-template';
 
 async function flip_image_file(path: string) {
   /* TODO: if configured, flip a few of the images */
@@ -195,15 +196,37 @@ async function get_all_assets(
     logger.info(`loaded ${all_assets.length} assets for upload`);
   }
 
-  console.log('#########################################################');
-  await compileTemplate(
-    all_assets.map((asset, index) => ({ tokenId: asset.base_name.replace(/^0+/, '') })),
-    'src/template',
-    `${the_project.output_folder}/html/`,
-  );
-  console.log('#########################################################');
+  const animationType = the_project.config.metadata_input.population_metadata?.animation_url;
+
+  if (animationType) {
+    console.log('#########################################################');
+    const animationSrc = templatePaths.get(animationType) || '';
+    await compileTemplate(
+      all_assets.map((asset) => (getAnimationTemplateVars(animationType, asset))),
+      animationSrc,
+      `${the_project.output_folder}/metadata/ethereum/animation_urls`,
+    );
+    console.log('#########################################################');
+  }
 
   return { all_assets, all_trait_names };
+}
+
+function getAnimationTemplateVars(type: AnimationTemplate, asset: Asset): CompileContext {
+  switch (type) {
+    case AnimationTemplate.TOKEN:
+      return {
+        tokenId: asset.base_name.replace(/^0+/, ''),
+        GENERATED_IMAGE: getImageBase64(`${the_project.output_folder}/assets/image/${asset.base_name}.png`, 'png')
+      }
+    default:
+      return {};
+  }
+}
+
+function getImageBase64(path: string, ext: string): string {
+  const file = fs.readFileSync(path, { encoding: 'base64' })
+  return `data:image/${ext};base64,${file}`;
 }
 
 function output_provenance_hash(all_assets: Asset[]) {
@@ -255,8 +278,8 @@ const run = async () => {
   validate_all_assets_for_ipfs(all_assets);
   await compute_asset_hashes(all_assets);
 
-  if (the_project.config.upload_images_to_ipfs) await upload_all_animation(all_assets);
   if (the_project.config.upload_images_to_ipfs) await upload_all_images(all_assets);
+  if (the_project.config.upload_animations_to_ipfs) await upload_all_animation(all_assets);
 
   // @ts-ignore
   console.warn(`generating metadata`);

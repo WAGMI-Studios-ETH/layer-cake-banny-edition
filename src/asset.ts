@@ -43,7 +43,7 @@ export class Asset {
     this.base_name = zero_pad(this.batch_index + 1, population_digits);
     this.image_folder = `${output_dir}/assets`;
     this.json_folder = `${output_dir}/metadata`;
-    this.html_folder = `${output_dir}/html`;
+    this.html_folder = `${output_dir}/metadata/ethereum/animation_urls`;
     this.json_path = `${this.json_folder}/${this.base_name}`;
     this.trait_dir = `${layered_assets_dir}/Traits`;
     this.nftName = nftName;
