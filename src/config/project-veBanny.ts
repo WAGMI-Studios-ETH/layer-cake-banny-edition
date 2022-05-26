@@ -128,7 +128,7 @@ export const bannyConfig: ProjectConfig = {
   upload_animations_to_ipfs: false,
   upload_metadata_to_ipfs: false,
   shuffle_assets: false,
-  resume_folder: '',
+  resume_folder: '20220526-14335532',
   re_generate_collages: false,
   re_generate_metadata_cid: false,
   metadata_outputs: ['ethereum'],
