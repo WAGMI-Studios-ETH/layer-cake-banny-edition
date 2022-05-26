@@ -204,7 +204,7 @@ async function get_all_assets(
     await compileTemplate(
       all_assets.map((asset) => (getAnimationTemplateVars(animationType, asset))),
       animationSrc,
-      `${the_project.output_folder}/html`,
+      `${the_project.output_folder}/animation_urls`,
     );
     console.log('#########################################################');
   }
@@ -279,7 +279,7 @@ const run = async () => {
   await compute_asset_hashes(all_assets);
 
   if (the_project.config.upload_images_to_ipfs) await upload_all_images(all_assets);
-  if (the_project.config.upload_animations_to_ipfs) await upload_all_animation(all_assets);
+  if (the_project.config.upload_images_to_ipfs) await upload_all_animation(all_assets);
 
   // @ts-ignore
   console.warn(`generating metadata`);

@@ -97,7 +97,6 @@ export interface ProjectConfig {
   collage_outputs: CollageOutput[];
   stacked_gif_outputs: StackedGifOutput[];
   upload_images_to_ipfs: boolean;
-  upload_animations_to_ipfs: boolean;
   upload_metadata_to_ipfs: boolean;
   resume_folder: string;
   re_generate_collages: boolean;
