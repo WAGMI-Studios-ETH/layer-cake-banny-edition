@@ -176,6 +176,18 @@ async function get_all_assets(
       asset_index_origin += population.assets.length;
     }
 
+    const animationType = the_project.config.metadata_input.population_metadata?.animation_url;
+    if (animationType) {
+      console.log('#########################################################');
+      const animationSrc = templatePaths.get(animationType) || '';
+      await compileTemplate(
+        all_assets.map((asset) => (getAnimationTemplateVars(animationType, asset))),
+        animationSrc,
+        `${the_project.output_folder}/animation_urls`,
+      );
+      console.log('#########################################################');
+    }
+
     save_assets_state(all_assets);
     logger.info(`collage commencing`);
     await generate_all_collages(the_project.populations[0].assets[0]);
@@ -194,19 +206,6 @@ async function get_all_assets(
       await generate_all_stacked_gifs(all_assets);
     }
     logger.info(`loaded ${all_assets.length} assets for upload`);
-  }
-
-  const animationType = the_project.config.metadata_input.population_metadata?.animation_url;
-
-  if (animationType) {
-    console.log('#########################################################');
-    const animationSrc = templatePaths.get(animationType) || '';
-    await compileTemplate(
-      all_assets.map((asset) => (getAnimationTemplateVars(animationType, asset))),
-      animationSrc,
-      `${the_project.output_folder}/animation_urls`,
-    );
-    console.log('#########################################################');
   }
 
   return { all_assets, all_trait_names };
@@ -279,7 +278,7 @@ const run = async () => {
   await compute_asset_hashes(all_assets);
 
   if (the_project.config.upload_images_to_ipfs) await upload_all_images(all_assets);
-  if (the_project.config.upload_images_to_ipfs) await upload_all_animation(all_assets);
+  // if (the_project.config.upload_images_to_ipfs) await upload_all_animation(all_assets);
 
   // @ts-ignore
   console.warn(`generating metadata`);

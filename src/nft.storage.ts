@@ -28,6 +28,10 @@ function image_paths_selector(asset: Asset) {
       paths.push(`${asset.image_folder}/${output.tag}/${asset.base_name}${output.ipfs_tag}.png`);
     }
   }
+
+  if (the_project.config.metadata_input.population_metadata?.animation_url) {
+    paths.push(`${asset.html_folder}/${asset.base_name.replace(/^0+/, '')}.html`);
+  }
   return paths;
 }
 
@@ -35,6 +39,10 @@ function image_cid_distributor(asset: Asset, cid: string, thumb_tag: string) {
   asset.images_cid = cid;
   asset.image_url = `${IPFS_BASE_URL}${cid}/${asset.base_name}.png`;
   asset.thumb_url = `${IPFS_BASE_URL}${cid}/${asset.base_name}${thumb_tag}.png`;
+
+  if (the_project.config.metadata_input.population_metadata?.animation_url) {
+    asset.animation_url = `${IPFS_BASE_URL}${cid}/${asset.base_name.replace(/^0+/, '')}.html`;
+  }
 }
 
 function animation_url_distributor(asset: Asset, cid: string) {
