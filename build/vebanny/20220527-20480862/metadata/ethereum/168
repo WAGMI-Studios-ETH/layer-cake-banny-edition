@@ -1,0 +1,172 @@
+{
+   "identifier": 168,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Pharaoh King Banatut No. 168",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 2
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "70,000-79,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 10000
+      },
+      {
+         "trait_type": "Background",
+         "value": "100 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Pharaoh"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Pharaoh"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Anch"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY168",
+   "shouldPreferSymbol": false,
+   "description": "I’ll show you, dad!\n\nMuch conjecture exists around this banny. He’s definitely an oddball who casts a wide shadow. He walks with a slight limp, perhaps the result of a clubbed foot. He may have some neurodegenerative disorders. He’s short and awkward. But nothing surprising for a banny who’s mother is his father’s sister. I mean you’re really scraping the bottom of the genetic barrel on that one. But by the same token, some believe this is all just a subterfuge for a crafty leader. Some would say Pharaoh King Banatut is a shrewd politician. Some would say that mountains were moved for him.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "100 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Pharaoh",
+      "Nothing",
+      "Anch"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/168.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/168.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/168s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/168.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/168.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/168.html",
+   "imageSize": 130611,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/168s.png",
+         "hash": "fe1a103fae2090991fff345247e001fb25571834e5930a91b51996cfaf425a4b",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/168.png",
+         "hash": "75262da4b0ef0d005fadc3af5c19de28a0c6df125452a6f6a904cbd4e1bd222c",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

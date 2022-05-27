@@ -1,0 +1,173 @@
+{
+   "identifier": 265,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Jinx No. 265",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 4
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "8,000,000-8,999,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 1000000
+      },
+      {
+         "trait_type": "Background",
+         "value": "1000 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Jinx"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Jinx hair"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Shark v2"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY265",
+   "shouldPreferSymbol": false,
+   "description": "Everything different about you is everything strong about you.\n\nA heroine who you can’t help but to root for, Jinx is a banny that brings the heat when she needs to. Don’t let her petite and unassuming exterior fool you, she’s a badass that wields her childhood trauma into magnificent destruction. She tends to steer clear from most bannies, and they do the same. But her approach to problem solving is a double-edged sword, as some more justice-oriented bannies may peg her for a villain. The eventual confrontation is bound to lead to more than a few fireworks, but who will emerge victorious? Stay tuned.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "1000 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Jinx",
+      "Nothing",
+      "Jinx hair",
+      "Shark v2"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/265.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/265.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/265s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/265.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/265.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/265.html",
+   "imageSize": 133791,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/265s.png",
+         "hash": "082a9b3262f1f4068c1b2722595408db0d28b2557de68ef037bac2b48cad880f",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/265.png",
+         "hash": "587d4699696ce073034ab02f0c7d6752c3a3b3c83074335f7e7c4c8ec198c742",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

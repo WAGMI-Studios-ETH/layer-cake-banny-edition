@@ -1,0 +1,172 @@
+{
+   "identifier": 80,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Johnny Rotten No. 080",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 1
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "6,000-6,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 1000
+      },
+      {
+         "trait_type": "Background",
+         "value": "1000 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Punk"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Headphones"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY080",
+   "shouldPreferSymbol": false,
+   "description": "Go fuck yourself and use coupon code PUNK to get 20% off a dildo.\n\nHave you ever wanted to be smashing around in a mosh pit while a rebellious banana pissed all over you and screamed in your face about anarchy? If so, Punk banny is for you! Whether you like a good show or just some good old fashioned non-conformism, you can purchase a Punk banny to express your distaste for capitalistic commoditization. You can further express your complete abhorrence for such consumerism by buying Punk banny’s complete set of accessories, which you can snatch up right now at a discounted bundle rate! (Terms of bundle rate or actual bundle rate subject to change, or not even exist at all!) Punk banny wants you to support him, but he would never tell you that. He’d tell you to go fuck yourself and embrace anarchy, and he’d show the all the right gift shops to help you express your newfound rebelliousness. Punk banny is on your side. Now open wide, the stream of piss is coming in hot!\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "1000 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Punk",
+      "Nothing",
+      "Headphones"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/080.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/080.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/080s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/080.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/080.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/80.html",
+   "imageSize": 148590,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/080s.png",
+         "hash": "63f72b538f7ab3e315080be4165c8ddd5acb3ea2676eadaa6b2f3828952743b5",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/080.png",
+         "hash": "22645ac2c65b9f9649f18978ba8603ac93534e2b7c7cdfa3181c4d0ec1c17806",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

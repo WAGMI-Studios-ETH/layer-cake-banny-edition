@@ -1,0 +1,173 @@
+{
+   "identifier": 141,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Banhovah No. 141",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 2
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "28,000-29,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 2000
+      },
+      {
+         "trait_type": "Background",
+         "value": "10 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "No choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "No shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Jesus"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Jesus"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Holy wine"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY141",
+   "shouldPreferSymbol": false,
+   "description": "For what shall it profit the banana, who gains the whole world, but in the process loses his sweetness?\n\nA banny that can turn strawberry smoothies into daiquiris: Banhova has arrived. They say he can walk on whipped cream. They say he hasn’t grown, just risen. They say his father was a great big tree, the likes of which made the Tower of Babel look small. They say he will flip all the fruit stands in the city. They say a lot about Banhova, or as his buddies call him, Yahweh. He likes to hang with OG Banny and the two of them get up to all sorts of mischief. He had a rough time once where he got peeled in front of everybody, but he learned to forgive. And he wants you to forgive, too.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "10 days",
+      "Yellow",
+      "Original",
+      "No choker",
+      "No shoes",
+      "Jesus",
+      "Nothing",
+      "Holy wine"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/141.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/141.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/141s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/141.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/141.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/141.html",
+   "imageSize": 115881,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/141s.png",
+         "hash": "4cafe7981950c1a2aeadfc930abf144f51c56316314b9f8bce9244c2ebd441a4",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/141.png",
+         "hash": "4efbd7ec09aa3e5250459eefaa6a722f8d6356cbc155abe3acbc47808204c34d",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

@@ -1,0 +1,174 @@
+{
+   "identifier": 126,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Athos No. 126",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 3
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "22,000-23,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 2000
+      },
+      {
+         "trait_type": "Background",
+         "value": "10 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "No choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Musketeer"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Feather hat"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Musketeer rapier"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY126",
+   "shouldPreferSymbol": false,
+   "description": "Let justice be served, no matter the cost.\n\nThis banny is principled and deft with a gun and sword. While not the most chirpy musketeer banny out there, he’s among the most lethal. Ever-troubled and a banana that turns to the drink more than most, he will stick up for what’s right, even if it means killing a part of himself in the process. He still grieves from the death of his wife, Ms. Musketeer, who he had to kill when he discovered that she was on the run. Justice trumps personal feelings, but he still loves her. He knows the deep truth to his existence: the banana that lives be the gun dies by it also.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "10 days",
+      "Yellow",
+      "Original",
+      "No choker",
+      "Black shoes",
+      "Musketeer",
+      "Nothing",
+      "Feather hat",
+      "Musketeer rapier"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/126.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/126.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/126s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/126.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/126.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/126.html",
+   "imageSize": 119500,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/126s.png",
+         "hash": "84acfd5dc69d9b490a61e1de2d9ed537ad550b40133e79a135f7525f149650f9",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/126.png",
+         "hash": "bfa5d968ed444a62254b9f553fe1552858f62a966fd64537802aaffcc263e471",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

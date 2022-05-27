@@ -1,0 +1,172 @@
+{
+   "identifier": 62,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Baobhan Sith No. 062",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 4
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "3,000-3,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 1000
+      },
+      {
+         "trait_type": "Background",
+         "value": "50 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Vampire girl"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "No hat"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY062",
+   "shouldPreferSymbol": false,
+   "description": "Why don’t you stay for just one more drink?\n\nA she-devil if there ever was one, Ms. Bhaoban Sith will charm you and disarm you in a heartbeat. She enjoys few things more than a nice scotch and good, supple company. You may see here from afar, glimmering in a nice sequin dress, or hear her angelic voice from beyond some nice idyllic hillside, and as if under a magnetic trance be attracted to this beautiful buxom vamp. The old adage rings doubly true for Ms. B: if it looks too good to be true, it is.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "50 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Vampire girl",
+      "Nothing",
+      "No hat"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/062.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/062.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/062s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/062.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/062.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/62.html",
+   "imageSize": 121979,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/062s.png",
+         "hash": "ab4735ee1d68079d0a64da4db6a716e9b765470adcfda552c07755a938001930",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeigusmafe2qrl3ckdaj6djpyxzfl5e73moddknco2qalfwm6wbrena/062.png",
+         "hash": "dec23456040de6f18b3925b2545fad485c59dac32d79bf841e79756909c87541",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

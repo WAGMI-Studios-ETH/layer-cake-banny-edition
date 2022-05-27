@@ -1,0 +1,172 @@
+{
+   "identifier": 235,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Enlil No. 235",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 5
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "2,000,000-2,999,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 1000000
+      },
+      {
+         "trait_type": "Background",
+         "value": "1000 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Green"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Alien"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "No outfit"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "No hat"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY235",
+   "shouldPreferSymbol": false,
+   "description": "Akkadians? Please. That’s so last-last-millennium!\n\nThis divine banny has a lot of stories about him, but all impossible to verify. What’s known is that he is amongst the oldest bannies, and the most wise. He’s also prone to a quick temper and can definitely make it rain when he needs to let off some steam. Some have said he may be an otherwordly banana, who came to the Bannyverse as a guest, or intruder, depending on which side you’re on. But all conjecture aside, this Banny is quite powerful. Some say that OG Banny has some info on him.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "1000 days",
+      "Green",
+      "Alien",
+      "Black shoes",
+      "No outfit",
+      "Nothing",
+      "No hat"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeian5czdsax53iqwsqqawvn37g5y47ccmshnfl3bsuqa3n535xqj3q/235.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeian5czdsax53iqwsqqawvn37g5y47ccmshnfl3bsuqa3n535xqj3q/235.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeian5czdsax53iqwsqqawvn37g5y47ccmshnfl3bsuqa3n535xqj3q/235s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeian5czdsax53iqwsqqawvn37g5y47ccmshnfl3bsuqa3n535xqj3q/235.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeian5czdsax53iqwsqqawvn37g5y47ccmshnfl3bsuqa3n535xqj3q/235.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeian5czdsax53iqwsqqawvn37g5y47ccmshnfl3bsuqa3n535xqj3q/235.html",
+   "imageSize": 147349,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeian5czdsax53iqwsqqawvn37g5y47ccmshnfl3bsuqa3n535xqj3q/235s.png",
+         "hash": "00efe7ca21088d6803ad2af6e176dd398aff73b038b683ccf0d2f1072fd5d200",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeian5czdsax53iqwsqqawvn37g5y47ccmshnfl3bsuqa3n535xqj3q/235.png",
+         "hash": "137295f7679f0d374de0dd099649d385c1a3668b37d45ce95af2f6ee5548b9fd",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

@@ -1,0 +1,173 @@
+{
+   "identifier": 23,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Miyamoto Musashi No. 023",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 5
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "900,000-999,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 100000
+      },
+      {
+         "trait_type": "Background",
+         "value": "100 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Samurai"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Samurai ribbon"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Samurai katana"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY023",
+   "shouldPreferSymbol": false,
+   "description": "Think lightly of yourself and deeply of the world.\n\nNo banny can wield a sword like Musashi. His form and technique is pristine and the stuff of legends. Musashi is interested in keeping the peace and punishing social transgressions. He’s excellent at shaming others, which some say cuts deeper than any katana ever could. He’s a bit lonely in the Bannyverse, but he heard that there’s another sword fighter floating around and he’s excited to duel them. After all, he’s never lost a duel. They say he can pluck flies out of the air with nothing more than chop sticks. As far as bar tricks go, that’s gotta take the cake.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "100 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Samurai",
+      "Nothing",
+      "Samurai ribbon",
+      "Samurai katana"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/023.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/023.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/023s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/023.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/023.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/23.html",
+   "imageSize": 116089,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/023s.png",
+         "hash": "34bcceccad8d7b6ea9f422d618a96b6f4474503d20aa868c91a39797cc0192ae",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/023.png",
+         "hash": "2e9a1a97c2d7145efd73cccccf0b24c72d33e0b32e6c394d5dad1abeefafbbb0",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

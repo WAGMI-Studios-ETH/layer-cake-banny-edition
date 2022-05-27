@@ -1,0 +1,171 @@
+{
+   "identifier": 279,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Banny Potter No. 279",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 4
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "20,000,000-39,999,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 20000000
+      },
+      {
+         "trait_type": "Background",
+         "value": "500 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Harry potter"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Harry potter"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY279",
+   "shouldPreferSymbol": false,
+   "description": "It does not do well to dwell on dreams, and forget to live.\n\nThis little meek banana is growing into his own peel. Day to day, he learns more amazing magic tricks and spells to cast. And just in time, too, for a nemesis is on the horizon, the likes of which Banny Potter has never seen before. He’s certain that he can’t overcome any major foe, but he’s about to be thrust before the greatest foe that he’s ever seen. Will he dig deep and find the strength and confidence to overcome this monumental test, or will he shrivel up, like testicles on a cold winter morning, when he rubber hits the road?\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "500 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Harry potter",
+      "Nothing"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/279.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/279.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/279s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/279.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/279.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/279.html",
+   "imageSize": 137088,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/279s.png",
+         "hash": "5e4247b3830058a2cf3766ca62e340a8af841a502e8e73d53a911236ec2d5d02",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeibyvqzpmgvoqmvdozmfxkfdx3p7fvimtqe2qtvrikqktt5zrzsmee/279.png",
+         "hash": "b0cab748b42a66f6e48204749089bd5d23dfc23bd04d614a2f0576642a5defd7",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

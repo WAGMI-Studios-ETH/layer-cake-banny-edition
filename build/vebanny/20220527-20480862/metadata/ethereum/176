@@ -1,0 +1,171 @@
+{
+   "identifier": 176,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Batbanny No. 176",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 4
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "90,000-99,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 10000
+      },
+      {
+         "trait_type": "Background",
+         "value": "10 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Batman"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Batman"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY176",
+   "shouldPreferSymbol": false,
+   "description": "Protector. Tormentor.\n\nDoes the end justify the means? This banny would tell you so. He took some serious childhood drama and turned it into the fuel he needed to clean up a corrupt and crime-ridden city. He’s entered the Bannyverse, and he’s ready to bring some heat on all the bad bananas out there. Does each killing bring him closer to peace? Hell no, but that doesn’t mean he’ll stop trying. Batbanny puts his pain and trauma onto you, and he lets it kill you. He wants you to suffer, just as he did. But ask him who’s the bad guy, and he’ll always say it’s you.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "10 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Batman",
+      "Nothing"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/176.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/176.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/176s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/176.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/176.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/176.html",
+   "imageSize": 122496,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/176s.png",
+         "hash": "10cd11d845b243997df9e2e8fe7872e4b49d8536ed26004e8c43bd4283fdeadd",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/176.png",
+         "hash": "96b22939e631323661b7be6c41a120770dd4d9ef2c7c7231afef71a0bacf9f6c",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

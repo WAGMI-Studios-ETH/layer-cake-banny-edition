@@ -1,0 +1,172 @@
+{
+   "identifier": 149,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Pinkie Pie No. 149",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 0
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 0
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "30,000-39,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 10000
+      },
+      {
+         "trait_type": "Background",
+         "value": "500 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Pink"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "No outfit"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "No hat"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY149",
+   "shouldPreferSymbol": false,
+   "description": "Awwww, I think she’s sleeping! Let’s pet her!\n\nThis bubbly banny is sweeter than a pound of aspartame. It’s eyebleach for all occasions. It shits rainbows and pukes butterflies. This banny works hard. This banny has beautiful round eyes that plead helplessly. This banny could go on a killing spree and people would just sit back and go, “Awwwwww! So cute!!!!” This banny gets access to important events because of how cute it looks, and this banny knows its power. This banny will fuck you up.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "500 days",
+      "Pink",
+      "Original",
+      "Black shoes",
+      "No outfit",
+      "Nothing",
+      "No hat"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/149.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/149.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/149s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/149.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/149.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/149.html",
+   "imageSize": 140888,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/149s.png",
+         "hash": "efc44d5b7b385173aed41f3e64ee9577e176961bb8f23e401178af8f4d8eaf1c",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/149.png",
+         "hash": "9a3e48c4faeb6e5e6bd60bfc1920ee0c49b755322645f61553005c221800eace",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

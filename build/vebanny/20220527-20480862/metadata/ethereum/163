@@ -1,0 +1,173 @@
+{
+   "identifier": 163,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Naruto No. 163",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 0
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "60,000-69,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 10000
+      },
+      {
+         "trait_type": "Background",
+         "value": "100 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "No choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Naruto"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Narutohead"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY163",
+   "shouldPreferSymbol": false,
+   "description": "I’ve got something growing inside me... For Sakura.\n\nThey say character spawns from tragedy, and Naruto will tell you that this must be so. Born out of the marriage of chaos and the innocence of childhood, this banana grew up in darkness, precluded from the violence trapped inside him. But like all great heroes, he turned those overripe bananas into a banana smoothie. He learned to harness his power and to bend its will toward the good and in need. And he developed a strong crush for Sakura, a Banny he seeks out at all costs.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "100 days",
+      "Yellow",
+      "Original",
+      "No choker",
+      "Black shoes",
+      "Naruto",
+      "Nothing",
+      "Narutohead"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/163.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/163.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/163s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/163.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/163.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/163.html",
+   "imageSize": 143523,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/163s.png",
+         "hash": "5d395731acd1e19a5a36f9220e748ba1f125274d18ca82aa7802a7be878d5fa3",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/163.png",
+         "hash": "3166a1b90456f9642c570537595d0acae42d64e4452a23ae824c342b35879023",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

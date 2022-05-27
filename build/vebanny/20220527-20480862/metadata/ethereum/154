@@ -1,0 +1,172 @@
+{
+   "identifier": 154,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Edward Teach No. 154",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 1
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 4
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "40,000-49,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 10000
+      },
+      {
+         "trait_type": "Background",
+         "value": "500 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Pirate"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Pirate"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Pirate sword"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY154",
+   "shouldPreferSymbol": false,
+   "description": "Let your image do the fighting for you.\n\nIf looks could kill, then laying eyes on Edward would mean certain death. He fits all the stereotypes of a vicious, opportunistic pirate, and he’s clad in the accoutrements to boot. But looks can be deceiving! This banny is amongst the most suave out there— a careful and intentional deal maker, shrewd beyond his years. He wields his image more deftly than any weapon on earth. Which begs the question— how much of that image can he truly back up? He would tell you simply: come find out.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "500 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Pirate",
+      "Nothing",
+      "Pirate sword"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/154.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/154.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/154s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/154.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/154.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/154.html",
+   "imageSize": 145417,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/154s.png",
+         "hash": "8ee9ff9d151ededbcce2493739ad83dbd7078a31185d04871ea2c926ecc84424",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/154.png",
+         "hash": "b51472ff76f8efe7999360a925ae92ef6f5f05876e7180dfefb67aaaf36bf3db",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

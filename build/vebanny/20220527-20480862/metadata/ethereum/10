@@ -1,0 +1,173 @@
+{
+   "identifier": 10,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Farceur No. 010",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 1
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 1
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 0
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "100-199"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 100
+      },
+      {
+         "trait_type": "Background",
+         "value": "1000 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "No outfit"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Clown"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Lollipop"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY010",
+   "shouldPreferSymbol": false,
+   "description": "You do not yet understand the stage. How could you possibly understand life?\n\nA ostensibly jovial banana if ever there was one, Farceur is stuffed from end to end with silly laughs and slapstick goodness. He’s a proverbial wild-card that you can always count on to get a laugh or shock his eager audience. But something about his expression as of late seems a bit troubling— a certain ennui in the eyes that suggests he, a banana who gives all his joy for others to be entertained, may have nobody to bring joy to him. A sad clown he is not— at least, not yet. They say here and there and everywhere, across all the lands, that Farceur can make anyone laugh at will. Indeed, one day a banana sat forlorn in a confessional and, being at his wits end, confided that he was in desperate straits, and felt like there was not joy in the world. “I’m sorry you feel this way,” the father told him, “I hear that Farceur is in town, and he can make any banana laugh. Please go see his show. He will help you.” “But father,” the banana cried in anguish, “I am Farceur!”\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "1000 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "No outfit",
+      "Nothing",
+      "Clown",
+      "Lollipop"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/010.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/010.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/010s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/010.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/010.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/10.html",
+   "imageSize": 156536,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/010s.png",
+         "hash": "d0b417495fec29625965982cfaedb88985791af6add22f3b4363099038d5fa28",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/010.png",
+         "hash": "38d65e0d57eea9113390f24c4dd6a98bf1c2e30b127b2abf29724f5e34a35f34",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

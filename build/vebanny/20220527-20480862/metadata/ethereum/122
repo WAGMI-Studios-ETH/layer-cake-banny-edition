@@ -1,0 +1,173 @@
+{
+   "identifier": 122,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Baker No. 122",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 1
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 2
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "20,000-21,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 2000
+      },
+      {
+         "trait_type": "Background",
+         "value": "50 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "No choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Astronaut"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Astronaut helmet"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY122",
+   "shouldPreferSymbol": false,
+   "description": "EEK EEK OOK OOK!\n\nMany astronaut bannies came before her, but this is the first one to survive. Oh yes, it was quite a harrowing experience for bananas in space. Nobody seemed to care much if they made it or now— in fact, early on they weren’t even expected to survive. But Astronaut Banny Baker made it back. She was studied carefully, both before, during, and after her trip into the cosmos. She had a good spirit about the whole thing and was never at risk of succumbing. But what nobody could possibly expect is the amazing career she has had after her spaceflight, routinely entertaining children and adults. One of the few bannies to go to space and tell the tale.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "50 days",
+      "Yellow",
+      "Original",
+      "No choker",
+      "Black shoes",
+      "Astronaut",
+      "Nothing",
+      "Astronaut helmet"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/122.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/122.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/122s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/122.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/122.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/122.html",
+   "imageSize": 121881,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/122s.png",
+         "hash": "4b6ddd47642e18b6d2936306169b32aa829c8b0c8ed78d713f3f6740629bdff0",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeietdy3hrxw363vt3tsjepemtthppadrpwrpci4j52mujnqiigwcwq/122.png",
+         "hash": "c0fcb65aa62decdfe8d1e908a19e1823c521193a0ed0f17ee3d0706fbbb9d3bf",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

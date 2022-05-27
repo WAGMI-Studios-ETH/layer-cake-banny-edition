@@ -1,0 +1,172 @@
+{
+   "identifier": 3,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Nammu No. 003",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 0
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 0
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 0
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 5
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "1-99"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 99
+      },
+      {
+         "trait_type": "Background",
+         "value": "100 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "No outfit"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "No hat"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY003",
+   "shouldPreferSymbol": false,
+   "description": "In the beginning, there was OG Banny.\n\nThe Banny that started it all. The one. The only. The magnificent, majestic and magnanimous. The OG Banny. All Bannies take some part from illustrious existence. Many Bannies tell tales of a vague, distant memory— some ascribe it to pure chance, others to the supernatural. Then yet other will tell you that OG Banny is bound to come into the world, in full, fleshy banana form. Others say he has come back many times, sometimes as an apple, other times as an orange. And yet others say he is yet to come, and when he comes, existence as we know it will change. And then there’s those who say that he’s far more than any of that: he’s a historical whisper, lost for generations and whose echo reverberates around the lore he inspired. An OG, if ever there was one.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "100 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "No outfit",
+      "Nothing",
+      "No hat"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/003.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/003.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/003s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/003.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/003.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/3.html",
+   "imageSize": 129222,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/003s.png",
+         "hash": "6fa9790f897d28eef97574f9fc05462e94ec372485ce6fae06a3d7e6f4de79f2",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeiajy567mgtktueygiarysfmialm5mutkkub6lrjaokuyfb2yl6s6m/003.png",
+         "hash": "64656358a6d71a82bb7d8d4e3eb47703a1f7700088650f31a74f1173691cebb7",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

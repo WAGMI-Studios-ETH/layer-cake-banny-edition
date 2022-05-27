@@ -1,0 +1,171 @@
+{
+   "identifier": 247,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Pamela Anderson No. 247",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 3
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "5,000,000-5,999,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 1000000
+      },
+      {
+         "trait_type": "Background",
+         "value": "50 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Bunny eyes"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Playboy"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Playboy"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY247",
+   "shouldPreferSymbol": false,
+   "description": "My vibrant peel? It’s all natural, baby.\n\nThis drop-dead gorgeous banny will have your banana sticking up straight. Playboy loves a good time and isn’t afraid to show it. Equally comfortable with a hammer and tool belt or out in the ocean currents, Playboy is a banny of many skills and talents. She’s also quite formidable, and can protect and kick ass as necessary. A seductress that can throw back a tequila shot over a conversation on animal rights, she’s everybody’s type. Which other banny will fall head over heels for her, and will that story have a happy ending? Stay tuned.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "50 days",
+      "Yellow",
+      "Bunny eyes",
+      "Black shoes",
+      "Playboy",
+      "Nothing"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/247.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/247.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/247s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/247.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/247.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/247.html",
+   "imageSize": 118963,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/247s.png",
+         "hash": "2d512a3470ac418958c18377576e877142201a42b62118547ba125c379d1acd0",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/247.png",
+         "hash": "117543a6004c87f1ecde52c81b7ef2d87e672bba4a759fa628f360cf63adb5d1",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

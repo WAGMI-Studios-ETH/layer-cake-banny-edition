@@ -1,0 +1,172 @@
+{
+   "identifier": 96,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Mick Mulligan No. 096",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 1
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 3
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "10,000-11,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 2000
+      },
+      {
+         "trait_type": "Background",
+         "value": "10 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Rave"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Rave glasses"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY096",
+   "shouldPreferSymbol": false,
+   "description": "Embouchure is everything.\n\nMusical and light in demeanor, Mick is a banana that knows how to keep it classy and fun at a party. You’ll find few bananas that can blow a horn like Mick. He likes long walks at the horse races and trips to the grocery store. He may not be the most famous banana, but he’s an important part of the crew, and when shit hits the fan and you need a moral-boosting trumpet to blare across the battlefield, you better believe it’ll have Mick’s wet lips all around it.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "10 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Rave",
+      "Nothing",
+      "Rave glasses"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/096.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/096.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/096s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/096.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/096.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/96.html",
+   "imageSize": 121831,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/096s.png",
+         "hash": "1e5345eccc1aeb75c2c2b3b9755bf7899ee6c543e18690acfc6c426ea427a696",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/096.png",
+         "hash": "b1475ef8d6e9a8d6a0ca67da72a508174932af952eea3fcb2a5b27f4a58819cc",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

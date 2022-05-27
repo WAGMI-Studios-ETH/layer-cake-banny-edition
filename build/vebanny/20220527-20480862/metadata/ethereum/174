@@ -1,0 +1,172 @@
+{
+   "identifier": 174,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Agent J No. 174",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 3
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "80,000-89,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 10000
+      },
+      {
+         "trait_type": "Background",
+         "value": "500 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Smoking"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Smoking glasses"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY174",
+   "shouldPreferSymbol": false,
+   "description": "Keep my partner’s name out your motherfuckin’ mouth!\n\nFinally, a fresh-faced banny who is ready to get some real work done! Agent J may not be the most experienced secret agent banana on the roster, but he’s gung-ho and ready to take down some bad guys and investigate some extraterrestrial mischief! He tries to be a good partner, even in the face of extreme sarcasm and resting bitch face. But he may occasionally lose his temper, and in the worst case will slap a fool.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "500 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Smoking",
+      "Nothing",
+      "Smoking glasses"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/174.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/174.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/174s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/174.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/174.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/174.html",
+   "imageSize": 150889,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/174s.png",
+         "hash": "5cdd80a7cfb4733592c10a42719cff6ff84f6d17d230b292cd5dac5a9d348514",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeighapaewewtcfh4wxltmakhxvzxtudvtjep4mjk3zwtd724uvhyji/174.png",
+         "hash": "229d8f0f630a4d39b8b04bec448973de2a153ca0b094231a2d2fe458ff267708",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

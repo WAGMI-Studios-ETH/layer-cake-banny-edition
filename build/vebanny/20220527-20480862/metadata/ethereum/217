@@ -1,0 +1,172 @@
+{
+   "identifier": 217,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Louise Burns No. 217",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 5
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "800,000-899,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 100000
+      },
+      {
+         "trait_type": "Background",
+         "value": "50 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Shiningbody"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Shining"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY217",
+   "shouldPreferSymbol": false,
+   "description": "Come play with me.\n\nLouise is cute as a button. A little girl banny about 8 years old, she loves to people watch. You can find her in dark long hallways, particularly after a long night of strange occurrences. Her only friend seems to be her twin sister, and she loves her bright blue dress, both clean and blood stained. Most of her other friends have been a bit odd, so she’s always happy to meet new people. At the end of the day she’s not unlike most kids— she just wants to play. Won’t you come play with her?\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "50 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Shiningbody",
+      "Nothing",
+      "Shining"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeie6d7g7vc7447zvw6k6v2rphcashu7l7zqbxcjiv3u6vubtovwvpm/217.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeie6d7g7vc7447zvw6k6v2rphcashu7l7zqbxcjiv3u6vubtovwvpm/217.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeie6d7g7vc7447zvw6k6v2rphcashu7l7zqbxcjiv3u6vubtovwvpm/217s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeie6d7g7vc7447zvw6k6v2rphcashu7l7zqbxcjiv3u6vubtovwvpm/217.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeie6d7g7vc7447zvw6k6v2rphcashu7l7zqbxcjiv3u6vubtovwvpm/217.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeie6d7g7vc7447zvw6k6v2rphcashu7l7zqbxcjiv3u6vubtovwvpm/217.html",
+   "imageSize": 121363,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeie6d7g7vc7447zvw6k6v2rphcashu7l7zqbxcjiv3u6vubtovwvpm/217s.png",
+         "hash": "3073438e0a7b5fe5630c923aae9906ccf4736235ed1b15f1788986be832f1eec",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeie6d7g7vc7447zvw6k6v2rphcashu7l7zqbxcjiv3u6vubtovwvpm/217.png",
+         "hash": "62676c30c594df87df72eb9ee370f74fbcd94e2bab22819f2cc095893a92aaa4",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

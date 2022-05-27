@@ -1,0 +1,172 @@
+{
+   "identifier": 157,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Legolas No. 157",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 4
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "50,000-59,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 10000
+      },
+      {
+         "trait_type": "Background",
+         "value": "50 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Christmas lights"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Christmas boots"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Elf"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Elf"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Christmas lights"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY157",
+   "shouldPreferSymbol": false,
+   "description": "Cross me and thy heart shall rest.\n\nThis little elven banny is a hard worker and overall just a really good banana. He’s on the sensitive side— likes most elven bananas—but don’t let that fool you, deep down he’s got a heart of gold. He’s got good dexterity and is a killer shot with a longbow, and he’s big enough to put his disagreements with dwarves aside if there is a bigger battle to fight. He’s lived a long life, but he isn’t old by any stretch. He’s happy to fight for the forces of good in the Bannyverse, and he looks forward to polishing off his old bow and putting some nasty bannies in the ground, where they belong.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "50 days",
+      "Yellow",
+      "Original",
+      "Christmas lights",
+      "Christmas boots",
+      "Elf",
+      "Nothing"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/157.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/157.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/157s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/157.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/157.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/157.html",
+   "imageSize": 129230,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/157s.png",
+         "hash": "2f6b506dbcffc7eaa8740628aeccb2f3ed348e64a4370e8dae67615157dcf427",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeieez6dbyzwpdlu5lewavihskwsbjjrje2l4zzelf7lab4hy4ooski/157.png",
+         "hash": "7ec59325d4cbbe57607e429cc4a64a8b2393a0f519f233c9c0b64195a26f2b99",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

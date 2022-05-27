@@ -1,0 +1,173 @@
+{
+   "identifier": 282,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Prince of Darkness No. 282",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 5
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "40,000,000-59,999,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 20000000
+      },
+      {
+         "trait_type": "Background",
+         "value": "50 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Red"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Satan"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "No hat"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Pitchfork"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY282",
+   "shouldPreferSymbol": false,
+   "description": "Tell me: where do I belong in a sick society?\n\nThis diabolical banny will be the first to tell you that he’s just misunderstood. After all, you’ve only heard one side of the story. Equipped with superhuman strength, telekinesis and telepathy, the Prince of Darkness will be the first to point out that he’s not even using any of them on you right now. After all, how bad can he be? Rumors that he erupted from a vessel where he was once entrapped as sentient sludge? Such silliness! And all those people he allegedly hurt? Crisis bananas, nothing more. Come make some deals with him. At the very least: listen to his time-share presentation.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "50 days",
+      "Red",
+      "Original",
+      "Black shoes",
+      "Satan",
+      "Nothing",
+      "No hat",
+      "Pitchfork"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeidpxq35agpyw7py6aeiprwsns7t7vlunoztptxwmgbbiru2kjvfpe/282.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeidpxq35agpyw7py6aeiprwsns7t7vlunoztptxwmgbbiru2kjvfpe/282.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeidpxq35agpyw7py6aeiprwsns7t7vlunoztptxwmgbbiru2kjvfpe/282s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeidpxq35agpyw7py6aeiprwsns7t7vlunoztptxwmgbbiru2kjvfpe/282.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeidpxq35agpyw7py6aeiprwsns7t7vlunoztptxwmgbbiru2kjvfpe/282.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeidpxq35agpyw7py6aeiprwsns7t7vlunoztptxwmgbbiru2kjvfpe/282.html",
+   "imageSize": 117249,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeidpxq35agpyw7py6aeiprwsns7t7vlunoztptxwmgbbiru2kjvfpe/282s.png",
+         "hash": "4bf9c4752bc8e3f4050bcc111862ee857f5dd324f3ff72bd1e27d35636c82146",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeidpxq35agpyw7py6aeiprwsns7t7vlunoztptxwmgbbiru2kjvfpe/282.png",
+         "hash": "947645235a3e846e9db88b96e05343c09457d13b142db4ebb09e15e26deb8c7b",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

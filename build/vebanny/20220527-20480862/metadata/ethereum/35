@@ -1,0 +1,172 @@
+{
+   "identifier": 35,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Princess Peach Toadstool No. 035",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 1
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 5
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 0
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "600-699"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 100
+      },
+      {
+         "trait_type": "Background",
+         "value": "1000 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Peach face"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "No shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Princess peach"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Peach"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY035",
+   "shouldPreferSymbol": false,
+   "description": "Help meeeee!\n\nOstensibly always in need of rescuing, Peach has a habit of finding herself in situations that can seem a bit overwhelming. But notice— each situation is met with a hero to save her, willing to die for her. One rescue we may chalk up to unexpected trauma. Two rescues? Bad luck, to be sure. But dozens? What in her personality is bringing about these constant kidnappings? Could it be that she’s just so sweet that no kidnapper can stay away? Or is her saccharine bubbly beauty nothing more than a honey pot, the mechanisms of which we have yet to figured out?\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "1000 days",
+      "Yellow",
+      "Peach face",
+      "No shoes",
+      "Princess peach",
+      "Nothing",
+      "Peach"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/035.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/035.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/035s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/035.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/035.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/35.html",
+   "imageSize": 137405,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/035s.png",
+         "hash": "eec6e20c191e0c31377ca25dc155ce970e5a70729e0c8f84ce480594a4783028",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeiehtq5xlsuoq5sp4lhm7tsubtvhb7jnn3q7nxekthidxuoixumc24/035.png",
+         "hash": "45487ea0343d45c80dbaa204e823b09395da6203f5c46292748a06ace1bff83d",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

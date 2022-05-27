@@ -1,0 +1,132 @@
+{
+   "identifier": 242,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "{{Banny Name}} No. 242",
+   "attributes": [
+      {
+         "trait_type": "Background",
+         "value": "50 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Harley quinn"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Harley quinn"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Harley quinn"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Harley"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY242",
+   "shouldPreferSymbol": false,
+   "description": "{{Motto}}\n\n{{History}}\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "50 days",
+      "Yellow",
+      "Harley quinn",
+      "Black shoes",
+      "Nothing",
+      "Harley"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/242.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/242.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/242s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/242.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/242.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/242.html",
+   "imageSize": 117183,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/242s.png",
+         "hash": "7a936e9ab544edc28126cbf440c2c8abe10da86798d78ff54c4b7e4eab253a58",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeicxzr4loxrgkwawliqldo2s2lhjn54cpoltcy5uu53735beyb2tji/242.png",
+         "hash": "c3d813caf2b520f3f27be0334933e0c877c37019d1607764b8706c9e758c22ed",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

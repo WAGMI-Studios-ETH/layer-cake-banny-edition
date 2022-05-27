@@ -1,0 +1,172 @@
+{
+   "identifier": 90,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Smalls No. 090",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 1
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 1
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 3
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "8,000-8,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 1000
+      },
+      {
+         "trait_type": "Background",
+         "value": "1000 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Smalls"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Green cap"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY090",
+   "shouldPreferSymbol": false,
+   "description": "I’m a mirror for your adolescence.\n\nSmalls isn’t a banana that strikes you as remarkable at first glance, but that’s only because it takes him a while to come into his own. He’s a moderately tempered, mellow-headed banana that experienced many rites of passage to get where he is. He may not be the first banana you think of when you need a pinch hitter at the bottom of the ninth, but you can definitely count on him being there and having your back. He’s a good banana, at a time when that old childhood innocent fun-loving life is the exception, not the rule. Wholesome, whether in a bowl of cereal or on top of a 1950’s style banana split, Smalls brings you good times and comfort.\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "1000 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Smalls",
+      "Nothing",
+      "Green cap"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/090.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/090.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/090s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/090.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/090.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/90.html",
+   "imageSize": 151551,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/090s.png",
+         "hash": "ec48e129454f6e4d308c4393708374618faaac74c2b0ed084e0a9825bf514e56",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/090.png",
+         "hash": "b707a608fabc51b149b7be2fd7bdeffef6f70ea17fedd4fab2b5fddca1a3b3d6",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}

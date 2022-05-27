@@ -1,0 +1,171 @@
+{
+   "identifier": 82,
+   "edition": 0,
+   "isBooleanAmount": true,
+   "name": "Sakura Haruno No. 082",
+   "attributes": [
+      {
+         "display_type": "number",
+         "trait_type": "Arcana",
+         "value": 0
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Communications",
+         "value": 2
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Grind",
+         "value": 3
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Perception",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Strength",
+         "value": 4
+      },
+      {
+         "display_type": "number",
+         "trait_type": "Shadowiness",
+         "value": 3
+      },
+      {
+         "trait_type": "$JBX Range",
+         "value": "7,000-7,999"
+      },
+      {
+         "display_type": "boost_number",
+         "trait_type": "Range width",
+         "value": 1000
+      },
+      {
+         "trait_type": "Background",
+         "value": "50 days"
+      },
+      {
+         "trait_type": "Body",
+         "value": "Yellow"
+      },
+      {
+         "trait_type": "Face",
+         "value": "Original"
+      },
+      {
+         "trait_type": "Choker",
+         "value": "Choker"
+      },
+      {
+         "trait_type": "Lower Accessory",
+         "value": "Black shoes"
+      },
+      {
+         "trait_type": "Outfit",
+         "value": "Sakura"
+      },
+      {
+         "trait_type": "Oral Fixation",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Headgear",
+         "value": "Sakura"
+      },
+      {
+         "trait_type": "Left Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Right Hand",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Both Hands",
+         "value": "Nothing"
+      },
+      {
+         "trait_type": "Birthday",
+         "display_type": "date",
+         "value": -22100400
+      }
+   ],
+   "symbol": "VEBANNY082",
+   "shouldPreferSymbol": false,
+   "description": "Everyone has their soulmate, but where is mine?\n\nNot everything is at it seems with this saccharine banny. Sakura, while charming and wily in her own rite, has some more layers to her than one might expect at first glance. Often overlooked, she has come into her own as a banny that can dictate the pace, and do so with remarkable ease and sophistication. Her pink hair and sweet demeanor belie a complexity not often seen nor appreciated, but when the going gets tough you always know she’ll have your back. Of late she’s been a bit forlorn, like most bannies who have lost their love interest— but will she find them again soon?\n\nJuicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n",
+   "minter": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+   "decimals": 0,
+   "creators": [
+      "@juiceboxETH"
+   ],
+   "publishers": [
+      "@juiceboxETH"
+   ],
+   "genre": [
+      "veNFT",
+      "Juicebox",
+      "Banny",
+      "banana",
+      "character",
+      "profile",
+      "DAO"
+   ],
+   "date": "2022-05-27T18:05:31.699Z",
+   "tags": [
+      "Background",
+      "Body",
+      "Face",
+      "Choker",
+      "Lower Accessory",
+      "Outfit",
+      "Oral Fixation",
+      "Headgear",
+      "Left Hand",
+      "Right Hand",
+      "Both Hands",
+      "50 days",
+      "Yellow",
+      "Original",
+      "Black shoes",
+      "Sakura",
+      "Nothing"
+   ],
+   "language": "en",
+   "mimeType": "image/png",
+   "artifactUri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/082.png",
+   "displayUri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/082.png",
+   "thumbnailUri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/082s.png",
+   "externalUri": "https://juicebox.money",
+   "uri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/082.png",
+   "image": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/082.png",
+   "animation_url": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/82.html",
+   "imageSize": 124385,
+   "formats": [
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/082s.png",
+         "hash": "fe74659c6906ee682d619fdb883019f86edb1128a5830d5679d14eac19d97f9a",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "350x350",
+            "unit": "px"
+         }
+      },
+      {
+         "uri": "https://gateway.pinata.cloud/ipfs/bafybeielw7askqkj2pa6hbh4vldzazvjvblogylvdez7o7pk3ht35wu3te/082.png",
+         "hash": "2c312a5399071c989d44c257093d78571975aad1fa0bb93ca00e4fedf279c87c",
+         "mimeType": "image/png",
+         "dimensions": {
+            "value": "1000x1000",
+            "unit": "px"
+         }
+      }
+   ],
+   "royalty_info": {
+      "artist_address": "0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e",
+      "artist_percentage": 5
+   },
+   "rights": "Juicebox Rights Reserved."
+}
