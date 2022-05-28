@@ -1,9 +1,9 @@
 import { MeowStatName } from './meow-stats';
-import { TestStatName } from './test-stats';
 
 const boost_max: number = 100;
 const half: number = 0.5;
 
+export type TestStatName = 'Strength' | 'Dexterity' | 'Intelligence' | 'Constitution' | 'Luck';
 export type DefaultStatName = 'Keyboard Skillz' | 'Fruit-Flavor' | 'Banana Strength';
 
 export type Stat = {

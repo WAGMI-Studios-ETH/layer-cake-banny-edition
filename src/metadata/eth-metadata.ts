@@ -5,8 +5,6 @@ import { strip_rarity } from '../csv';
 import { random_birthday, fourtwenty_birthday, Stat } from './stats';
 
 import { meow_stats } from './meow-stats';
-import { banny_stats } from './banny-stats';
-import { test_stats } from './test-stats';
 
 import { change_to_sentence_case, replace_underscores, strip_extension, trait_boost } from './metadata';
 import { getMetadataRow, replaceTemplateText } from '../utils/stringVariables';
@@ -25,18 +23,13 @@ export async function generate_ethereum_metadata(asset: Asset) {
   const asset_boosts: { stat_name: string; maxxed: boolean }[] = [];
   const tags: string[] = [];
 
-  let stats: Stat[];
+  let stats: Stat[] = [];
   switch (the_project.config.name) {
     case 'glo-gang': {
       throw new Error(`glo-gang not configured for ethereum metadata`);
     }
     case 'meowsdao': {
       stats = meow_stats;
-      break;
-    }
-    default: {
-      logger.warn('generate_ethereum_metadata default should fetch metadata.csv from layer-assets unimplemented');
-      stats = default_stats;
       break;
     }
   }
@@ -83,17 +76,11 @@ export async function generate_ethereum_metadata(asset: Asset) {
     base_stat_attributes.push({ trait_type: stat_name, value: val });
   }
 
-  const level = Math.floor(stats_sum / stats.length / 2);
-  const level_attribute = { trait_type: 'Level', value: level };
-
   const birthday_ms = fourtwenty_birthday();
   const birthday_attribute = { trait_type: 'Birthday', display_type: 'date', value: birthday_ms };
 
-  const History = asset.attribs.find(attr => attr.trait_type === 'History');
-  const Motto = asset.attribs.find(attr => attr.trait_type === 'Motto');
-
   const all_attributes = [
-    ...asset.attribs.filter(attr => [History, Motto].indexOf(attr) === -1),
+    ...asset.attribs,
     ...traits,
     birthday_attribute,
   ];

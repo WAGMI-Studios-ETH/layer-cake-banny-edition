@@ -183,7 +183,7 @@ async function get_all_assets(
       await compileTemplate(
         all_assets.map((asset) => (getAnimationTemplateVars(animationType, asset))),
         animationSrc,
-        `${the_project.output_folder}/animation_urls`,
+        `${the_project.output_folder}/metadata/animation_urls`,
       );
       console.log('#########################################################');
     }

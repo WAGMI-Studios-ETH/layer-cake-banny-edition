@@ -124,8 +124,8 @@ const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
   name: layered_assets_folder,
   stunt_populations_to: 10,
-  upload_images_to_ipfs: false,
-  upload_metadata_to_ipfs: false,
+  upload_images_to_ipfs: true,
+  upload_metadata_to_ipfs: true,
   shuffle_assets: false,
   resume_folder: '',
   re_generate_collages: false,
