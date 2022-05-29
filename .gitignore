@@ -66,3 +66,7 @@ lib/*
 .rsync.sh
 
 .pnp.cjs
+
+tsconfig.tsbuildinfo
+build/vebanny/**/*
+!build/vebanny/.gitkeep
