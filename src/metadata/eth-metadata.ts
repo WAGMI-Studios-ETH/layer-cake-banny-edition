@@ -32,7 +32,7 @@ export function generate_ethereum_metadata(asset: Asset) {
     case 'meowsdao': {
       stats = meow_stats;
       break;
-    }    
+    }
     default: {
       logger.warn('generate_ethereum_metadata default should fetch metadata.csv from layer-assets unimplemented');
       stats = default_stats;
@@ -74,7 +74,7 @@ export function generate_ethereum_metadata(asset: Asset) {
   }
 
   const base_stat_attributes = [];
-  
+
   let stats_sum = 0;
   for (const stat_name in my_stats) {
     const val = Math.floor(my_stats[stat_name]);

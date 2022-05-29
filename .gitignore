@@ -70,3 +70,4 @@ lib/*
 tsconfig.tsbuildinfo
 build/vebanny/**/*
 !build/vebanny/.gitkeep
+scripts/opensea.json
