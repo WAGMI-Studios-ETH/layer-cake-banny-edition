@@ -1,19 +1,9 @@
-/* eslint-disable no-shadow */
-/* eslint-disable max-len */
-/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
 import * as fs from 'fs';
-import moment from 'moment';
-import { CollageOutput, ProjectConfig, PopulationConfig } from '../interfaces';
-import { parse_csv, random, SetEx } from '../utils';
-import { population_order } from './vebanny-order';
+import { ProjectConfig, PopulationConfig } from '../interfaces';
+import { SetEx } from '../utils';
+import { population_order } from './veBanny-order';
 import {
   collage300,
-  collage1600,
-  collage4444,
-  collage4000,
-  collage5000,
-  collage10000,
-  collage11110,
   collageOpenSea1200x75,
   collageDiscord600x240,
   collageTwitter1200x675,
