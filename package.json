@@ -21,7 +21,7 @@
   },
   "scripts": {
     "git": "git add . && git-cz",
-    "build:svelte": "yarn --cwd client build",
+    "build:svelte": "yarn --cwd svelte build",
     "upload:svelte": "time ts-node scripts/client_upload_ipfs.ts",
     "start": "time ts-node ./src/index.ts",
     "run:all": "yarn build:svelte && yarn upload:svelte && yarn start",

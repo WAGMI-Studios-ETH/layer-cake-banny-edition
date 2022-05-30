@@ -114,8 +114,8 @@ const description = `Juicebox Governance Token, or veBanny, is the Juicebox DAO 
 const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
   name: layered_assets_folder,
-  upload_images_to_ipfs: false,
-  upload_metadata_to_ipfs: false,
+  upload_images_to_ipfs: true,
+  upload_metadata_to_ipfs: true,
   shuffle_assets: false,
   resume_folder: '',
   re_generate_collages: false,
@@ -148,9 +148,8 @@ export const bannyConfig: ProjectConfig = {
       { trait_type: `Perception`, value: `{{{{batch_index}}.Perception}}` },
       { trait_type: `Strength`, value: `{{{{batch_index}}.Strength}}` },
       { trait_type: `Shadowiness`, value: `{{{{batch_index}}.Shadowiness}}` },
-      { trait_type: `History`, value: `{{{{batch_index}}.History}}` },
     ],
-    animation_url: `{{SVELTE_IPFS}}/#tokenId={{tokenId}}`,
+    animation_url: `{{SVELTE_IPFS}}/index.html#tokenId={{tokenId}}&cid={{images_cid}}`,
     royalties: {
       artist_address: nft_artist_address,
       artist_percentage: nft_artist_royality,
@@ -177,7 +176,7 @@ export const bannyConfig: ProjectConfig = {
       images_per_stack: 50,
     },
   ],
-  populations: (generate_populations(false) as PopulationConfig[]).slice(0, 20),
+  populations: (generate_populations(false) as PopulationConfig[]).slice(0, 2),
   anim_outputs: [],
   collage_outputs: [
     collage300,

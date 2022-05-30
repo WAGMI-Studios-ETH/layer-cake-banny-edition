@@ -1,5 +1,3 @@
-// https://gateway.pinata.cloud/ipfs/bafybeid64vrqul6a2tivtofhq7avz3jjcmgtukevhhewt5dxeigpcir3cy/1
-
 import { ethers, network } from 'hardhat';
 import { BigNumber, Contract, ContractFactory } from 'ethers';
 import { config as dotenvConfig } from 'dotenv';
