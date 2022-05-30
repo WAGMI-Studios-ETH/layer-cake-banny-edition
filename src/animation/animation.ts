@@ -1,11 +1,11 @@
 import fs from 'fs-extra';
 import sharp from 'sharp';
 import ffmpeg from 'fluent-ffmpeg';
-import { Asset } from '../asset';
+import { Asset } from '../other/asset';
 import { AnimOutput, ImageOutput, StackedGifOutput } from '../interfaces';
 import { createCanvas, loadImage } from 'node-canvas';
 import { delay, logger, zero_pad } from '../utils';
-import { the_project } from '../project';
+import { the_project } from '../other/project';
 
 type AnimationName = 'confetti' | 'rain' | 'smoke';
 

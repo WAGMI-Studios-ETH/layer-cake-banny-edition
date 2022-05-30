@@ -1,5 +1,5 @@
-import { logger, number_with_commas, getTime, getElapsed } from './utils';
-import { IHash, Trait } from './interfaces';
+import { logger, number_with_commas, getTime, getElapsed } from '../utils';
+import { IHash, Trait } from '../interfaces';
 
 export function get_possible_permutation_count(priorities: any[], traits_arrays: any[][]): number {
   let p: number = 1;

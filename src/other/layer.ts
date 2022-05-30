@@ -2,12 +2,12 @@ import fs from 'fs';
 import sharp from 'sharp';
 import { Asset } from './asset';
 import { the_project } from './project';
-import { logger, getTime, getElapsed, delay, msToTime, get_file_size } from './utils';
-import { animate_all_frames, combine_icon_gif, combine_video, delete_animation_files } from './animation/animation';
+import { logger, getTime, getElapsed, delay, msToTime, get_file_size } from '../utils';
+import { animate_all_frames, combine_icon_gif, combine_video, delete_animation_files } from '../animation/animation';
 import { create_collages } from './collage';
 import { compute_file_hash } from './ipfs';
-import { Population } from './interfaces';
-import { generate_all_images } from './layering/leader';
+import { Population } from '../interfaces';
+import { generate_all_images } from '../layering/leader';
 
 let start = getTime();
 

@@ -1,5 +1,5 @@
 import { Asset } from './asset';
-import { dynamic, logger } from './utils';
+import { dynamic, logger } from '../utils';
 
 export function calculate_stats(assets: Asset[]) {
   logger.info(`calculating stats...`);

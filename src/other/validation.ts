@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { Asset } from './asset';
-import { logger } from './utils';
+import { logger } from '../utils';
 import { the_project } from './project';
 
 export function validate_all_assets_for_ipfs(assets: Asset[]) {

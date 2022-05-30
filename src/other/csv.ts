@@ -2,11 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import * as csv_writer from 'csv-writer';
 import { Asset } from './asset';
-import { logger, dynamic, zero_pad, Dynamic, IHash } from './utils';
-import { Population } from './interfaces';
+import { logger, dynamic, zero_pad, Dynamic, IHash } from '../utils';
+import { Population } from '../interfaces';
 import { the_project } from './project';
 import { string } from 'yargs';
-import { replace_underscores } from './metadata/metadata';
+import { replace_underscores } from '../metadata/metadata';
 
 const onlyUnique = (value: string, index: number, self: any[]) => {
   return self.indexOf(value) === index;

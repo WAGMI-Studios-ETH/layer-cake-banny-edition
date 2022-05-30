@@ -1,6 +1,6 @@
 import { get_directories, scan_sort_folders, logger } from '../utils';
 import { folder_names } from '../config/project-config';
-import { the_project } from '../project';
+import { the_project } from '../other/project';
 
 const potential_project_paths = scan_sort_folders(folder_names.traits);
 const project_layers: string[] = [];

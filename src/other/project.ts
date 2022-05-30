@@ -1,9 +1,9 @@
 /* eslint-disable no-shadow */
 import fs from 'fs';
 import moment from 'moment';
-import { folder_names, project_config } from './config/project-config';
-import { logger, create_path_folders } from './utils';
-import { ProjectConfig, Population } from './interfaces';
+import { folder_names, project_config } from '../config/project-config';
+import { logger, create_path_folders } from '../utils';
+import { ProjectConfig, Population } from '../interfaces';
 
 /*
  * @dev project definition

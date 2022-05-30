@@ -109,11 +109,13 @@ const ordered = generate_veBanny_populations(false) as PopulationConfig[];
 Array.from(ordered).map(m => console.log(m.name));
 */
 
+const description = `Juicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n\nThe Banny that started it all. The one. The only. The magnificent, majestic and magnanimous. The OG Banny. All Bannies take some part from illustrious existence. Many Bannies tell tales of a vague, distant memory— some ascribe it to pure chance, others to the supernatural. Then yet other will tell you that OG Banny is bound to come into the world, in full, fleshy banana form. Others say he has come back many times, sometimes as an apple, other times as an orange. And yet others say he is yet to come, and when he comes, existence as we know it will change. And then there’s those who say that he’s far more than any of that: he’s a historical whisper, lost for generations and whose echo reverberates around the lore he inspired. An OG, if ever there was one.\nIn the beginning, there was OG Banny.`;
+
 const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
   name: layered_assets_folder,
-  upload_images_to_ipfs: true,
-  upload_metadata_to_ipfs: true,
+  upload_images_to_ipfs: false,
+  upload_metadata_to_ipfs: false,
   shuffle_assets: false,
   resume_folder: '',
   re_generate_collages: false,
@@ -125,11 +127,11 @@ export const bannyConfig: ProjectConfig = {
   mirror_images_allowed: 0,
   // asset_origin: 0,
   metadata_input: {
-    name: nft_name,
+    name: `{{{{batch_index}}.Banny Name}} {{traits.0.value}}`,
     symbol: nft_symbol,
-    description: nft_description,
+    description: `{{{{batch_index}}.Motto}}\n\n{{{{batch_index}}.History}}\n\n${description}`,
     birthdate: `-22100400`,
-    background_colors: [] /*nft_colors*/,
+    background_colors: [], // nft_colors
     minter: nft_minter,
     creators: nft_creators,
     publishers: nft_publishers,
@@ -139,52 +141,21 @@ export const bannyConfig: ProjectConfig = {
     native_size: '1000x1000',
     more_info_link: nft_more_info_link,
     include_total_population_in_name: true,
-    /*
-      if this is specific to population then note below within populations which one its for
-    */
-    population_metadata: {
-      specific_to_population: true,
-      metadata_source: `./layered-assets/${layered_assets_folder}/metadata.csv`,
-      match_key: `folder_name`,
-      include_columns: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`, `History`, `Motto`],
-      rename_columes_attributes: [
-        `Arcana`,
-        `Communications`,
-        `Grind`,
-        `Perception`,
-        `Strength`,
-        `Shadowiness`,
-        `History`,
-        `Motto`,
-      ],
-      metadata_type: {
-        attributes: [`$JBX Range`, `Range width`],
-        levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`, `History`, `Motto`],
-        boosts: false,
-      },
-      /*
-        animation_url: {
-          token_type: token, // music_single, music_album, music_generative, membership 
-          tempate_file: `./layered-assets/${layered_assets_folder}/token.html`,
-        }
-      */
-    },
+    attributes: [
+      { trait_type: `Arcana`, value: `{{{{batch_index}}.Arcana}}` },
+      { trait_type: `Communications`, value: `{{{{batch_index}}.Comms}}` },
+      { trait_type: `Grind`, value: `{{{{batch_index}}.Grind}}` },
+      { trait_type: `Perception`, value: `{{{{batch_index}}.Perception}}` },
+      { trait_type: `Strength`, value: `{{{{batch_index}}.Strength}}` },
+      { trait_type: `Shadowiness`, value: `{{{{batch_index}}.Shadowiness}}` },
+      { trait_type: `History`, value: `{{{{batch_index}}.History}}` },
+    ],
+    animation_url: `{{SVELTE_IPFS}}/#tokenId={{tokenId}}`,
     royalties: {
       artist_address: nft_artist_address,
       artist_percentage: nft_artist_royality,
-      /*
-      additional_payee: nft_additional_payee,
-      additional_payee_percentage: nft_additional_royality,      
-      */
-    },
-    opensea: {
-      // https://docs.opensea.io/docs/contract-level-metadata
-      name: nft_name,
-      description: nft_description,
-      image: '',
-      external_link: nft_more_info_link,
-      seller_fee_basis_points: 250, // Indicates a 1% seller fee.
-      fee_recipient: nft_artist_address,
+      // additional_payee: nft_additional_payee,
+      // additional_payee_percentage: nft_additional_royality,
     },
     rights: nft_rights,
     decimals: 0,
@@ -201,30 +172,18 @@ export const bannyConfig: ProjectConfig = {
     {
       tag: 'stacked-gif',
       source_image_type: 'profile',
-      /* 
-        if the population generation doesn't have enough images, exposions ensue 
-      */
+      // if the population generation doesn't have enough images, exposions ensue
       max_stacks: 5,
       images_per_stack: 50,
     },
   ],
-  populations: generate_populations(false) as PopulationConfig[],
-  /*
-  // match to the above metadata so that different population can have different csv files for them
-  populations: {
-    population_metadata {
-      insert_into: true;
-    }
-  }
-  */
+  populations: (generate_populations(false) as PopulationConfig[]).slice(0, 20),
   anim_outputs: [],
   collage_outputs: [
     collage300,
-    /*
-    collage1600,
-    collage4444,
-    collage4000,
-    */
+    // collage1600,
+    // collage4444,
+    // collage4000,
     collageOpenSea1200x75,
     collageDiscord600x240,
     collageTwitter1200x675,

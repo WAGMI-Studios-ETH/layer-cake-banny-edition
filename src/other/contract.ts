@@ -1,4 +1,4 @@
-import { logger, delay } from './utils';
+import { logger, delay } from '../utils';
 import { Asset } from './asset';
 
 export async function invoke_contract(assets: Asset[]) {

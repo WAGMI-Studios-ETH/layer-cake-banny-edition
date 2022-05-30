@@ -1,7 +1,7 @@
-import { Asset } from '../asset';
+import { Asset } from '../other/asset';
 import { IHash, logger } from '../utils';
-import { the_project } from '../project';
-import { strip_rarity } from '../csv';
+import { the_project } from '../other/project';
+import { strip_rarity } from '../other/csv';
 import { replace_underscores, strip_extension } from './metadata';
 
 export function generate_tezos_metadata(asset: Asset, excluded_layers_from_metadata: string[] = []) {

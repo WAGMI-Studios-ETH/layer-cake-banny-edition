@@ -1,14 +1,13 @@
-import fs, { existsSync, readdirSync, statSync } from 'fs';
+import fs, { existsSync, readdirSync, readFileSync, statSync } from 'fs';
 import { Asset } from './asset';
 import path, { basename } from 'path';
 import { readdir, readFile } from 'fs/promises';
 import { the_project } from './project';
-import { delay, logger } from './utils';
+import { delay, logger } from '../utils';
 import { NFTStorage, File } from 'nft.storage';
-import { IPFS_BASE_URL, NFT_STORAGE_API_KEYS } from './config';
-import { save_assets_state } from '.';
+import { IPFS_BASE_URL, NFT_STORAGE_API_KEYS } from '../config';
+import { save_assets_state } from '..';
 import type { CIDString } from 'nft.storage/dist/src/lib/interface';
-import { boolean } from 'yargs';
 import { readDirectory } from './compile-template';
 
 // TODO: experiment with more or less to get stable and faster build
@@ -192,6 +191,29 @@ export async function upload_all_animation(assets: Asset[]) {
 
 export async function upload_all_metadata(assets: Asset[]) {
   await upload_all_asset_artifacts(assets, metadata_cid_checker, metadata_path_selector, metadata_cid_distributor);
+}
+
+export async function uploadToIPFS(paths: string[]) {
+  const files: any[] = [];
+
+  for (const _path of paths) {
+    const dirPath = path.resolve(__dirname, '../..', _path);
+    const dir = readDirectory(dirPath);
+
+    for (const filePath of dir) {
+      const file = new File([readFileSync(filePath)], filePath.replace(`${dirPath}/`, ''));
+      files.push(file);
+    }
+  }
+
+  const api_key = NFT_STORAGE_API_KEYS[NFT_STORAGE_API_KEYS.length - 1];
+  const storage = new NFTStorage({ token: api_key });
+
+  const cid = await storage.storeDirectory(files);
+  console.log({ cid });
+
+  const status = await storage.status(cid);
+  return status;
 }
 
 // works up to 64MB

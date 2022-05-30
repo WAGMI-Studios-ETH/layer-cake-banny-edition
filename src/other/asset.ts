@@ -1,7 +1,7 @@
 import { Project, the_project } from './project';
-import { Trait, Population } from './interfaces';
-import { BLANK, parse_csv, zero_pad } from './utils';
-import { MARGIN_FOR_ERROR } from './config';
+import { Trait, Population } from '../interfaces';
+import { BLANK, parse_csv, zero_pad } from '../utils';
+import { MARGIN_FOR_ERROR } from '../config';
 import fs from 'fs';
 import path from 'path';
 
@@ -16,6 +16,7 @@ export class Asset {
   image_size: number = 0;
   thumb_hash: string = BLANK;
   batch_index: number;
+  tokenId: number;
   base_name: string;
   images_cid = BLANK;
   image_url = BLANK;
@@ -37,6 +38,7 @@ export class Asset {
     this.traits = traits;
     this.attribs = attribs;
     this.batch_index = batch_index;
+    this.tokenId = batch_index + 1;
     this.base_name = zero_pad(this.batch_index + 1, population_digits);
     this.image_folder = `${output_dir}/assets`;
     this.json_folder = `${output_dir}/metadata`;
@@ -57,29 +59,6 @@ export async function create_assets(
   const target = Math.ceil(population.config.population_size * MARGIN_FOR_ERROR);
   const assets: Asset[] = [];
   const attribs: any[] = [];
-  if (project.config.metadata_input.population_metadata?.metadata_source) {
-    const jsonMetadata = (await parse_csv(
-      path.join(__dirname, '..', project.config.metadata_input.population_metadata?.metadata_source),
-    )) as any[];
-    const name = population.config.name
-      .replace(/Character_?/, '')
-      .replace(/_/g, ' ')
-      .split(/\d+/)?.[0]
-      ?.trim();
-    const matched = jsonMetadata.find(item => name === item['Banny Name']);
-    if (matched) {
-      for (let j = 0; j < project.config.metadata_input.population_metadata?.include_columns?.length; j++) {
-        const column = project.config.metadata_input.population_metadata?.include_columns?.[j];
-        const renamed_column = project.config.metadata_input.population_metadata?.rename_columes_attributes?.[j];
-        if (column && renamed_column && typeof matched[column] !== 'undefined') {
-          attribs.push({
-            trait_type: renamed_column,
-            value: matched[column].match(/^\d+$/) ? Number(matched[column]) : matched[column],
-          });
-        }
-      }
-    }
-  }
   for (const combo of combinations) {
     assets.push(
       new Asset(

@@ -2,25 +2,25 @@
 import fs from 'fs';
 import dotenv from 'dotenv';
 import { Population, Trait } from './interfaces';
-import { ensure_folders_exist, the_project } from './project';
-import { validate_all_assets_for_contract, validate_all_assets_for_ipfs } from './validation';
-import { get_possible_permutation_count, get_permutations } from './permutations';
+import { ensure_folders_exist, the_project } from './other/project';
+import { validate_all_assets_for_contract, validate_all_assets_for_ipfs } from './other/validation';
+import { get_possible_permutation_count, get_permutations } from './other/permutations';
 import { generate_metadata } from './metadata/metadata';
 import {
   compute_asset_hash as compute_asset_hashes,
   generate_all_collages,
   generate_all_outputs,
   generate_all_stacked_gifs,
-} from './layer';
-import { invoke_contract } from './contract';
-import { calculate_stats } from './stats';
+} from './other/layer';
+import { invoke_contract } from './other/contract';
+import { calculate_stats } from './other/stats';
 import { delay, logger, log_traits_arrays } from './utils';
-import { output_contract_csv, output_csv, output_rarity_report_csv } from './csv';
-import { Asset, create_assets } from './asset';
-import { upload_all_animation, upload_all_images, upload_all_metadata } from './nft.storage';
+import { output_contract_csv, output_csv, output_rarity_report_csv } from './other/csv';
+import { Asset, create_assets } from './other/asset';
+import { upload_all_animation, upload_all_images, upload_all_metadata } from './other/nft.storage';
 import { createHash } from 'crypto';
 import { shuffle_array } from './utils/randomize';
-import compileTemplate from './compile-template';
+import compileTemplate from './other/compile-template';
 
 async function flip_image_file(path: string) {
   /* TODO: if configured, flip a few of the images */
@@ -198,7 +198,7 @@ async function get_all_assets(
   console.log('#########################################################');
   await compileTemplate(
     all_assets.map((asset, index) => ({ tokenId: asset.base_name.replace(/^0+/, '') })),
-    'src/template',
+    './src/template',
     `${the_project.output_folder}/html/`,
   );
   console.log('#########################################################');

@@ -1,9 +1,9 @@
 import fs from 'fs';
 import sharp from 'sharp';
-import { Asset } from '../asset';
-import { the_project } from '../project';
+import { Asset } from '../other/asset';
+import { the_project } from '../other/project';
 import { logger, getTime, getElapsed, delay, msToTime, get_file_size } from '../utils';
-import { compute_file_hash } from '../ipfs';
+import { compute_file_hash } from '../other/ipfs';
 import { parentPort, workerData } from 'worker_threads';
 
 const WORKERS = 5;

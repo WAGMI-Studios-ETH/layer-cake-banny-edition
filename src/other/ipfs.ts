@@ -3,10 +3,10 @@ import fsp from 'fs/promises';
 import path from 'path';
 import axios from 'axios';
 import pinataSDK from '@pinata/sdk';
-import { PINATA_API_KEY, PINATA_API_SECRET } from './config';
+import { PINATA_API_KEY, PINATA_API_SECRET } from '../config';
 import { randomInt, createHash } from 'crypto';
 import { createSentence } from 'sentence-engine';
-import { logger, type } from './utils';
+import { logger, type } from '../utils';
 
 require('dotenv').config();
 

@@ -107,3 +107,14 @@ export const parse_csv = (_path: string) => {
       });
   });
 };
+
+export function filesIn(dir: string): string[] {
+  return fs
+    .readdirSync(path.resolve(__dirname, '../..', dir), { withFileTypes: true })
+    .filter(entry => {
+      return entry.isDirectory();
+    })
+    .map(entry => {
+      return entry.name;
+    });
+}

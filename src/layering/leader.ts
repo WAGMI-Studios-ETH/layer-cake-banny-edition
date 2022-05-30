@@ -1,6 +1,6 @@
 import { logger, getTime } from '../utils';
 import { Worker, WorkerOptions } from 'worker_threads';
-import { Asset } from '../asset';
+import { Asset } from '../other/asset';
 
 interface WorkerData {}
 

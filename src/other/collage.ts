@@ -1,23 +1,12 @@
 import fs from 'fs';
 import dotenv from 'dotenv';
-import { zero_pad } from './utils';
-import { logger } from './utils/logger';
+import { filesIn, zero_pad } from '../utils';
+import { logger } from '../utils/logger';
 import { createCanvas, loadImage } from 'canvas';
-import { Population } from './interfaces';
-import { shuffle_array } from './utils/randomize';
+import { Population } from '../interfaces';
+import { shuffle_array } from '../utils/randomize';
 
 dotenv.config();
-
-function filesIn(dir: string): string[] {
-  return fs
-    .readdirSync(dir, { withFileTypes: true })
-    .filter(entry => {
-      return entry.isDirectory;
-    })
-    .map(entry => {
-      return entry.name;
-    });
-}
 
 export const delay = (ms: number) => {
   return new Promise(resolve => setTimeout(resolve, ms));

@@ -21,7 +21,10 @@
   },
   "scripts": {
     "git": "git add . && git-cz",
+    "build:svelte": "yarn --cwd client build",
+    "upload:svelte": "time ts-node scripts/client_upload_ipfs.ts",
     "start": "time ts-node ./src/index.ts",
+    "run:all": "yarn build:svelte && yarn upload:svelte && yarn start",
     "build": "rm -rf ./lib && tsc",
     "clean": "rm -rf ./lib && find . -name \".DS_Store\" -delete",
     "clean:all": "rm -rf ./lib ./node_modules",
@@ -59,6 +62,7 @@
     "canvas": "^2.8.0",
     "colors": "^1.4.0",
     "crypto": "^1.0.1",
+    "csv-parse": "^5.1.0",
     "csv-parser": "^3.0.0",
     "csv-writer": "^1.6.0",
     "dotenv": "^16.0.1",

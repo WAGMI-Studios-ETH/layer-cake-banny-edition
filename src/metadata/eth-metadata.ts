@@ -1,7 +1,7 @@
-import { Asset } from '../asset';
+import { Asset } from '../other/asset';
 import { Dynamic, IHash, logger, random } from '../utils';
-import { the_project } from '../project';
-import { strip_rarity } from '../csv';
+import { the_project } from '../other/project';
+import { strip_rarity } from '../other/csv';
 import { random_birthday, fourtwenty_birthday, Stat } from './stats';
 
 import { meow_stats } from './meow-stats';
@@ -9,6 +9,8 @@ import { banny_stats } from './banny-stats';
 import { test_stats } from './test-stats';
 
 import { change_to_sentence_case, replace_underscores, strip_extension, trait_boost } from './metadata';
+import { fillVars, generateVars } from '../utils/template';
+import { MetadataInput } from '../interfaces';
 
 export const default_stats: Stat[] = [
   {
@@ -97,27 +99,33 @@ export function generate_ethereum_metadata(asset: Asset) {
     birthday_attribute,
   ];
 
-  const i = the_project.config.metadata_input;
-  const name = `${i.name} No. ${asset.base_name}`;
+  const { metadata_input } = the_project.config;
+  let template = JSON.stringify(metadata_input);
+  template = fillVars(template, generateVars(the_project));
+  template = fillVars(template, generateVars({ ...asset, traits }));
+  template = fillVars(template, generateVars('./layered-assets/vebanny/metadata.csv'));
+  const svelteJSON = generateVars('./layered-assets/vebanny/svelte.json');
+  template = fillVars(template, { SVELTE_IPFS: `https://cloudflare-ipfs.com/ipfs/${svelteJSON.cid}` });
+
+  const i: MetadataInput = JSON.parse(template);
 
   let md: IHash = {
+    ...i,
     identifier: asset.batch_index + 1, // `0..n`
     edition: i.edition,
     isBooleanAmount: true,
-    name: name,
-    attributes: all_attributes,
-    symbol: `${i.symbol}${asset.base_name}`,
+    name: i.name,
+    attributes: [...all_attributes, ...i.attributes],
+    symbol: i.symbol,
     shouldPreferSymbol: false,
-    description: `${i.description}${History?.value ? '\n' + History?.value : ''}${
-      Motto?.value ? '\n' + Motto?.value : ''
-    }`,
+    description: i.description,
     minter: i.minter,
     decimals: i.decimals,
     creators: i.creators,
     publishers: i.publishers,
     genre: i.genres,
     date: i.drop_date,
-    tags: [...new Set(tags)],
+    tags: [...new Set([...tags, ...i.tags])],
     background_color:
       i.background_colors !== undefined ? i.background_colors[random(i.background_colors.length)] : 'FFFFFF',
     language: `en`,
@@ -128,7 +136,7 @@ export function generate_ethereum_metadata(asset: Asset) {
     externalUri: i.more_info_link,
     uri: asset.image_url,
     image: asset.image_url,
-    animation_url: asset.animation_url,
+    animation_url: i.animation_url,
     imageSize: asset.image_size,
     formats: [
       {
@@ -152,7 +160,7 @@ export function generate_ethereum_metadata(asset: Asset) {
     ],
   };
   if (!!i.royalties) {
-    md.royalty_info = i.royalties;
+    md.royalties = i.royalties;
   }
   if (!!i.rights) {
     md.rights = i.rights;

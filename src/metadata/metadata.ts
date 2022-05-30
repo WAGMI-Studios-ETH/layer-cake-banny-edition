@@ -1,7 +1,7 @@
 import fs from 'fs';
-import { Asset } from '../asset';
+import { Asset } from '../other/asset';
 import { Dynamic, logger } from '../utils';
-import { the_project } from '../project';
+import { the_project } from '../other/project';
 import { Trait } from '../interfaces';
 import { Stat } from './stats';
 import { generate_tezos_metadata } from './tezos-metadata';

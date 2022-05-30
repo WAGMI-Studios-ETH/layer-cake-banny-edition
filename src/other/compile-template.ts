@@ -15,7 +15,7 @@ type CompileContext = {
 };
 
 export function getPath(relativePath: string) {
-  return path.resolve(__dirname, '..', relativePath);
+  return path.resolve(__dirname, '../..', relativePath);
 }
 
 function fillVars(vars: CompileContext, template: string, context?: Context) {
