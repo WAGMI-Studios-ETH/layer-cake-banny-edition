@@ -5,7 +5,7 @@ import { readDirectory } from '../src/other/compile-template';
 import { NFT_STORAGE_API_KEYS } from '../src/config';
 
 async function main() {
-  const directoryPath = path.resolve(__dirname, '../client/dist/');
+  const directoryPath = path.resolve(__dirname, '../svelte/dist/');
 
   const dirPath = path.resolve(__dirname, '..', directoryPath);
   const dir = readDirectory(dirPath);
