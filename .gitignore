@@ -61,7 +61,7 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-lib/*
+/lib/*
 .env
 .rsync.sh
 
@@ -84,7 +84,6 @@ build/
 cache/
 coverage/
 dist/
-lib/
 node_modules/
 typechain/
 
