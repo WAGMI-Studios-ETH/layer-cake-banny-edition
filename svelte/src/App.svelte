@@ -53,19 +53,19 @@
     };
   }
   let animating = false;
-  function spin() {
-    animating = true;
-    const [animation] = [coin, sparkles].map(elm =>
-      elm.animate([{ transform: 'rotateY(0deg)' }, { transform: 'rotateY(360deg)' }], {
-        duration: 3000,
-        iterations: 1,
-        easing: 'cubic-bezier(0.42, 0, 0.58, 1)',
-      }),
-    );
-    animation.onfinish = event => {
-      if (animating) spin();
-    };
-  }
+  // function spin() {
+  //   animating = true;
+  //   const [animation] = [coin, sparkles].map(elm =>
+  //     elm.animate([{ transform: 'rotateY(0deg)' }, { transform: 'rotateY(360deg)' }], {
+  //       duration: 3000,
+  //       iterations: 1,
+  //       easing: 'cubic-bezier(0.42, 0, 0.58, 1)',
+  //     }),
+  //   );
+  //   animation.onfinish = event => {
+  //     if (animating) spin();
+  //   };
+  // }
 </script>
 
 <div class="intro" />
@@ -168,7 +168,7 @@
   .coin .back {
     transform: translateZ(-16px) rotateY(180deg);
   }
-  .coin .glow {
+  .coin .barrier {
     clip-path: circle(320px);
     left: 50%;
     position: absolute;
