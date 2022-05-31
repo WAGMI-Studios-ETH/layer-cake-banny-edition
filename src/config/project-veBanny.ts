@@ -23,7 +23,7 @@ const nft_artist_royality = 5;
 const nft_rights = `Juicebox Rights Reserved.`;
 
 export const layer_order = [
-  'Background',
+  'Lock_Period',
   'Body',
   'Face',
   'Choker',
@@ -89,6 +89,8 @@ export function generate_populations(verbose: boolean = false) {
   console.warn(`Total number of characters not found: ${not_found}`);
   return ordered_characters as unknown as PopulationConfig[];
 }
+
+const populations: PopulationConfig[] = generate_populations(false);
 
 /*
 const ordered = generate_veBanny_populations(false) as PopulationConfig[];
@@ -164,7 +166,7 @@ export const bannyConfig: ProjectConfig = {
       images_per_stack: 50,
     },
   ],
-  populations: (generate_populations(false) as PopulationConfig[]).slice(0, 62),
+  populations,
   anim_outputs: [],
   collage_outputs: [
     collage300,

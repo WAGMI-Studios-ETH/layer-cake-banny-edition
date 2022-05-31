@@ -109,13 +109,20 @@ export function generate_ethereum_metadata(asset: Asset) {
 
   const i: MetadataInput = JSON.parse(template);
 
+  const attributes = [...all_attributes, ...i.attributes].map(attrib => {
+    if (typeof attrib.value === 'string' && attrib.value.match(/^\d+$/)) {
+      attrib.value = Number(attrib.value);
+    }
+    return attrib;
+  });
+
   let md: IHash = {
     ...i,
     identifier: asset.batch_index + 1, // `0..n`
     edition: i.edition,
     isBooleanAmount: true,
     name: i.name,
-    attributes: [...all_attributes, ...i.attributes],
+    attributes,
     symbol: i.symbol,
     shouldPreferSymbol: false,
     description: i.description,

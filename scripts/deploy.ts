@@ -15,7 +15,7 @@ async function main(): Promise<void> {
   console.log(`Token name:${tokenName} (${tokenSymbol})`);
   console.log(`Max tokens:${maxTokens}, startSale:${startSale}`);
 
-  const SevenTwentyOne: Contract = await Factory.deploy(tokenName, tokenSymbol, baseURI, 200, startSale);
+  const SevenTwentyOne: Contract = await Factory.deploy(tokenName, tokenSymbol, baseURI, maxTokens, startSale);
 
   const deployed = await SevenTwentyOne.deployed();
   console.log(`Contract deployed to:`, SevenTwentyOne.address);
@@ -45,10 +45,10 @@ async function main(): Promise<void> {
 
     console.log('Minting....');
     let batch_size = 25;
-    let number_of_tokens = 63;
+    let number_of_tokens = maxTokens;
     for (let i = 0; i < number_of_tokens; i += batch_size) {
       console.log('minting batch', i, 'to', i + batch_size);
-      const txn1 = await contract.mintTokenTransfer(deployer, batch_size, {
+      const txn1 = await contract.mintTokenTransfer(deployer, Math.min(number_of_tokens - i, batch_size), {
         gasLimit: 20_000_000,
       });
       await txn1.wait();

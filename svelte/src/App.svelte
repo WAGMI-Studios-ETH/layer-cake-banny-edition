@@ -72,7 +72,7 @@
 <div class="purse" bind:this={purse}>
   <!-- on:pointerenter={spin} on:pointerleave={() => (animating = false)} -->
   <div bind:this={coin} class="coin" data-tilt style="pointer-events: none">
-    <div class="glow" />
+    <div class="barrier" />
     <div class="front" style="background-image: url('{front}')" />
     <div class="back" style="background-image: url('{back}');" />
     <div class="side">
@@ -152,12 +152,15 @@
   }
   .coin .front,
   .coin .back,
-  .coin .glow {
+  .coin .barrier {
     position: absolute;
     height: 320px;
     width: 320px;
     border-radius: 50%;
     background-size: cover;
+  }
+  .coin .barrier {
+    background: #222;
   }
   .coin .front {
     transform: translateZ(16px);

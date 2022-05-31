@@ -13,7 +13,7 @@ export function exportProfileGif(images: string[], outputPath: string) {
     copyFileSync(image, path.resolve(temp, `${i.toString().padStart(3, '0')}.png`));
     i++;
   }
-  const command = `ffmpeg -f image2 -framerate 2 -i ${temp}/%03d.png -loop -1 ${outputPath}`;
+  const command = `ffmpeg -f image2 -framerate 2 -i ${temp}/%03d.png -loop 0 ${outputPath}`;
   execSync(command).toString('utf-8');
   console.log('Exec:', command);
   rmSync(temp, {

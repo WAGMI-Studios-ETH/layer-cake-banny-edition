@@ -76,7 +76,7 @@ contract SevenTwentyOne is ERC721, Ownable {
     require(numberOfTokens <= MAX_TOTAL_TOKENS, 'Can not mint more than the total supply.');
     require(totalSupply().add(numberOfTokens) <= MAX_TOTAL_TOKENS, 'Minting would exceed max supply of Tokens');
     uint256 supply = totalSupply();
-    for (uint256 i = 0; i < numberOfTokens; i++) {
+    for (uint256 i = 1; i <= numberOfTokens; i++) {
       if (totalSupply() < MAX_TOTAL_TOKENS) {
         _safeMint(msg.sender, supply + i);
       }
@@ -93,7 +93,7 @@ contract SevenTwentyOne is ERC721, Ownable {
     require(address(to) != address(this), 'Cannot mint to contract itself.');
     require(address(to) != address(0), 'Cannot mint to the null address.');
     uint256 supply = totalSupply();
-    for (uint256 i = 0; i < numberOfTokens; i++) {
+    for (uint256 i = 1; i <= numberOfTokens; i++) {
       if (totalSupply() < MAX_TOTAL_TOKENS) {
         _safeMint(to, supply + i);
       }
