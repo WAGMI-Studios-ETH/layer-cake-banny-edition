@@ -2,13 +2,14 @@ import { ethers, network } from 'hardhat';
 import { BigNumber, Contract, ContractFactory } from 'ethers';
 import { config as dotenvConfig } from 'dotenv';
 import { resolve } from 'path';
-import { project_config } from './config';
+import { writeOpenseaConfig } from './config';
 
 dotenvConfig({ path: resolve(__dirname, '../.env') });
 
 async function main(): Promise<void> {
   const deployer = await (await ethers.getSigners())[0].getAddress();
-  const { tokenName, tokenSymbol, baseURI, maxTokens, startSale } = project_config;
+  const result = await writeOpenseaConfig();
+  const { tokenName, tokenSymbol, baseURI, maxTokens, startSale } = result.project_config;
   const Factory: ContractFactory = await ethers.getContractFactory('SevenTwentyOne');
 
   console.log(`Token name:${tokenName} (${tokenSymbol})`);
@@ -21,6 +22,10 @@ async function main(): Promise<void> {
 
   const { deployTransaction } = deployed;
   const { hash, from, to, gasPrice, gasLimit, data, chainId, confirmations } = deployTransaction;
+  const contract = await SevenTwentyOne.deployed();
+
+  console.log('setting contract url...');
+  await (await contract.setContractURI(`ipfs://${result.opensea_json_cid}`)).wait();
 
   console.log(`transaction id:${hash}`);
   console.log(`from:${from}, to:${to} - (${confirmations} confirmations)`);
@@ -33,7 +38,6 @@ async function main(): Promise<void> {
       `"${tokenName}" "${tokenSymbol}" "${baseURI}" "${maxTokens}" "${startSale}"`,
   );
 
-  const contract = await SevenTwentyOne.deployed();
   if (true) {
     console.log('flipping sale state');
     const txn = await contract.flipSaleState();

@@ -15,7 +15,7 @@ contract SevenTwentyOne is ERC721, Ownable {
 
   bool public mintingIsActive = false;
   string public PROVENANCE = 'e0226b57469edf5240bf0985c33f5d18d569040669ac365956d9c6b4b31ce75e';
-  string public OPENSEA_STORE_METADATA = 'ipfs://QmR4tfopGKsw65EzLUgw45ETyajnhm8TrFucoi2SdE6nJa';
+  string public OPENSEA_STORE_METADATA = '';
 
   uint256 public MAX_TOTAL_TOKENS;
   uint256 public REVEAL_TIMESTAMP;
@@ -53,6 +53,10 @@ contract SevenTwentyOne is ERC721, Ownable {
    */
   function contractURI() public view returns (string memory) {
     return OPENSEA_STORE_METADATA;
+  }
+
+  function setContractURI(string memory _uri) public {
+    OPENSEA_STORE_METADATA = _uri;
   }
 
   /**

@@ -1,5 +1,7 @@
-import { promises as fs, readdirSync, readFileSync } from 'fs';
+import { promises as fs, readdirSync, readFileSync, writeFileSync } from 'fs';
 import path from 'path';
+import { NFTStorage, File } from 'nft.storage';
+import { NFT_STORAGE_API_KEYS } from '../src/config';
 
 const buildDir = path.resolve(__dirname, '../build/vebanny');
 const dir = readdirSync(buildDir)
@@ -46,27 +48,36 @@ export const opensea_storefront = {
 
 false && console.log(project_config);
 
-(async () => {
+export async function writeOpenseaConfig() {
+  const json = {
+    name: project_name,
+    description: project_description,
+    image: project_image_gif,
+    external_link: project_external_url,
+    seller_fee_basis_points: project_seller_fee_basis_points,
+    fee_recipient: project_fee_recipient,
+    discord: 'https://discord.gg/movexyz',
+    twitter: 'https://twitter.com/move_xyz',
+  };
+  const returnValue = {
+    project_config,
+    opensea_json: json,
+    opensea_json_cid: '',
+  };
   try {
     console.log('writing opensea.json...');
-    await fs.writeFile(
-      path.join(__dirname, './opensea.json'),
-      JSON.stringify(
-        {
-          name: project_name,
-          description: project_description,
-          image: project_image_gif,
-          external_link: project_external_url,
-          seller_fee_basis_points: project_seller_fee_basis_points,
-          fee_recipient: project_fee_recipient,
-          discord: 'https://discord.gg/movexyz',
-          twitter: 'https://twitter.com/move_xyz',
-        },
-        null,
-        '  ',
-      ),
-    );
+    await fs.writeFile(path.join(__dirname, './opensea.json'), JSON.stringify(json, null, '  '));
+    if (true) {
+      const file = new File([JSON.stringify(json, null, '  ')], 'opensea.json');
+
+      const api_key = NFT_STORAGE_API_KEYS[NFT_STORAGE_API_KEYS.length - 1];
+      const storage = new NFTStorage({ token: api_key });
+      console.log('uploading opensea.json to ipfs...');
+      const cid = await storage.storeDirectory([file]);
+      returnValue.opensea_json_cid = cid;
+    }
   } catch (error) {
     console.log(error);
   }
-})();
+  return returnValue;
+}
