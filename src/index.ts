@@ -20,7 +20,8 @@ import { Asset, create_assets } from './other/asset';
 import { upload_all_animation, upload_all_images, upload_all_metadata } from './other/nft.storage';
 import { createHash } from 'crypto';
 import { shuffle_array } from './utils/randomize';
-import compileTemplate from './other/compile-template';
+import compileTemplate, { readDirectory } from './other/compile-template';
+import { exportProfileGif } from './utils/gif';
 
 async function flip_image_file(path: string) {
   /* TODO: if configured, flip a few of the images */
@@ -280,6 +281,12 @@ const run = async () => {
   const rarity_path = `${the_project.output_folder}/${the_project.config.name}.rarity.csv`;
   await output_rarity_report_csv(all_assets, all_trait_names, rarity_path);
   output_provenance_hash(all_assets);
+
+  console.log('exporting gif from images...');
+  exportProfileGif(
+    readDirectory(`${the_project.output_folder}/assets/image`).slice(0, 15),
+    `${the_project.output_folder}/assets/profile/profile.gif`,
+  );
 
   /* 
   validate_all_assets_for_contract(all_assets);

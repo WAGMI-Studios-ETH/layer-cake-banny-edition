@@ -19,7 +19,6 @@ const project_base_uri = `ipfs://${metadata_cid}/`;
 const project_name = `veBanny Collection`;
 const project_symbol = `VEBANNY`;
 const project_description = `Introducing the Ascended Apes, a derivative of Movement DAO's Bored Ape Yacht Club No. 1420. The Ascended Apes can only be earned by participating in decentralized governance.  Visit Twitter's @move_xyz or Discord at https://discord.gg/movexyz for details.`;
-const project_image_gif = `ipfs://QmSw7NtkEkiNCUpdb458kVKVTzS3xUVhQ7pm9XNrF1fFxU`;
 
 // const provenance = `e0226b57469edf5240bf0985c33f5d18d569040669ac365956d9c6b4b31ce75e`;
 const project_max_tokens = 4444;
@@ -27,7 +26,6 @@ const project_start_sale = 1;
 const project_external_url = `https://move.xyz`;
 const project_seller_fee_basis_points = 5000;
 const project_fee_recipient = `0x1DD2091f250876Ba87B6fE17e6ca925e1B1c0CF0`;
-const project_fee_recipient_ens = `natasha-pankina.eth`;
 
 export const project_config = {
   tokenName: project_name,
@@ -40,7 +38,7 @@ export const project_config = {
 export const opensea_storefront = {
   name: project_name,
   description: project_description,
-  image: project_image_gif,
+  image: '',
   external_link: project_external_url,
   seller_fee_basis_points: project_seller_fee_basis_points,
   fee_recipient: project_fee_recipient,
@@ -52,7 +50,7 @@ export async function writeOpenseaConfig() {
   const json = {
     name: project_name,
     description: project_description,
-    image: project_image_gif,
+    image: '',
     external_link: project_external_url,
     seller_fee_basis_points: project_seller_fee_basis_points,
     fee_recipient: project_fee_recipient,
@@ -65,19 +63,27 @@ export async function writeOpenseaConfig() {
     opensea_json_cid: '',
   };
   try {
-    console.log('writing opensea.json...');
-    await fs.writeFile(path.join(__dirname, './opensea.json'), JSON.stringify(json, null, '  '));
     if (true) {
-      const file = new File([JSON.stringify(json, null, '  ')], 'opensea.json');
-
-      const api_key = NFT_STORAGE_API_KEYS[NFT_STORAGE_API_KEYS.length - 1];
-      const storage = new NFTStorage({ token: api_key });
-      console.log('uploading opensea.json to ipfs...');
-      const cid = await storage.storeDirectory([file]);
+      const { cid: imageCid } = await uploadFile(
+        readFileSync(path.resolve(buildDir, buildFolder, 'assets/profile/profile.gif')),
+        'profile.gif',
+      );
+      json.image = opensea_storefront.image = `ipfs://${imageCid}/profile.gif`;
+      const { cid } = await uploadFile(JSON.stringify(json, null, '  '), 'opensea.json');
       returnValue.opensea_json_cid = cid;
     }
+    await fs.writeFile(path.join(__dirname, './opensea.json'), JSON.stringify(json, null, '  '));
   } catch (error) {
     console.log(error);
   }
   return returnValue;
+}
+
+async function uploadFile(content: any, filename: string) {
+  const file = new File([content], filename);
+  const api_key = NFT_STORAGE_API_KEYS[NFT_STORAGE_API_KEYS.length - 1];
+  const storage = new NFTStorage({ token: api_key });
+  console.log(`uploading ${filename} to ipfs...`);
+  const cid = await storage.storeDirectory([file]);
+  return { cid };
 }

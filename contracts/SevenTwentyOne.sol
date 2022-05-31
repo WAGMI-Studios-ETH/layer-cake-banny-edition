@@ -55,7 +55,7 @@ contract SevenTwentyOne is ERC721, Ownable {
     return OPENSEA_STORE_METADATA;
   }
 
-  function setContractURI(string memory _uri) public {
+  function setContractURI(string memory _uri) public onlyOwner {
     OPENSEA_STORE_METADATA = _uri;
   }
 

@@ -83,7 +83,7 @@
     "png-file-stream": "^1.2.1",
     "sentence-engine": "^0.8.0",
     "sharp": "^0.30.4",
-    "solidity-coverage": "^0.7.21",
+    "solidity-coverage": "^0.7.16",
     "ts-node": "^10.3.0",
     "typechain": "^8.0.0",
     "typechain-target-ethers-v5": "^5.0.1",
