@@ -115,9 +115,9 @@ export const bannyConfig: ProjectConfig = {
   mirror_images_allowed: 0,
   // asset_origin: 0,
   metadata_input: {
-    name: `{{{{batch_index}}.Banny Name}} {{traits.0.value}}`,
+    name: `{{{{population_index}}.Banny Name}} {{traits.0.value}}`,
     symbol: nft_symbol,
-    description: `{{{{batch_index}}.Motto}}\n\n{{{{batch_index}}.History}}\n\n${aboutJuicebox}`,
+    description: `{{{{population_index}}.Motto}}\n\n{{{{population_index}}.History}}\n\n${aboutJuicebox}`,
     birthdate: `-22100400`,
     background_colors: [], // nft_colors
     minter: nft_minter,
@@ -130,14 +130,14 @@ export const bannyConfig: ProjectConfig = {
     more_info_link: nft_more_info_link,
     include_total_population_in_name: true,
     attributes: [
-      { trait_type: `Arcana`, value: `{{{{batch_index}}.Arcana}}` },
-      { trait_type: `Communications`, value: `{{{{batch_index}}.Comms}}` },
-      { trait_type: `Grind`, value: `{{{{batch_index}}.Grind}}` },
-      { trait_type: `Perception`, value: `{{{{batch_index}}.Perception}}` },
-      { trait_type: `Strength`, value: `{{{{batch_index}}.Strength}}` },
-      { trait_type: `Shadowiness`, value: `{{{{batch_index}}.Shadowiness}}` },
+      { trait_type: `Arcana`, value: `{{{{population_index}}.Arcana}}` },
+      { trait_type: `Communications`, value: `{{{{population_index}}.Comms}}` },
+      { trait_type: `Grind`, value: `{{{{population_index}}.Grind}}` },
+      { trait_type: `Perception`, value: `{{{{population_index}}.Perception}}` },
+      { trait_type: `Strength`, value: `{{{{population_index}}.Strength}}` },
+      { trait_type: `Shadowiness`, value: `{{{{population_index}}.Shadowiness}}` },
     ],
-    animation_url: `{{SVELTE_IPFS}}/index.html#tokenId={{tokenId}}&cid={{images_cid}}`,
+    animation_url: `{{SVELTE_IPFS}}/index.html#tokenId={{base_name}}&cid={{images_cid}}`,
     royalties: {
       artist_address: nft_artist_address,
       artist_percentage: nft_artist_royality,
@@ -164,7 +164,7 @@ export const bannyConfig: ProjectConfig = {
       images_per_stack: 50,
     },
   ],
-  populations: (generate_populations(false) as PopulationConfig[]).slice(0, 2),
+  populations: (generate_populations(false) as PopulationConfig[]).slice(0, 62),
   anim_outputs: [],
   collage_outputs: [
     collage300,

@@ -25,7 +25,7 @@ async function main(): Promise<void> {
   const contract = await SevenTwentyOne.deployed();
 
   console.log('setting contract url...');
-  await (await contract.setContractURI(`ipfs://${result.opensea_json_cid}`)).wait();
+  await (await contract.setContractURI(`ipfs://${result.opensea_json_cid}/opensea.json`)).wait();
 
   console.log(`transaction id:${hash}`);
   console.log(`from:${from}, to:${to} - (${confirmations} confirmations)`);
@@ -44,8 +44,17 @@ async function main(): Promise<void> {
     await txn.wait();
 
     console.log('Minting....');
-    const txn1 = await contract.mintTokenTransfer(deployer, 3);
-    await txn1.wait();
+    let batch_size = 25;
+    let number_of_tokens = 63;
+    for (let i = 0; i < number_of_tokens; i += batch_size) {
+      console.log('minting batch', i, 'to', i + batch_size);
+      const txn1 = await contract.mintTokenTransfer(deployer, batch_size, {
+        gasLimit: 20_000_000,
+      });
+      await txn1.wait();
+    }
+
+    console.log('Token URI:', await contract.contractURI());
     console.log('DONE!');
   }
 }

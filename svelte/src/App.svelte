@@ -1,8 +1,10 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import Tilt from 'vanilla-tilt';
 
   const number_of_star = 150;
 
+  let purse: HTMLElement;
   let coin: HTMLElement;
   let sparkles: HTMLElement;
 
@@ -16,11 +18,17 @@
   let ready = false;
 
   onMount(() => {
+    Tilt.init(purse, {
+      max: 25,
+      speed: 500,
+    });
     const search = location.hash.slice(1);
     const urlSearchParams = new URLSearchParams(search);
     const tokenId = urlSearchParams.get('tokenId');
     const cid = urlSearchParams.get('cid');
-    front = `https://cloudflare-ipfs.com/ipfs/${cid}/${tokenId}.png`;
+    if (cid && tokenId) {
+      front = `https://cloudflare-ipfs.com/ipfs/${cid}/${tokenId}.png`;
+    }
 
     const interval = setInterval(() => {
       if (window.innerWidth > 100) {
@@ -61,8 +69,10 @@
 </script>
 
 <div class="intro" />
-<div class="purse" on:pointerenter={spin} on:pointerleave={() => (animating = false)}>
-  <div bind:this={coin} class="coin" style="pointer-events: none">
+<div class="purse" bind:this={purse}>
+  <!-- on:pointerenter={spin} on:pointerleave={() => (animating = false)} -->
+  <div bind:this={coin} class="coin" data-tilt style="pointer-events: none">
+    <div class="glow" />
     <div class="front" style="background-image: url('{front}')" />
     <div class="back" style="background-image: url('{back}');" />
     <div class="side">
@@ -141,7 +151,8 @@
     mix-blend-mode: color-dodge;
   }
   .coin .front,
-  .coin .back {
+  .coin .back,
+  .coin .glow {
     position: absolute;
     height: 320px;
     width: 320px;
@@ -153,6 +164,17 @@
   }
   .coin .back {
     transform: translateZ(-16px) rotateY(180deg);
+  }
+  .coin .glow {
+    clip-path: circle(320px);
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -0);
+    z-index: -5;
+    border-width: 5px;
+    border-style: solid;
+    box-shadow: -10px -10px 25px 0px #ffff00bb, 10px -10px 25px 0px blue, 10px 10px 25px 0px red,
+      -10px 10px 25px 0px green;
   }
   .coin .side {
     transform: translateX(144px);

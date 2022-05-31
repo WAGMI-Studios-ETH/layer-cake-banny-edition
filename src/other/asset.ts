@@ -16,6 +16,7 @@ export class Asset {
   image_size: number = 0;
   thumb_hash: string = BLANK;
   batch_index: number;
+  population_index: number;
   tokenId: number;
   base_name: string;
   images_cid = BLANK;
@@ -40,6 +41,7 @@ export class Asset {
     this.batch_index = batch_index;
     this.tokenId = batch_index + 1;
     this.base_name = zero_pad(this.batch_index + 1, population_digits);
+    this.population_index = Math.floor(batch_index / 5);
     this.image_folder = `${output_dir}/assets`;
     this.json_folder = `${output_dir}/metadata`;
     this.html_folder = `${output_dir}/html`;

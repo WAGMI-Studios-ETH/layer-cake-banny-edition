@@ -64,8 +64,10 @@ export async function writeOpenseaConfig() {
   };
   try {
     if (true) {
+      const dirPath = path.resolve(buildDir, buildFolder, 'assets/stacked-gif/');
+      const dir = readdirSync(dirPath).map(file => path.resolve(dirPath, file));
       const { cid: imageCid } = await uploadFile(
-        readFileSync(path.resolve(buildDir, buildFolder, 'assets/profile/profile.gif')),
+        readFileSync(dir[0] || path.resolve(__dirname, '..', 'profile/profile.gif')),
         'profile.gif',
       );
       json.image = opensea_storefront.image = `ipfs://${imageCid}/profile.gif`;
