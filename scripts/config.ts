@@ -18,9 +18,8 @@ const project_base_uri = `ipfs://${metadata_cid}/`;
 
 const project_name = `veBanny Collection`;
 const project_symbol = `VEBANNY`;
-const project_description = `Introducing the Ascended Apes, a derivative of Movement DAO's Bored Ape Yacht Club No. 1420. The Ascended Apes can only be earned by participating in decentralized governance.  Visit Twitter's @move_xyz or Discord at https://discord.gg/movexyz for details.`;
+const project_description = `Juicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.`;
 
-// const provenance = `e0226b57469edf5240bf0985c33f5d18d569040669ac365956d9c6b4b31ce75e`;
 const project_max_tokens = 300;
 const project_start_sale = 1;
 const project_external_url = `https://move.xyz`;
