@@ -13,18 +13,27 @@
   let front = './front.png';
   let back = './back.png';
 
+  let ready = false;
+
   onMount(() => {
     const search = location.hash.slice(1);
     const urlSearchParams = new URLSearchParams(search);
     const tokenId = urlSearchParams.get('tokenId');
     const cid = urlSearchParams.get('cid');
     front = `https://cloudflare-ipfs.com/ipfs/${cid}/${tokenId}.png`;
+
+    const interval = setInterval(() => {
+      if (window.innerWidth > 100) {
+        ready = true;
+        clearInterval(interval);
+      }
+    }, 50);
   });
 
   function getStarData() {
     const star_rotation = 'move_right;';
-    const star_top = random_number(0, document.documentElement.clientHeight);
-    const star_left = random_number(0, document.documentElement.clientWidth);
+    const star_top = random_number(0, window.innerHeight);
+    const star_left = random_number(0, window.innerWidth);
     const star_radius = random_number(0, 4);
     const star_duration = random_number(6, 16);
     return {
@@ -79,12 +88,14 @@
     <img src="./sparkles.gif" alt="" />
   </div>
 </div>
-{#each Array(number_of_star).fill(0).map(getStarData) as { top, left, radius, duration, rotation }}
-  <div
-    class="star"
-    style="top:{top}px; left: {left}px; width: {radius}px; height: {radius}px; animation-name:{rotation}; animation-duration: {duration}s;"
-  />
-{/each}
+{#if ready}
+  {#each Array(number_of_star).fill(0).map(getStarData) as { top, left, radius, duration, rotation }}
+    <div
+      class="star"
+      style="top:{top}px; left: {left}px; width: {radius}px; height: {radius}px; animation-name:{rotation}; animation-duration: {duration}s;"
+    />
+  {/each}
+{/if}
 
 <style>
   :root {

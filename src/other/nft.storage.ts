@@ -46,7 +46,7 @@ function metadata_cid_checker(asset: Asset) {
 }
 
 function metadata_path_selector(asset: Asset) {
-  return [`${asset.json_folder}/ethereum/${asset.base_name.replace(/^0+/, '')}`];
+  return [`${asset.json_folder}/ethereum/`];
 }
 
 function metadata_cid_distributor(asset: Asset, cid: string, thumb_tag: string) {
@@ -190,7 +190,19 @@ export async function upload_all_animation(assets: Asset[]) {
 }
 
 export async function upload_all_metadata(assets: Asset[]) {
-  await upload_all_asset_artifacts(assets, metadata_cid_checker, metadata_path_selector, metadata_cid_distributor);
+  if (assets.length) {
+    const path = metadata_path_selector(assets[0]);
+    console.log(path);
+    const status = await uploadToIPFS(path);
+    await wait(1000);
+    if (status.cid) {
+      for (const asset of assets) {
+        console.log(asset.base_name, 'setting', status.cid);
+        metadata_cid_distributor(asset, status.cid, '');
+      }
+    }
+  }
+  save_assets_state(assets);
 }
 
 export async function uploadToIPFS(paths: string[]) {

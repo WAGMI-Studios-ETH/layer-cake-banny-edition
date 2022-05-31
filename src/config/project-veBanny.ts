@@ -12,17 +12,7 @@ import {
 
 const iso_datetime_now = new Date().toISOString();
 
-const nft_name = `#CHARACTER_NAME`;
 const nft_symbol = `VEBANNY`;
-const nft_description: string = `#CHARACTER_MOTTO
-
-#CHARACTER_HISTORY
-
-Juicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.
-
-Juicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.
-`;
-
 const nft_more_info_link = 'https://juicebox.money';
 const nft_minter = `0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`;
 const nft_creators = [`@juiceboxETH`];
@@ -31,8 +21,6 @@ const nft_genres = [`veNFT`, `Juicebox`, `Banny`, `banana`, `character`, `profil
 const nft_artist_address = `0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`;
 const nft_artist_royality = 5;
 const nft_rights = `Juicebox Rights Reserved.`;
-
-const nft_colors = [];
 
 export const layer_order = [
   'Background',
@@ -102,14 +90,14 @@ export function generate_populations(verbose: boolean = false) {
   return ordered_characters as unknown as PopulationConfig[];
 }
 
-const ordered = generate_populations(false) as PopulationConfig[];
-
 /*
 const ordered = generate_veBanny_populations(false) as PopulationConfig[];
 Array.from(ordered).map(m => console.log(m.name));
 */
 
-const description = `Juicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.\n\nThe Banny that started it all. The one. The only. The magnificent, majestic and magnanimous. The OG Banny. All Bannies take some part from illustrious existence. Many Bannies tell tales of a vague, distant memory— some ascribe it to pure chance, others to the supernatural. Then yet other will tell you that OG Banny is bound to come into the world, in full, fleshy banana form. Others say he has come back many times, sometimes as an apple, other times as an orange. And yet others say he is yet to come, and when he comes, existence as we know it will change. And then there’s those who say that he’s far more than any of that: he’s a historical whisper, lost for generations and whose echo reverberates around the lore he inspired. An OG, if ever there was one.\nIn the beginning, there was OG Banny.`;
+const aboutJuicebox = `Juicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.
+
+Juicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.`;
 
 const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
@@ -129,7 +117,7 @@ export const bannyConfig: ProjectConfig = {
   metadata_input: {
     name: `{{{{batch_index}}.Banny Name}} {{traits.0.value}}`,
     symbol: nft_symbol,
-    description: `{{{{batch_index}}.Motto}}\n\n{{{{batch_index}}.History}}\n\n${description}`,
+    description: `{{{{batch_index}}.Motto}}\n\n{{{{batch_index}}.History}}\n\n${aboutJuicebox}`,
     birthdate: `-22100400`,
     background_colors: [], // nft_colors
     minter: nft_minter,

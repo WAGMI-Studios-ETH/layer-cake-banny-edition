@@ -7,6 +7,7 @@ import { project_config } from './config';
 dotenvConfig({ path: resolve(__dirname, '../.env') });
 
 async function main(): Promise<void> {
+  const deployer = await (await ethers.getSigners())[0].getAddress();
   const { tokenName, tokenSymbol, baseURI, maxTokens, startSale } = project_config;
   const Factory: ContractFactory = await ethers.getContractFactory('SevenTwentyOne');
 
@@ -31,6 +32,18 @@ async function main(): Promise<void> {
       `${SevenTwentyOne.address} ` +
       `"${tokenName}" "${tokenSymbol}" "${baseURI}" "${maxTokens}" "${startSale}"`,
   );
+
+  const contract = await SevenTwentyOne.deployed();
+  if (true) {
+    console.log('flipping sale state');
+    const txn = await contract.flipSaleState();
+    await txn.wait();
+
+    console.log('Minting....');
+    const txn1 = await contract.mintTokenTransfer(deployer, 3);
+    await txn1.wait();
+    console.log('DONE!');
+  }
 }
 
 /* We recommend this pattern to be able to use async/await everywhere
