@@ -22,7 +22,7 @@ const project_description = `Juicebox Governance Token, or veBanny, is the Juice
 
 const project_max_tokens = 300;
 const project_start_sale = 1;
-const project_external_url = `https://move.xyz`;
+const project_external_url = `https://juicebox.money/`;
 const project_seller_fee_basis_points = 5000;
 const project_fee_recipient = `0x1DD2091f250876Ba87B6fE17e6ca925e1B1c0CF0`;
 
