@@ -13,7 +13,7 @@ import {
 const iso_datetime_now = new Date().toISOString();
 
 const nft_symbol = `VEBANNY`;
-const nft_more_info_link = 'https://juicebox.money';
+// const nft_more_info_link = 'https://juicebox.money';
 const nft_minter = `0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`;
 const nft_creators = [`@juiceboxETH`];
 const nft_publishers = [`@juiceboxETH`];
@@ -129,7 +129,7 @@ export const bannyConfig: ProjectConfig = {
     tags: [`ETH`],
     drop_date: `${iso_datetime_now}`,
     native_size: '1000x1000',
-    more_info_link: nft_more_info_link,
+    more_info_link: ``,
     include_total_population_in_name: true,
     attributes: [
       // { trait_type: `Arcana`, value: `{{{{population_index}}.Arcana}}` },
