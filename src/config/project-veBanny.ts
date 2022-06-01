@@ -90,7 +90,7 @@ export function generate_populations(verbose: boolean = false) {
   return ordered_characters as unknown as PopulationConfig[];
 }
 
-const populations: PopulationConfig[] = generate_populations(false).slice(0);
+const populations: PopulationConfig[] = generate_populations(false).slice(0, 3);
 
 /*
 const ordered = generate_veBanny_populations(false) as PopulationConfig[];
@@ -132,6 +132,7 @@ export const bannyConfig: ProjectConfig = {
     more_info_link: nft_more_info_link,
     include_total_population_in_name: true,
     attributes: [
+      { trait_type: 'JBX Range', value: `{{{{population_index}}.$JBX Range}}` },
       // { trait_type: `Arcana`, value: `{{{{population_index}}.Arcana}}` },
       // { trait_type: `Communications`, value: `{{{{population_index}}.Comms}}` },
       // { trait_type: `Grind`, value: `{{{{population_index}}.Grind}}` },
