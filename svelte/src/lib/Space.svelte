@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  export let amount: number = 5000;
+  export let amount: number = 2500;
   export let speed: number = 3;
 
   const id = Math.floor(Math.random() * Number.MAX_SAFE_INTEGER).toString(36);
