@@ -9,6 +9,8 @@
 
   let ready = false;
 
+  let amount = 1000;
+
   onMount(() => {
     Tilt.init(purse, {
       max: 25,
@@ -23,9 +25,8 @@
       front = `https://cloudflare-ipfs.com/ipfs/${cid}/${tokenId}.png`;
     }
 
-    console.log({ lock_period });
     if (lock_period) {
-      console.log(lock_period);
+      amount = Number(lock_period.replace(/[^\d]/g, '')) * 5;
     }
 
     const interval = setInterval(() => {
@@ -69,9 +70,6 @@
 {/if}
 
 <style>
-  :root {
-    background: black;
-  }
   :global(body) {
     background-color: #000;
     position: absolute;
@@ -79,6 +77,8 @@
     bottom: 0;
     left: 0;
     right: 0;
+    margin: 0;
+    padding: 0;
   }
   .purse {
     height: 320px;
@@ -132,8 +132,10 @@
     z-index: -5;
     border-width: 5px;
     border-style: solid;
-    box-shadow: -10px -10px 25px 0px #ffff00bb, 10px -10px 25px 0px blue, 10px 10px 25px 0px red,
-      -10px 10px 25px 0px green;
+    box-shadow: -10px -10px 25px 0px #32c8db, 10px -10px 25px 0px #32c8db, 10px 10px 25px 0px #32c8db,
+      -10px 10px 25px 0px #32c8db;
+    /* box-shadow: -10px -10px 25px 0px #ffff00bb, 10px -10px 25px 0px blue, 10px 10px 25px 0px red,
+      -10px 10px 25px 0px green; */
     animation: spinin 25s linear infinite;
   }
   @keyframes spinin {
