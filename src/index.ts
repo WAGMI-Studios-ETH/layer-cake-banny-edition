@@ -197,12 +197,15 @@ async function get_all_assets(
   }
 
   console.log('#########################################################');
-  await compileTemplate(
-    all_assets.map((asset, index) => ({ tokenId: asset.base_name.replace(/^0+/, '') })),
-    './src/template',
-    `${the_project.output_folder}/html/`,
-  );
-  console.log('#########################################################');
+  const animation_url = the_project.config.metadata_input.animation_url;
+  if (animation_url && !animation_url?.match('SVELTE_IPFS')) {
+    await compileTemplate(
+      all_assets.map((asset, index) => ({ tokenId: asset.base_name.replace(/^0+/, '') })),
+      './src/template',
+      `${the_project.output_folder}/html/`,
+    );
+    console.log('#########################################################');
+  }
 
   return { all_assets, all_trait_names };
 }
@@ -256,7 +259,10 @@ const run = async () => {
   validate_all_assets_for_ipfs(all_assets);
   await compute_asset_hashes(all_assets);
 
-  if (the_project.config.upload_images_to_ipfs) await upload_all_animation(all_assets);
+  const animation_url = the_project.config.metadata_input.animation_url;
+  if (the_project.config.upload_images_to_ipfs && animation_url && !animation_url?.match(/SVELTE_IPFS/)) {
+    await upload_all_animation(all_assets);
+  }
   if (the_project.config.upload_images_to_ipfs) await upload_all_images(all_assets);
 
   // @ts-ignore

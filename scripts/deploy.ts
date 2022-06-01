@@ -15,7 +15,9 @@ async function main(): Promise<void> {
   console.log(`Token name:${tokenName} (${tokenSymbol})`);
   console.log(`Max tokens:${maxTokens}, startSale:${startSale}`);
 
-  const SevenTwentyOne: Contract = await Factory.deploy(tokenName, tokenSymbol, baseURI, maxTokens, startSale);
+  const args = [tokenName, tokenSymbol, baseURI, maxTokens, startSale];
+
+  const SevenTwentyOne: Contract = await Factory.deploy(...args);
 
   const deployed = await SevenTwentyOne.deployed();
   console.log(`Contract deployed to:`, SevenTwentyOne.address);
@@ -35,7 +37,7 @@ async function main(): Promise<void> {
       `\n` +
       `npx hardhat verify --network ${network.name} ` +
       `${SevenTwentyOne.address} ` +
-      `"${tokenName}" "${tokenSymbol}" "${baseURI}" "${maxTokens}" "${startSale}"`,
+      args.map(arg => `"${arg}"`).join(' '),
   );
 
   if (true) {

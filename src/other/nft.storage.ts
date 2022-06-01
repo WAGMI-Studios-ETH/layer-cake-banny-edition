@@ -9,6 +9,7 @@ import { IPFS_BASE_URL, NFT_STORAGE_API_KEYS } from '../config';
 import { save_assets_state } from '..';
 import type { CIDString } from 'nft.storage/dist/src/lib/interface';
 import { readDirectory } from './compile-template';
+import { fillVars, generateVars } from '../utils/template';
 
 // TODO: experiment with more or less to get stable and faster build
 const MAX_BATCH_ASSETS = 20;
@@ -34,10 +35,6 @@ function image_cid_distributor(asset: Asset, cid: string, thumb_tag: string) {
   asset.images_cid = cid;
   asset.image_url = `${IPFS_BASE_URL}${cid}/${asset.base_name}.png`;
   asset.thumb_url = `${IPFS_BASE_URL}${cid}/${asset.base_name}${thumb_tag}.png`;
-}
-
-function animation_url_distributor(asset: Asset, cid: string) {
-  asset.animation_url = `${IPFS_BASE_URL}${cid}/${asset.base_name.replace(/^0+/, '')}.html`;
 }
 
 function metadata_cid_checker(asset: Asset) {
@@ -167,24 +164,22 @@ export async function upload_all_images(assets: Asset[]) {
 }
 
 export async function upload_all_animation(assets: Asset[]) {
-  function animation_cid_checker(asset: Asset) {
-    return asset.animation_url?.length > 0;
-  }
   if (assets.length) {
-    const files = readdirSync(assets[0].html_folder)
-      .map(name => `${assets[0].html_folder}/${name}`)
-      .filter(file => {
-        const matchedAsset = assets.find(
-          asset => `${asset.html_folder}/${asset.base_name.replace(/^0+/g, '')}.html` === file,
+    const { cid } = await uploadToIPFS([assets[0].html_folder]);
+    if (cid) {
+      for (const asset of assets) {
+        asset.animation_url = fillVars(
+          the_project.config.metadata_input.animation_url || '',
+          generateVars(the_project),
         );
-        if (matchedAsset) {
-          return !matchedAsset?.animation_url;
-        }
-        return true;
-      });
-    const { cid, success } = await wrap_and_pin_folders_and_files_to_ipfs(files);
-    if (cid && success) {
-      await Promise.all(assets.map(async asset => await animation_url_distributor(asset, cid)));
+        asset.animation_url = fillVars(
+          the_project.config.metadata_input.animation_url || '',
+          generateVars({ ...asset }),
+        );
+        asset.animation_url = fillVars(the_project.config.metadata_input.animation_url || '', {
+          IPFS: `https://cloudflare-ipfs.com/ipfs/${cid}`,
+        });
+      }
     }
   }
 }

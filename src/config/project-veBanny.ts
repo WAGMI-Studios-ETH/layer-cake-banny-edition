@@ -90,7 +90,7 @@ export function generate_populations(verbose: boolean = false) {
   return ordered_characters as unknown as PopulationConfig[];
 }
 
-const populations: PopulationConfig[] = generate_populations(false);
+const populations: PopulationConfig[] = generate_populations(false).slice(0);
 
 /*
 const ordered = generate_veBanny_populations(false) as PopulationConfig[];
@@ -132,14 +132,14 @@ export const bannyConfig: ProjectConfig = {
     more_info_link: nft_more_info_link,
     include_total_population_in_name: true,
     attributes: [
-      { trait_type: `Arcana`, value: `{{{{population_index}}.Arcana}}` },
-      { trait_type: `Communications`, value: `{{{{population_index}}.Comms}}` },
-      { trait_type: `Grind`, value: `{{{{population_index}}.Grind}}` },
-      { trait_type: `Perception`, value: `{{{{population_index}}.Perception}}` },
-      { trait_type: `Strength`, value: `{{{{population_index}}.Strength}}` },
-      { trait_type: `Shadowiness`, value: `{{{{population_index}}.Shadowiness}}` },
+      // { trait_type: `Arcana`, value: `{{{{population_index}}.Arcana}}` },
+      // { trait_type: `Communications`, value: `{{{{population_index}}.Comms}}` },
+      // { trait_type: `Grind`, value: `{{{{population_index}}.Grind}}` },
+      // { trait_type: `Perception`, value: `{{{{population_index}}.Perception}}` },
+      // { trait_type: `Strength`, value: `{{{{population_index}}.Strength}}` },
+      // { trait_type: `Shadowiness`, value: `{{{{population_index}}.Shadowiness}}` },
     ],
-    animation_url: `{{SVELTE_IPFS}}/index.html#tokenId={{base_name}}&cid={{images_cid}}`,
+    animation_url: `{{SVELTE_IPFS}}/index.html#tokenId={{base_name}}&cid={{images_cid}}&lock_period={{traits.0.value}}`,
     royalties: {
       artist_address: nft_artist_address,
       artist_percentage: nft_artist_royality,

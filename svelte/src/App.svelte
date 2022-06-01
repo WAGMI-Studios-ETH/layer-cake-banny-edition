@@ -1,19 +1,11 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import Tilt from 'vanilla-tilt';
-
-  const number_of_star = 150;
+  import Space from './lib/Space.svelte';
 
   let purse: HTMLElement;
-  let coin: HTMLElement;
-  let sparkles: HTMLElement;
-
-  const random_number = function (min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  };
 
   let front = './front.png';
-  let back = './back.png';
 
   let ready = false;
 
@@ -26,8 +18,14 @@
     const urlSearchParams = new URLSearchParams(search);
     const tokenId = urlSearchParams.get('tokenId');
     const cid = urlSearchParams.get('cid');
+    let lock_period = urlSearchParams.get('lock_period');
     if (cid && tokenId) {
       front = `https://cloudflare-ipfs.com/ipfs/${cid}/${tokenId}.png`;
+    }
+
+    console.log({ lock_period });
+    if (lock_period) {
+      console.log(lock_period);
     }
 
     const interval = setInterval(() => {
@@ -37,44 +35,12 @@
       }
     }, 50);
   });
-
-  function getStarData() {
-    const star_rotation = 'move_right;';
-    const star_top = random_number(0, window.innerHeight);
-    const star_left = random_number(0, window.innerWidth);
-    const star_radius = random_number(0, 4);
-    const star_duration = random_number(6, 16);
-    return {
-      top: star_top,
-      left: star_left,
-      radius: star_radius,
-      duration: star_duration,
-      rotation: star_rotation,
-    };
-  }
-  let animating = false;
-  // function spin() {
-  //   animating = true;
-  //   const [animation] = [coin, sparkles].map(elm =>
-  //     elm.animate([{ transform: 'rotateY(0deg)' }, { transform: 'rotateY(360deg)' }], {
-  //       duration: 3000,
-  //       iterations: 1,
-  //       easing: 'cubic-bezier(0.42, 0, 0.58, 1)',
-  //     }),
-  //   );
-  //   animation.onfinish = event => {
-  //     if (animating) spin();
-  //   };
-  // }
 </script>
 
-<div class="intro" />
 <div class="purse" bind:this={purse}>
-  <!-- on:pointerenter={spin} on:pointerleave={() => (animating = false)} -->
-  <div bind:this={coin} class="coin" data-tilt style="pointer-events: none">
+  <div class="coin" data-tilt style="pointer-events: none">
     <div class="barrier" />
     <div class="front" style="background-image: url('{front}')" />
-    <div class="back" style="background-image: url('{back}');" />
     <div class="side">
       <div class="spoke" />
       <div class="spoke" />
@@ -94,17 +60,12 @@
       <div class="spoke" />
     </div>
   </div>
-  <div bind:this={sparkles} class="sparkles" style="pointer-events: none">
+  <div class="sparkles" style="pointer-events: none">
     <img src="./sparkles.gif" alt="" />
   </div>
 </div>
 {#if ready}
-  {#each Array(number_of_star).fill(0).map(getStarData) as { top, left, radius, duration, rotation }}
-    <div
-      class="star"
-      style="top:{top}px; left: {left}px; width: {radius}px; height: {radius}px; animation-name:{rotation}; animation-duration: {duration}s;"
-    />
-  {/each}
+  <Space />
 {/if}
 
 <style>
@@ -128,8 +89,6 @@
     margin-top: -160px;
     margin-left: -160px;
     perspective: 1000;
-    -webkit-box-reflect: below 0
-      linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 45%, rgba(255, 255, 255, 0.2));
     filter: saturate(1.45) hue-rotate(2deg);
     z-index: 1000;
   }
@@ -151,7 +110,6 @@
     mix-blend-mode: color-dodge;
   }
   .coin .front,
-  .coin .back,
   .coin .barrier {
     position: absolute;
     height: 320px;
@@ -165,19 +123,26 @@
   .coin .front {
     transform: translateZ(16px);
   }
-  .coin .back {
-    transform: translateZ(-16px) rotateY(180deg);
-  }
   .coin .barrier {
     clip-path: circle(320px);
     left: 50%;
+    top: 50%;
     position: absolute;
-    transform: translate(-50%, -0);
+    transform: translate(-50%, -50%);
     z-index: -5;
     border-width: 5px;
     border-style: solid;
     box-shadow: -10px -10px 25px 0px #ffff00bb, 10px -10px 25px 0px blue, 10px 10px 25px 0px red,
       -10px 10px 25px 0px green;
+    animation: spinin 25s linear infinite;
+  }
+  @keyframes spinin {
+    from {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
   }
   .coin .side {
     transform: translateX(144px);
@@ -271,37 +236,5 @@
   }
   .coin.skeleton .side .spoke:after {
     background: rgba(204, 204, 255, 0.2);
-  }
-  .star {
-    display: block;
-    background-color: #fff;
-    position: absolute;
-    border-radius: 100%;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-
-  @keyframes move_right {
-    from {
-      transform: rotate(0deg) translateX(8px) rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg) translateX(8px) rotate(-360deg);
-    }
-  }
-
-  @keyframes move_left {
-    from {
-      transform: rotate(0deg) translateX(8px) rotate(0deg);
-    }
-    to {
-      transform: rotate(-360deg) translateX(8px) rotate(360deg);
-    }
-  }
-  .intro {
-    color: #63baf7;
-    margin: 1em;
-    font-family: Jura;
-    font-size: 11pt;
   }
 </style>
