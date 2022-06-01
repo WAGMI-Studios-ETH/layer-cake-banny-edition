@@ -90,7 +90,7 @@ export function generate_populations(verbose: boolean = false) {
   return ordered_characters as unknown as PopulationConfig[];
 }
 
-const populations: PopulationConfig[] = generate_populations(false).slice(0, 3);
+const populations: PopulationConfig[] = generate_populations(false).slice(0);
 
 /*
 const ordered = generate_veBanny_populations(false) as PopulationConfig[];

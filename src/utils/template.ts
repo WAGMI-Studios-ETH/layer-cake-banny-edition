@@ -15,10 +15,12 @@ type CompileContext = {
 export function fillVars(template: string, vars: CompileContext, context?: Context) {
   let result = template;
   for (const key in vars) {
-    result = result.replace(
-      new RegExp(`{{${key}}}`, 'g'),
-      typeof vars[key] === 'function' ? (vars[key] as Function)(context).toString() : vars[key].toString(),
-    );
+    while (result.includes(`{{${key}}}`)) {
+      result = result.replace(
+        `{{${key}}}`,
+        typeof vars[key] === 'function' ? (vars[key] as Function)(context).toString() : vars[key].toString(),
+      );
+    }
   }
   return result;
 }

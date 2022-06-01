@@ -66,7 +66,7 @@
   </div>
 </div>
 {#if ready}
-  <Space />
+  <Space amount={Math.max(200, amount + 100)} />
 {/if}
 
 <style>

@@ -134,7 +134,7 @@ export function generate_ethereum_metadata(asset: Asset) {
     date: i.drop_date,
     tags: [...new Set([...tags, ...i.tags])],
     background_color:
-      i.background_colors !== undefined ? i.background_colors[random(i.background_colors.length)] : 'FFFFFF',
+      i.background_colors !== undefined ? i.background_colors?.[random(i.background_colors?.length || 0)] : 'FFFFFF',
     language: `en`,
     mimeType: `image/png`,
     artifactUri: asset.image_url,

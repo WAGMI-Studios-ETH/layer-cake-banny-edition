@@ -20,10 +20,10 @@ const project_name = `veBanny Collection`;
 const project_symbol = `VEBANNY`;
 const project_description = `Juicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.\n\nJuicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.`;
 
-const project_max_tokens = 300;
+const project_max_tokens = 3;
 const project_start_sale = 1;
 const project_external_url = `https://juicebox.money/`;
-const project_seller_fee_basis_points = 5000;
+const project_seller_fee_basis_points = 500;
 const project_fee_recipient = `0x1DD2091f250876Ba87B6fE17e6ca925e1B1c0CF0`;
 
 export const project_config = {

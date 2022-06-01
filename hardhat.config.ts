@@ -8,7 +8,7 @@ import 'solidity-coverage';
 import { task } from 'hardhat/config';
 import { config as dotenvConfig } from 'dotenv';
 import { resolve } from 'path';
-import { HardhatUserConfig, NetworkUserConfig } from 'hardhat/types';
+import type { HardhatUserConfig, NetworkUserConfig } from 'hardhat/types';
 import './type-extensions';
 
 dotenvConfig({ path: resolve(__dirname, './.env') });
