@@ -1,4 +1,4 @@
-<script lang="ts"></script>
+<script lang="ts">
   import { onMount } from 'svelte';
 
   export let amount: number = 5000;
