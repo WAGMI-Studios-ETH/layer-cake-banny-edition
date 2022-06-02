@@ -133,12 +133,14 @@ export const bannyConfig: ProjectConfig = {
     include_total_population_in_name: true,
     /*
     https://cloudflare-ipfs.com/ipfs/bafybeiaqrndygqdubcpj7nqtt3ot67yniszmdxoiwt5ud3anqkci45t7je/index.html#tokenId=2&cid=bafybeiehhublymoiw3fii7rwfh5w5auw74a66en5p6e4w4fcjvljsqbe2m&lock_period=50
-  
-  Blue/Teal: current
-  Green: B0F35B
-  Yellow/Orange: F6D222
-  Purple: CA86FF
-  Rainbow
+    
+  10 days: E15476
+  50 days: The teal color
+  100 days: B062FF
+  500 days: FFC61C
+  1000 days: 4CE15B
+  and green on 4/20 
+
     */
     attributes: [
       { trait_type: 'JBX Range', value: `{{{{population_index}}.$JBX Range}}` },
