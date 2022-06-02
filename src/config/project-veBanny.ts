@@ -131,6 +131,15 @@ export const bannyConfig: ProjectConfig = {
     native_size: '1000x1000',
     more_info_link: ``,
     include_total_population_in_name: true,
+    /*
+    https://cloudflare-ipfs.com/ipfs/bafybeiaqrndygqdubcpj7nqtt3ot67yniszmdxoiwt5ud3anqkci45t7je/index.html#tokenId=2&cid=bafybeiehhublymoiw3fii7rwfh5w5auw74a66en5p6e4w4fcjvljsqbe2m&lock_period=50
+  
+  Blue/Teal: current
+  Green: B0F35B
+  Yellow/Orange: F6D222
+  Purple: CA86FF
+  Rainbow
+    */
     attributes: [
       { trait_type: 'JBX Range', value: `{{{{population_index}}.$JBX Range}}` },
       // { trait_type: `Arcana`, value: `{{{{population_index}}.Arcana}}` },
@@ -141,6 +150,22 @@ export const bannyConfig: ProjectConfig = {
       // { trait_type: `Shadowiness`, value: `{{{{population_index}}.Shadowiness}}` },
     ],
     animation_url: `{{SVELTE_IPFS}}/index.html#tokenId={{base_name}}&cid={{images_cid}}&lock_period={{traits.0.value}}`,
+    /*
+    animation_url_arguments: {
+      lock_color: [
+        (color = ``),
+        (lock_period = `{{traits.0.value}}`),
+        (color = ``),
+        (lock_period = `{{traits.0.value}}`),
+        (color = ``),
+        (lock_period = `{{traits.0.value}}`),
+        (color = ``),
+        (lock_period = `{{traits.0.value}}`),
+        (color = ``),
+        (lock_period = `{{traits.0.value}}`),
+      ],
+    },
+    */
     royalties: {
       artist_address: nft_artist_address,
       artist_percentage: nft_artist_royality,
