@@ -1,4 +1,5 @@
 import { Asset } from '../other/asset';
+import { AnimationTemplate } from './animation-template';
 import { OpenSeaStoreInformation } from './metadata';
 export { OpenSeaStoreInformation } from './metadata';
 
@@ -39,6 +40,7 @@ export interface MetadataInput {
   name: string;
   symbol: string;
   description: string;
+  opensea: OpenSeaStoreInformation;
   additiona_metadata?: string;
   birthdate?: string;
   background_colors?: string[];
@@ -56,8 +58,27 @@ export interface MetadataInput {
   decimals: number;
   generation: number;
   edition: number;
+  // OLD
   animation_url?: string;
   attributes: Partial<Trait>[];
+  // NEW
+  population_metadata?: {
+    specific_to_population: boolean;
+    metadata_source: string;
+    match_key: string;
+    include_columns: string[];
+    rename_columes_attributes: string[];
+    metadata_type: MetadataType;
+    substitute_variables: string[];
+    animation_url: AnimationTemplate;
+  };
+}
+
+export interface MetadataType {
+  attributes: string[];
+  levels: string[];
+  boosts: string[];
+  boosts_percentage: string[];
 }
 
 /*

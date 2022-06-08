@@ -12,12 +12,12 @@ export async function generate_metadata(asset: Asset) {
   for (const mo of mos) {
     switch (mo) {
       case 'tezos': {
-        const md = generate_tezos_metadata(asset, the_project.config.excluded_layers_from_metadata);
+        const md = await generate_tezos_metadata(asset, the_project.config.excluded_layers_from_metadata);
         write_metadata_to_file(asset, md, 'tezos');
         break;
       }
       case 'ethereum': {
-        const md = generate_ethereum_metadata(asset);
+        const md = await generate_ethereum_metadata(asset);
         write_metadata_to_file(asset, md, 'ethereum');
         break;
       }

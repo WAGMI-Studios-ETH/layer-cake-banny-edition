@@ -44,7 +44,7 @@ export const output_contract_csv = async (assets: Asset[], dest_path: string) =>
       const rec: dynamic = {};
       rec.token_id = `${asset.batch_index + 1}`; // 1
       rec.symbol = `${the_project.config.metadata_input.symbol}${asset.base_name}`; // GLO0001
-      rec.name = `${the_project.config.metadata_input.name} No. ${asset.base_name}`; // GloGang No. 1
+      rec.name = `${asset.nftName} No. ${asset.base_name}`; // GloGang No. 1
       rec.url = asset.metadata_url;
       records.push(rec);
     });

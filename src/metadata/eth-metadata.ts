@@ -9,6 +9,7 @@ import { banny_stats } from './banny-stats';
 import { test_stats } from './test-stats';
 
 import { change_to_sentence_case, replace_underscores, strip_extension, trait_boost } from './metadata';
+import { getMetadataRow, replaceTemplateText } from '../utils/stringVariables';
 import { fillVars, generateVars } from '../utils/template';
 import { MetadataInput } from '../interfaces';
 
@@ -20,13 +21,13 @@ export const default_stats: Stat[] = [
   },
 ];
 
-export function generate_ethereum_metadata(asset: Asset) {
+export async function generate_ethereum_metadata(asset: Asset) {
   logger.info(`generating metadata for ${asset.base_name}`);
   const traits: IHash[] = [];
   const asset_boosts: { stat_name: string; maxxed: boolean }[] = [];
   const tags: string[] = [];
 
-  let stats: Stat[];
+  let stats: Stat[] = [];
   switch (the_project.config.name) {
     case 'glo-gang': {
       throw new Error(`glo-gang not configured for ethereum metadata`);
@@ -84,46 +85,21 @@ export function generate_ethereum_metadata(asset: Asset) {
     base_stat_attributes.push({ trait_type: stat_name, value: val });
   }
 
-  const level = Math.floor(stats_sum / stats.length / 2);
-  const level_attribute = { trait_type: 'Level', value: level };
-
   const birthday_ms = fourtwenty_birthday();
   const birthday_attribute = { trait_type: 'Birthday', display_type: 'date', value: birthday_ms };
 
-  const History = asset.attribs.find(attr => attr.trait_type === 'History');
-  const Motto = asset.attribs.find(attr => attr.trait_type === 'Motto');
+  const all_attributes = [...asset.attribs, ...traits, birthday_attribute];
 
-  const all_attributes = [
-    ...asset.attribs.filter(attr => [History, Motto].indexOf(attr) === -1),
-    ...traits,
-    birthday_attribute,
-  ];
-
-  const { metadata_input } = the_project.config;
-  let template = JSON.stringify(metadata_input);
-  template = fillVars(template, generateVars(the_project));
-  template = fillVars(template, generateVars({ ...asset, traits }));
-  template = fillVars(template, generateVars('./layered-assets/vebanny/metadata.csv'));
-  const svelteJSON = generateVars('./layered-assets/vebanny/svelte.json');
-  template = fillVars(template, { SVELTE_IPFS: `https://cloudflare-ipfs.com/ipfs/${svelteJSON.cid}` });
-
-  const i: MetadataInput = JSON.parse(template);
-
-  const attributes = [...all_attributes, ...i.attributes].map(attrib => {
-    if (typeof attrib.value === 'string' && attrib.value.match(/^\d+$/)) {
-      attrib.value = Number(attrib.value);
-    }
-    return attrib;
-  });
+  const i = the_project.config.metadata_input;
+  const name = `${asset.nftName} No. ${asset.base_name}`;
 
   let md: IHash = {
-    ...i,
     identifier: asset.batch_index + 1, // `0..n`
     edition: i.edition,
     isBooleanAmount: true,
-    name: i.name,
-    attributes,
-    symbol: i.symbol,
+    name: name,
+    attributes: all_attributes,
+    symbol: `${i.symbol}${asset.base_name}`,
     shouldPreferSymbol: false,
     description: i.description,
     minter: i.minter,
@@ -132,7 +108,7 @@ export function generate_ethereum_metadata(asset: Asset) {
     publishers: i.publishers,
     genre: i.genres,
     date: i.drop_date,
-    tags: [...new Set([...tags, ...i.tags])],
+    tags: [...new Set(tags)],
     background_color:
       i.background_colors !== undefined ? i.background_colors[random(i.background_colors.length)] : 'FFFFFF',
     language: `en`,
@@ -143,7 +119,7 @@ export function generate_ethereum_metadata(asset: Asset) {
     externalUri: i.more_info_link,
     uri: asset.image_url,
     image: asset.image_url,
-    animation_url: i.animation_url,
+    animation_url: asset.animation_url,
     imageSize: asset.image_size,
     formats: [
       {
@@ -167,10 +143,20 @@ export function generate_ethereum_metadata(asset: Asset) {
     ],
   };
   if (!!i.royalties) {
-    md.royalties = i.royalties;
+    md.royalty_info = i.royalties;
   }
   if (!!i.rights) {
     md.rights = i.rights;
+  }
+
+  let variablesToReplace = i.population_metadata?.substitute_variables;
+  if (variablesToReplace && variablesToReplace.length > 0) {
+    const metadataRow = await getMetadataRow(the_project, asset.nftName);
+    variablesToReplace.forEach(variable => {
+      if (metadataRow && md[variable]) {
+        md[variable] = replaceTemplateText(metadataRow, md[variable]);
+      }
+    });
   }
   return md;
 }

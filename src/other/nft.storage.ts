@@ -8,6 +8,7 @@ import { NFTStorage, File } from 'nft.storage';
 import { IPFS_BASE_URL, NFT_STORAGE_API_KEYS } from '../config';
 import { save_assets_state } from '..';
 import type { CIDString } from 'nft.storage/dist/src/lib/interface';
+import { boolean } from 'yargs';
 import { readDirectory } from './compile-template';
 import { fillVars, generateVars } from '../utils/template';
 
@@ -28,6 +29,10 @@ function image_paths_selector(asset: Asset) {
       paths.push(`${asset.image_folder}/${output.tag}/${asset.base_name}${output.ipfs_tag}.png`);
     }
   }
+
+  if (the_project.config.metadata_input.population_metadata?.animation_url) {
+    paths.push(`${asset.html_folder}/${asset.base_name.replace(/^0+/, '')}.html`);
+  }
   return paths;
 }
 
@@ -35,6 +40,14 @@ function image_cid_distributor(asset: Asset, cid: string, thumb_tag: string) {
   asset.images_cid = cid;
   asset.image_url = `${IPFS_BASE_URL}${cid}/${asset.base_name}.png`;
   asset.thumb_url = `${IPFS_BASE_URL}${cid}/${asset.base_name}${thumb_tag}.png`;
+
+  if (the_project.config.metadata_input.population_metadata?.animation_url) {
+    asset.animation_url = `${IPFS_BASE_URL}${cid}/${asset.base_name.replace(/^0+/, '')}.html`;
+  }
+}
+
+function animation_url_distributor(asset: Asset, cid: string) {
+  asset.animation_url = `${IPFS_BASE_URL}${cid}/${asset.base_name.replace(/^0+/, '')}.html`;
 }
 
 function metadata_cid_checker(asset: Asset) {
@@ -43,7 +56,7 @@ function metadata_cid_checker(asset: Asset) {
 }
 
 function metadata_path_selector(asset: Asset) {
-  return [`${asset.json_folder}/ethereum/`];
+  return [`${asset.json_folder}/ethereum/${asset.base_name.replace(/^0+/, '')}`];
 }
 
 function metadata_cid_distributor(asset: Asset, cid: string, thumb_tag: string) {
@@ -164,63 +177,30 @@ export async function upload_all_images(assets: Asset[]) {
 }
 
 export async function upload_all_animation(assets: Asset[]) {
+  function animation_cid_checker(asset: Asset) {
+    return asset.animation_url?.length > 0;
+  }
   if (assets.length) {
-    const { cid } = await uploadToIPFS([assets[0].html_folder]);
-    if (cid) {
-      for (const asset of assets) {
-        asset.animation_url = fillVars(
-          the_project.config.metadata_input.animation_url || '',
-          generateVars(the_project),
+    const files = readdirSync(assets[0].html_folder)
+      .map(name => `${assets[0].html_folder}/${name}`)
+      .filter(file => {
+        const matchedAsset = assets.find(
+          asset => `${asset.html_folder}/${asset.base_name.replace(/^0+/g, '')}.html` === file,
         );
-        asset.animation_url = fillVars(
-          the_project.config.metadata_input.animation_url || '',
-          generateVars({ ...asset }),
-        );
-        asset.animation_url = fillVars(the_project.config.metadata_input.animation_url || '', {
-          IPFS: `https://cloudflare-ipfs.com/ipfs/${cid}`,
-        });
-      }
+        if (matchedAsset) {
+          return !matchedAsset?.animation_url;
+        }
+        return true;
+      });
+    const { cid, success } = await wrap_and_pin_folders_and_files_to_ipfs(files);
+    if (cid && success) {
+      await Promise.all(assets.map(async asset => await animation_url_distributor(asset, cid)));
     }
   }
 }
 
 export async function upload_all_metadata(assets: Asset[]) {
-  if (assets.length) {
-    const path = metadata_path_selector(assets[0]);
-    console.log(path);
-    const status = await uploadToIPFS(path);
-    await wait(1000);
-    if (status.cid) {
-      for (const asset of assets) {
-        console.log(asset.base_name, 'setting', status.cid);
-        metadata_cid_distributor(asset, status.cid, '');
-      }
-    }
-  }
-  save_assets_state(assets);
-}
-
-export async function uploadToIPFS(paths: string[]) {
-  const files: any[] = [];
-
-  for (const _path of paths) {
-    const dirPath = path.resolve(__dirname, '../..', _path);
-    const dir = readDirectory(dirPath);
-
-    for (const filePath of dir) {
-      const file = new File([readFileSync(filePath)], filePath.replace(`${dirPath}/`, ''));
-      files.push(file);
-    }
-  }
-
-  const api_key = NFT_STORAGE_API_KEYS[NFT_STORAGE_API_KEYS.length - 1];
-  const storage = new NFTStorage({ token: api_key });
-
-  const cid = await storage.storeDirectory(files);
-  console.log({ cid });
-
-  const status = await storage.status(cid);
-  return status;
+  await upload_all_asset_artifacts(assets, metadata_cid_checker, metadata_path_selector, metadata_cid_distributor);
 }
 
 // works up to 64MB

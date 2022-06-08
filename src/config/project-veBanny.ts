@@ -1,19 +1,40 @@
+/* eslint-disable no-shadow */
+/* eslint-disable max-len */
+/* eslint-disable @typescript-eslint/no-unnecessary-type-assertion */
 import * as fs from 'fs';
-import { ProjectConfig, PopulationConfig } from '../interfaces';
-import { SetEx } from '../utils';
+import { CollageOutput, ProjectConfig, PopulationConfig } from '../interfaces';
+import { parse_csv, random, SetEx } from '../utils';
+import moment from 'moment';
 import { population_order } from './veBanny-order';
 import {
   collage300,
+  collage1600,
+  collage4444,
+  collage4000,
+  collage5000,
+  collage10000,
+  collage11110,
   collageOpenSea1200x75,
   collageDiscord600x240,
   collageTwitter1200x675,
   collageTwitter1500x500,
 } from './collages';
+import { AnimationTemplate } from '../interfaces/animation-template';
 
 const iso_datetime_now = new Date().toISOString();
 
+const nft_name = `{{Banny Name}}`;
 const nft_symbol = `VEBANNY`;
-// const nft_more_info_link = 'https://juicebox.money';
+const nft_description: string = `{{Motto}}
+
+{{History}}
+
+Juicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.
+
+Juicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.
+`;
+
+const nft_more_info_link = 'https://juicebox.money';
 const nft_minter = `0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`;
 const nft_creators = [`@juiceboxETH`];
 const nft_publishers = [`@juiceboxETH`];
@@ -22,8 +43,10 @@ const nft_artist_address = `0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`;
 const nft_artist_royality = 5;
 const nft_rights = `Juicebox Rights Reserved.`;
 
+const nft_colors = [];
+
 export const layer_order = [
-  'Lock_Period',
+  'Background',
   'Body',
   'Face',
   'Choker',
@@ -90,7 +113,8 @@ export function generate_populations(verbose: boolean = false) {
   return ordered_characters as unknown as PopulationConfig[];
 }
 
-const populations: PopulationConfig[] = generate_populations(false).slice(0, 3);
+// const populations: PopulationConfig[] = generate_populations(false).slice(0, 3);
+const ordered = generate_populations(false) as PopulationConfig[];
 
 /*
 const ordered = generate_veBanny_populations(false) as PopulationConfig[];
@@ -104,6 +128,7 @@ Juicebox, https://juicebox.money, is a programmable treasury for community-owned
 const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
   name: layered_assets_folder,
+  stunt_populations_to: 10,
   upload_images_to_ipfs: true,
   upload_metadata_to_ipfs: true,
   shuffle_assets: false,
@@ -117,9 +142,9 @@ export const bannyConfig: ProjectConfig = {
   mirror_images_allowed: 0,
   // asset_origin: 0,
   metadata_input: {
-    name: `{{{{population_index}}.Banny Name}} {{traits.0.value}}`,
+    name: nft_name, // `{{{{population_index}}.Banny Name}} {{traits.0.value}}`,
     symbol: nft_symbol,
-    description: `{{{{population_index}}.Motto}}\n\n{{{{population_index}}.History}}\n\n${aboutJuicebox}`,
+    description: nft_description, //  `{{{{population_index}}.Motto}}\n\n{{{{population_index}}.History}}\n\n${aboutJuicebox}`,
     birthdate: `-22100400`,
     background_colors: [], // nft_colors
     minter: nft_minter,
@@ -129,10 +154,12 @@ export const bannyConfig: ProjectConfig = {
     tags: [`ETH`],
     drop_date: `${iso_datetime_now}`,
     native_size: '1000x1000',
-    more_info_link: ``,
+    more_info_link: nft_more_info_link,
     include_total_population_in_name: true,
     /*
-    https://cloudflare-ipfs.com/ipfs/bafybeiaqrndygqdubcpj7nqtt3ot67yniszmdxoiwt5ud3anqkci45t7je/index.html#tokenId=2&cid=bafybeiehhublymoiw3fii7rwfh5w5auw74a66en5p6e4w4fcjvljsqbe2m&lock_period=50
+      if this is specific to population then note below within populations which one its for
+
+      https://cloudflare-ipfs.com/ipfs/bafybeiaqrndygqdubcpj7nqtt3ot67yniszmdxoiwt5ud3anqkci45t7je/index.html#tokenId=2&cid=bafybeiehhublymoiw3fii7rwfh5w5auw74a66en5p6e4w4fcjvljsqbe2m&lock_period=50
     
   10 days: E15476
   50 days: The teal color
@@ -140,7 +167,6 @@ export const bannyConfig: ProjectConfig = {
   500 days: FFC61C
   1000 days: 4CE15B
   and green on 4/20 
-
     */
     attributes: [
       { trait_type: 'JBX Range', value: `{{{{population_index}}.$JBX Range}}` },
@@ -153,26 +179,68 @@ export const bannyConfig: ProjectConfig = {
     ],
     animation_url: `{{SVELTE_IPFS}}/index.html#tokenId={{base_name}}&cid={{images_cid}}&lock_period={{traits.0.value}}`,
     /*
-    animation_url_arguments: {
-      lock_color: [
-        (color = ``),
-        (lock_period = `{{traits.0.value}}`),
-        (color = ``),
-        (lock_period = `{{traits.0.value}}`),
-        (color = ``),
-        (lock_period = `{{traits.0.value}}`),
-        (color = ``),
-        (lock_period = `{{traits.0.value}}`),
-        (color = ``),
-        (lock_period = `{{traits.0.value}}`),
+      animation_url_arguments: {
+        lock_color: [
+          (color = ``),
+          (lock_period = `{{traits.0.value}}`),
+          (color = ``),
+          (lock_period = `{{traits.0.value}}`),
+          (color = ``),
+          (lock_period = `{{traits.0.value}}`),
+          (color = ``),
+          (lock_period = `{{traits.0.value}}`),
+          (color = ``),
+          (lock_period = `{{traits.0.value}}`),
+        ],
+      },
+      */
+    population_metadata: {
+      specific_to_population: true,
+      metadata_source: `./layered-assets/${layered_assets_folder}/metadata.csv`,
+      match_key: `folder_name`,
+      include_columns: [
+        `Arcana`,
+        `Comms`,
+        `Grind`,
+        `Perception`,
+        `Strength`,
+        `Shadowiness`,
+        `$JBX Range`,
+        `Range width`,
       ],
+      rename_columes_attributes: [
+        `Arcana`,
+        `Communications`,
+        `Grind`,
+        `Perception`,
+        `Strength`,
+        `Shadowiness`,
+        `$JBX Range`,
+        `Range width`,
+      ],
+      substitute_variables: [`description`] /* name is constructed differently */,
+      metadata_type: {
+        attributes: [`$JBX Range`],
+        levels: [`Arcana`, `Comms`, `Grind`, `Perception`, `Strength`, `Shadowiness`],
+        boosts: [`Range width`],
+        boosts_percentage: [],
+      },
+      animation_url: AnimationTemplate.TOKEN,
     },
-    */
     royalties: {
       artist_address: nft_artist_address,
       artist_percentage: nft_artist_royality,
       // additional_payee: nft_additional_payee,
       // additional_payee_percentage: nft_additional_royality,
+    },
+    opensea: {
+      // https://docs.opensea.io/docs/contract-level-metadata
+      name: nft_name,
+      description: nft_description,
+      image: '',
+      external_link: nft_more_info_link,
+      seller_fee_basis_points: 250, // Indicates a 1% seller fee.
+      fee_recipient: nft_artist_address,
     },
     rights: nft_rights,
     decimals: 0,
@@ -194,7 +262,15 @@ export const bannyConfig: ProjectConfig = {
       images_per_stack: 50,
     },
   ],
-  populations,
+  populations: generate_populations(false) as PopulationConfig[],
+  /*
+  // match to the above metadata so that different population can have different csv files for them
+  populations: {
+    population_metadata {
+      insert_into: true;
+    }
+  }
+  */
   anim_outputs: [],
   collage_outputs: [
     collage300,

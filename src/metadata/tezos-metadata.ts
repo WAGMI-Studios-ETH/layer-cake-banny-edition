@@ -3,8 +3,9 @@ import { IHash, logger } from '../utils';
 import { the_project } from '../other/project';
 import { strip_rarity } from '../other/csv';
 import { replace_underscores, strip_extension } from './metadata';
+import { getMetadataRow, replaceTemplateText } from '../utils/stringVariables';
 
-export function generate_tezos_metadata(asset: Asset, excluded_layers_from_metadata: string[] = []) {
+export async function generate_tezos_metadata(asset: Asset, excluded_layers_from_metadata: string[] = []) {
   logger.info(`generating metadata for ${asset.base_name}`);
   const attributes: {}[] = [];
   const tags: string[] = [];
@@ -23,8 +24,8 @@ export function generate_tezos_metadata(asset: Asset, excluded_layers_from_metad
   });
   const i = the_project.config.metadata_input;
   const name = i.include_total_population_in_name
-    ? `${i.name} ${asset.base_name}/${the_project.total_populations_size}`
-    : `${i.name} ${asset.base_name}`;
+    ? `${asset.nftName} ${asset.base_name}/${the_project.total_populations_size}`
+    : `${asset.nftName} ${asset.base_name}`;
   const md: IHash = {
     identifier: asset.batch_index + 1, // `0..n`
     name: name,
@@ -81,6 +82,14 @@ export function generate_tezos_metadata(asset: Asset, excluded_layers_from_metad
   if (!!i.rights) {
     md.rights = i.rights;
   }
-
+  let variablesToReplace = i.population_metadata?.substitute_variables;
+  if (variablesToReplace && variablesToReplace.length > 0) {
+    const metadataRow = await getMetadataRow(the_project, asset.nftName);
+    variablesToReplace.forEach(variable => {
+      if (metadataRow && md[variable]) {
+        md[variable] = replaceTemplateText(metadataRow, md[variable]);
+      }
+    });
+  }
   return md;
 }

@@ -1,9 +1,10 @@
 import { Project, the_project } from './project';
-import { Trait, Population } from '../interfaces';
+import { Trait, Population, MetadataType } from '../interfaces';
 import { BLANK, parse_csv, zero_pad } from '../utils';
 import { MARGIN_FOR_ERROR } from '../config';
 import fs from 'fs';
 import path from 'path';
+import { getMetadataRow } from '../utils/stringVariables';
 
 export class Asset {
   image_folder: string;
@@ -16,8 +17,6 @@ export class Asset {
   image_size: number = 0;
   thumb_hash: string = BLANK;
   batch_index: number;
-  population_index: number;
-  tokenId: number;
   base_name: string;
   images_cid = BLANK;
   image_url = BLANK;
@@ -28,25 +27,38 @@ export class Asset {
   attribs: Array<Trait>;
   rotation = 0;
   animation_url = '';
+  nftName: string;
   constructor(
     batch_index: number,
     traits: Array<Trait>,
     layered_assets_dir: string,
     output_dir: string,
     attribs: any[] = [],
+    nftName: string = '',
   ) {
     const population_digits = the_project.total_populations_size.toString().length;
     this.traits = traits;
     this.attribs = attribs;
     this.batch_index = batch_index;
-    this.tokenId = batch_index + 1;
     this.base_name = zero_pad(this.batch_index + 1, population_digits);
-    this.population_index = Math.floor(batch_index / 5);
     this.image_folder = `${output_dir}/assets`;
     this.json_folder = `${output_dir}/metadata`;
-    this.html_folder = `${output_dir}/html`;
+    this.html_folder = `${output_dir}/metadata/animation_urls`;
     this.json_path = `${this.json_folder}/${this.base_name}`;
     this.trait_dir = `${layered_assets_dir}/Traits`;
+    this.nftName = nftName;
+  }
+}
+
+function getDisplayType(column: string, config: MetadataType): string | undefined {
+  if (config.levels.indexOf(column) !== -1) {
+    return 'number';
+  }
+  if (config.boosts.indexOf(column) !== -1) {
+    return 'boost_number';
+  }
+  if (config.boosts_percentage.indexOf(column) !== -1) {
+    return 'boost_percentage';
   }
 }
 
@@ -61,6 +73,31 @@ export async function create_assets(
   const target = Math.ceil(population.config.population_size * MARGIN_FOR_ERROR);
   const assets: Asset[] = [];
   const attribs: any[] = [];
+  let nftName = project.config.metadata_input.name;
+  if (project.config.metadata_input.population_metadata?.metadata_source) {
+    const name = population.config.name
+      .replace(/Character_?/, '')
+      .replace(/_/g, ' ')
+      .split(/\d+/)?.[0]
+      ?.trim();
+    const nameColumn = project.config.metadata_input.name.match(/[^{\{]+(?=}\})/g)?.[0];
+    const matched = await getMetadataRow(project, name);
+    if (matched && nameColumn) {
+      nftName = matched[nameColumn];
+      for (let j = 0; j < project.config.metadata_input.population_metadata?.include_columns?.length; j++) {
+        const column = project.config.metadata_input.population_metadata?.include_columns?.[j];
+        const renamed_column = project.config.metadata_input.population_metadata?.rename_columes_attributes?.[j];
+        if (column && renamed_column && typeof matched[column] !== 'undefined') {
+          const display_type = getDisplayType(column, project.config.metadata_input.population_metadata.metadata_type);
+          attribs.push({
+            display_type,
+            trait_type: renamed_column,
+            value: matched[column].match(/^\d+$/) ? Number(matched[column]) : matched[column],
+          });
+        }
+      }
+    }
+  }
   for (const combo of combinations) {
     assets.push(
       new Asset(
@@ -69,6 +106,7 @@ export async function create_assets(
         `${population.input_folder}/${project.config.name}/${population.config.name}`,
         project.output_folder,
         attribs,
+        nftName,
       ),
     );
   }

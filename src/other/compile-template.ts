@@ -10,7 +10,7 @@ type Context = {
   dist?: { dir: string; file: string };
 };
 
-type CompileContext = {
+export type CompileContext = {
   [key: string]: BasicTypes | ((context: Context) => BasicTypes);
 };
 
