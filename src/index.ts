@@ -255,7 +255,7 @@ function get_original_ordering(size: number) {
 const run = async () => {
   dotenv.config();
   const { all_assets: all_assets_, all_trait_names } = await get_all_assets();
-  const all_assets = all_assets_.map(asset => ({ ...asset, metadata_cid: '' }));
+  const all_assets: Asset[] = all_assets_.map(asset => ({ ...asset, metadata_cid: '' }));
   validate_all_assets_for_ipfs(all_assets);
   await compute_asset_hashes(all_assets);
 
@@ -263,16 +263,20 @@ const run = async () => {
   if (the_project.config.upload_images_to_ipfs && animation_url && !animation_url?.match(/SVELTE_IPFS/)) {
     await upload_all_animation(all_assets);
   }
-  if (the_project.config.upload_images_to_ipfs) await upload_all_images(all_assets);
+  if (the_project.config.upload_images_to_ipfs) {
+    await upload_all_images(all_assets);
+  }
 
-  // @ts-ignore
   console.warn(`generating metadata`);
-  for (const asset of all_assets) await generate_metadata(asset);
+  for (const asset of all_assets) {
+    await generate_metadata(asset);
+  }
   console.warn(`metadata finished`);
 
-  // @ts-ignore
-  if (the_project?.config?.upload_metadata_to_ipfs) await upload_all_metadata(all_assets);
-  console.log('metadata uploaded to IPFS');
+  if (the_project?.config?.upload_metadata_to_ipfs) {
+    await upload_all_metadata(all_assets);
+    console.log('metadata uploaded to IPFS');
+  }
 
   calculate_stats(all_assets);
   await output_csv(
@@ -281,7 +285,6 @@ const run = async () => {
     `${the_project.output_folder}/${the_project.config.name}.csv`,
   );
 
-  // @ts-ignore
   const path = `${the_project.output_folder}/${the_project.config.name}.contract.csv`;
   await output_contract_csv(all_assets, path);
   const rarity_path = `${the_project.output_folder}/${the_project.config.name}.rarity.csv`;

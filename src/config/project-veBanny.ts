@@ -23,16 +23,13 @@ import { AnimationTemplate } from '../interfaces/animation-template';
 
 const iso_datetime_now = new Date().toISOString();
 
-const nft_name = `{{Banny Name}}`;
+const aboutJuicebox = `Juicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.
+
+Juicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.`;
+
+const nft_name = `{{{{population_index}}.Banny Name}} {{traits.0.value}}`;
 const nft_symbol = `VEBANNY`;
-const nft_description: string = `{{Motto}}
-
-{{History}}
-
-Juicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.
-
-Juicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.
-`;
+const nft_description = `{{{{population_index}}.Motto}}\n\n{{{{population_index}}.History}}\n\n${aboutJuicebox}`;
 
 const nft_more_info_link = 'https://juicebox.money';
 const nft_minter = `0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`;
@@ -46,7 +43,7 @@ const nft_rights = `Juicebox Rights Reserved.`;
 const nft_colors = [];
 
 export const layer_order = [
-  'Background',
+  'Lock_Period',
   'Body',
   'Face',
   'Choker',
@@ -121,16 +118,12 @@ const ordered = generate_veBanny_populations(false) as PopulationConfig[];
 Array.from(ordered).map(m => console.log(m.name));
 */
 
-const aboutJuicebox = `Juicebox Governance Token, or veBanny, is the Juicebox DAO voting escrow token. veBanny represents an address's voting weight in Juicebox DAO governance based on the amount of tokens locked over a set duration.
-
-Juicebox, https://juicebox.money, is a programmable treasury for community-owned Ethereum projects.`;
-
 const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
   name: layered_assets_folder,
   stunt_populations_to: 10,
-  upload_images_to_ipfs: true,
-  upload_metadata_to_ipfs: true,
+  upload_images_to_ipfs: false,
+  upload_metadata_to_ipfs: false,
   shuffle_assets: false,
   resume_folder: '',
   re_generate_collages: false,
@@ -142,9 +135,9 @@ export const bannyConfig: ProjectConfig = {
   mirror_images_allowed: 0,
   // asset_origin: 0,
   metadata_input: {
-    name: nft_name, // `{{{{population_index}}.Banny Name}} {{traits.0.value}}`,
+    name: nft_name,
     symbol: nft_symbol,
-    description: nft_description, //  `{{{{population_index}}.Motto}}\n\n{{{{population_index}}.History}}\n\n${aboutJuicebox}`,
+    description: nft_description,
     birthdate: `-22100400`,
     background_colors: [], // nft_colors
     minter: nft_minter,
