@@ -35,6 +35,8 @@ function write_metadata_to_file(asset: Asset, md: Dynamic, sub_folder: string) {
   const extension = the_project.config.metadata_file_extension ? '.json' : '';
   const folder = `${asset.json_folder}/${sub_folder}`;
   const p = `${folder}/${asset.batch_index + 1}${extension}`;
+
+  const collectionMetadataFilePath = `${folder}.json`;
   if (!fs.existsSync(folder)) {
     fs.mkdirSync(folder);
   }
@@ -45,6 +47,14 @@ function write_metadata_to_file(asset: Asset, md: Dynamic, sub_folder: string) {
       fs.rmSync(p);
     }
     fs.writeFileSync(p, JSON.stringify(md, null, 3));
+
+    if (fs.existsSync(collectionMetadataFilePath)) {
+      const collectionMetadata: Dynamic[] = JSON.parse(fs.readFileSync(collectionMetadataFilePath).toString());
+      collectionMetadata.push(md);
+      fs.writeFileSync(collectionMetadataFilePath, JSON.stringify(collectionMetadata, null, 3));
+    } else {
+      fs.writeFileSync(collectionMetadataFilePath, JSON.stringify([md], null, 3));
+    }
   } catch (err) {
     logger.error(`error writing json to ${p} ${JSON.stringify(err)}`);
   }
