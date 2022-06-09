@@ -2,6 +2,10 @@
   import { onMount } from 'svelte';
   import Tilt from 'vanilla-tilt';
   import Space from './lib/Space.svelte';
+  import SpacePixelized from './lib/SpacePixelized.svelte';
+  import BlinkingStar from './lib/BlinkingStar.svelte';
+
+  export let vibe: 'zoomy-stars' | 'pixelized' = 'pixelized';
 
   let purse: HTMLElement;
 
@@ -40,9 +44,11 @@
 
 <div class="purse" bind:this={purse}>
   <div class="coin" data-tilt style="pointer-events: none">
-    <div class="barrier" />
+    {#if vibe == 'zoomy-stars'}
+      <div class="barrier" />
+    {/if}
     <div class="front" style="background-image: url('{front}')" />
-    <div class="side">
+    <!-- <div class="side">
       <div class="spoke" />
       <div class="spoke" />
       <div class="spoke" />
@@ -59,14 +65,29 @@
       <div class="spoke" />
       <div class="spoke" />
       <div class="spoke" />
-    </div>
+    </div> -->
   </div>
   <div class="sparkles" style="pointer-events: none">
-    <img src="./sparkles.gif" alt="" />
+    {#if vibe == 'zoomy-stars'}
+      <img src="./sparkles.gif" alt="" />
+    {:else}
+      <BlinkingStar type="small" top={20} left={15} />
+      <BlinkingStar type="small" top={30} left={30} />
+      <BlinkingStar type="small" top={45} left={75} />
+      <BlinkingStar type="small" top={45} left={95} />
+      {#each Array.from({ length: 50 }, (_, i) => i) as i}
+        <BlinkingStar type="dot" top={Math.random() * 100} left={Math.random() * 100} />
+      {/each}
+    {/if}
   </div>
 </div>
+
 {#if ready}
-  <Space />
+  {#if vibe === 'zoomy-stars'}
+    <Space />
+  {:else if vibe === 'pixelized'}
+    <SpacePixelized />
+  {/if}
 {/if}
 
 <style>
@@ -146,7 +167,11 @@
       transform: translate(-50%, -50%) rotateZ(360deg);
     }
   }
-  .coin .side {
+
+  /* NOTE: what are these spokes? */
+
+  /* } */
+  /* .coin .side {
     transform: translateX(144px);
     transform-style: preserve-3d;
     backface-visibility: hidden;
@@ -238,5 +263,5 @@
   }
   .coin.skeleton .side .spoke:after {
     background: rgba(204, 204, 255, 0.2);
-  }
+  } */
 </style>
