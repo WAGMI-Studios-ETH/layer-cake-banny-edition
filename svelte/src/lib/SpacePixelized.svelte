@@ -5,9 +5,9 @@
   const levelColors = ['#F9329D', '#FE5EB4', '#FE6FBB', '#FE70EE', '#E270FE', '#BA70FE'];
 
   const transition = 40;
-  const dots = 22;
-  const mdStars = 2;
-  const smStars = 3;
+  const dots = 55;
+  const mdStars = 18;
+  const smStars = 9;
 
   const transitions = {};
   const skylevels = [];
@@ -95,9 +95,34 @@
 </div>
 
 <style>
-  .sky {
-    width: 100%;
+  :global(html, body, #app) {
+    overflow: hidden;
+    width: 100vw;
     height: 100vh;
+  }
+  .sky {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    width: 1000%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+    /* Animation moving background from left to right */
+    animation: moveSky 8s linear infinite;
+  }
+
+  .sky::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Keyframes for moveSky */
+  @keyframes moveSky {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-80%);
+    }
   }
   .sky {
     position: relative;
