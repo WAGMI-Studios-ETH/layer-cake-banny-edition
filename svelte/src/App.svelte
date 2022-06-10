@@ -16,6 +16,9 @@
   let amount = 1000;
 
   let SpaceColor = '';
+  if (new Date().getMonth() + 1 === 4 && new Date().getDate() === 20) {
+    SpaceColor = 'green';
+  }
 
   onMount(() => {
     Tilt.init(purse, {
@@ -34,25 +37,26 @@
     if (lock_period) {
       amount = Number(lock_period.replace(/[^\d]/g, '')) * 5;
 
-      switch (lock_period) {
-        case '10':
-          SpaceColor = '#E15476';
-          break;
-        case '50':
-          SpaceColor = 'Teal';
-          break;
-        case '100':
-          SpaceColor = '#B062FF';
-          break;
-        case '500':
-          SpaceColor = '#FFC61C';
-          break;
-        case '1000':
-          SpaceColor = '#4CE15B';
-          break;
-        default:
-          break;
-      }
+      if (!SpaceColor)
+        switch (lock_period) {
+          case '10':
+            SpaceColor = '#E15476';
+            break;
+          case '50':
+            SpaceColor = 'Teal';
+            break;
+          case '100':
+            SpaceColor = '#B062FF';
+            break;
+          case '500':
+            SpaceColor = '#FFC61C';
+            break;
+          case '1000':
+            SpaceColor = '#4CE15B';
+            break;
+          default:
+            break;
+        }
     }
 
     const interval = setInterval(() => {
