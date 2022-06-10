@@ -5,7 +5,7 @@ import { Population, Trait } from './interfaces';
 import { ensure_folders_exist, the_project } from './other/project';
 import { validate_all_assets_for_contract, validate_all_assets_for_ipfs } from './other/validation';
 import { get_possible_permutation_count, get_permutations } from './other/permutations';
-import { generate_metadata } from './metadata/metadata';
+import { compress_metadata, generate_metadata } from './metadata/metadata';
 import {
   compute_asset_hash as compute_asset_hashes,
   generate_all_collages,
@@ -268,6 +268,7 @@ const run = async () => {
   // @ts-ignore
   console.warn(`generating metadata`);
   for (const asset of all_assets) await generate_metadata(asset);
+  compress_metadata(all_assets);
   console.warn(`metadata finished`);
 
   // @ts-ignore
