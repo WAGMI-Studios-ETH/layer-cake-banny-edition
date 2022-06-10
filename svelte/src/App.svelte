@@ -67,7 +67,11 @@
 <div class="purse" bind:this={purse}>
   <div class="coin" data-tilt style="pointer-events: none">
     {#if vibe == 'zoomy-stars'}
-      <div class="barrier" />
+      <div
+        class="barrier"
+        style="box-shadow: -10px -10px 25px 0px {SpaceColor}, 10px -10px 25px 0px  {SpaceColor}, 10px 10px 25px 0px  {SpaceColor},
+      -10px 10px 25px 0px  {SpaceColor} ;"
+      />
     {/if}
     <div class="front" style="background-image: url('{front}')" />
     <!-- <div class="side">
@@ -106,7 +110,7 @@
 
 {#if ready}
   {#if vibe === 'zoomy-stars'}
-    <Space color={SpaceColor} />
+    <Space />
   {:else if vibe === 'pixelized'}
     <SpacePixelized />
   {/if}
@@ -175,10 +179,6 @@
     z-index: -5;
     border-width: 5px;
     border-style: solid;
-    box-shadow: -10px -10px 25px 0px #32c8db, 10px -10px 25px 0px #32c8db, 10px 10px 25px 0px #32c8db,
-      -10px 10px 25px 0px #32c8db;
-    /* box-shadow: -10px -10px 25px 0px #ffff00bb, 10px -10px 25px 0px blue, 10px 10px 25px 0px red,
-      -10px 10px 25px 0px green; */
     animation: spinin 25s linear infinite;
   }
   @keyframes spinin {

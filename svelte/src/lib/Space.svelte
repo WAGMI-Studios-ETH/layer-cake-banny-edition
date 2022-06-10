@@ -17,8 +17,6 @@
   let i;
   let animation: number;
 
-  export let color: string;
-
 const colors = ['#ffaaaa', '#aaffaa', '#aaaaff', 'white', 'orange', 'yellow'];
    
   onMount(() => {
@@ -52,7 +50,7 @@ const colors = ['#ffaaaa', '#aaffaa', '#aaaaff', 'white', 'orange', 'yellow'];
         y: Math.random() * canvas.height,
         z: Math.random() * canvas.width,
         o: '0.' + Math.floor(Math.random() * 99) + 1,
-        color: color? color : colors[Math.floor(Math.random() * colors.length)],
+        color: colors[Math.floor(Math.random() * colors.length)],
       };
       stars.push(star);
     }
