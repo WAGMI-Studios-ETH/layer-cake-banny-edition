@@ -15,7 +15,7 @@
 
   let amount = 1000;
 
-  let SpaceColor = ""
+  let SpaceColor = '';
 
   onMount(() => {
     Tilt.init(purse, {
@@ -31,32 +31,28 @@
       front = `https://cloudflare-ipfs.com/ipfs/${cid}/${tokenId}.png`;
     }
 
-
-    
-
-
-    if (lock_period)   {
+    if (lock_period) {
       amount = Number(lock_period.replace(/[^\d]/g, '')) * 5;
 
-switch (lock_period) {
-  case '10':
-  SpaceColor = '#E15476' 
-    break;
-    case '50':
-  SpaceColor = 'Teal'
-    break;
-    case '100':
-  SpaceColor = '#B062FF'
-    break;
-    case '500':
-  SpaceColor = '#FFC61C'
-    break;
-    case '1000':
-  SpaceColor = '#4CE15B'
-    break;
-  default:
-    break;
-}
+      switch (lock_period) {
+        case '10':
+          SpaceColor = '#E15476';
+          break;
+        case '50':
+          SpaceColor = 'Teal';
+          break;
+        case '100':
+          SpaceColor = '#B062FF';
+          break;
+        case '500':
+          SpaceColor = '#FFC61C';
+          break;
+        case '1000':
+          SpaceColor = '#4CE15B';
+          break;
+        default:
+          break;
+      }
     }
 
     const interval = setInterval(() => {
@@ -110,7 +106,7 @@ switch (lock_period) {
 
 {#if ready}
   {#if vibe === 'zoomy-stars'}
-    <Space color={SpaceColor}/>
+    <Space color={SpaceColor} />
   {:else if vibe === 'pixelized'}
     <SpacePixelized />
   {/if}
