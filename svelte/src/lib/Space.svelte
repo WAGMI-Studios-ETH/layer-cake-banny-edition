@@ -16,8 +16,11 @@
   let star;
   let i;
   let animation: number;
-  const colors = ['#ffaaaa', '#aaffaa', '#aaaaff', 'white', 'orange', 'yellow'];
 
+  export let color: string;
+
+const colors = ['#ffaaaa', '#aaffaa', '#aaaaff', 'white', 'orange', 'yellow'];
+   
   onMount(() => {
     context = canvas.getContext('2d');
     focalLength = canvas.width * 2;
@@ -42,14 +45,14 @@
     centerX = canvas.width / 2;
     centerY = canvas.height / 2;
 
-    stars = [];
+    stars = [];   
     for (i = 0; i < amount; i++) {
       star = {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         z: Math.random() * canvas.width,
         o: '0.' + Math.floor(Math.random() * 99) + 1,
-        color: colors[Math.floor(Math.random() * colors.length)],
+        color: color? color : colors[Math.floor(Math.random() * colors.length)],
       };
       stars.push(star);
     }
