@@ -1,5 +1,5 @@
-@use "sass:list";
-@use "sass:math";
+@use 'sass:list';
+@use 'sass:math';
 $pi: 3.14159265359;
 $_precision: 10;
 // List of colors
@@ -156,7 +156,7 @@ $colors: (#563c9b, #8344bd, #14577c, #0be3bd, #145b7e, #118f96, #0b6ae3, #242885
 }
 
 @for $i from 1 to 360 {
-  $t: math.random(40000) + 5000;
+  $t: math.random(40000);
   $angle: $i - reminder($i, 4);
   .stars-axis-#{$i} {
     animation: anim#{$angle} #{$t}ms, fade#{math.random(10)} #{$t}ms;
