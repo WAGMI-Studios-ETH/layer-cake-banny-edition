@@ -2,10 +2,11 @@
   import { onMount } from 'svelte';
   import Tilt from 'vanilla-tilt';
   import Space from './lib/Space.svelte';
-  import SpacePixelized from './lib/SpacePixelized.svelte';
+  import HorizontalPixelized from './lib/SpacePixelized.svelte';
   import BlinkingStar from './lib/BlinkingStar.svelte';
+  import ThroughSpacePixelized from './lib/ThroughSpacePixelized.svelte';
 
-  export let vibe: 'zoomy-stars' | 'pixelized' = 'pixelized';
+  export let vibe: 'zoomy-stars' | 'horizontalPixelized' | 'pixelized' = 'pixelized';
 
   let purse: HTMLElement;
 
@@ -48,7 +49,7 @@
       <div class="barrier" />
     {/if}
     <div class="front" style="background-image: url('{front}')" />
-    <!-- <div class="side">
+    <div class="side">
       <div class="spoke" />
       <div class="spoke" />
       <div class="spoke" />
@@ -65,7 +66,7 @@
       <div class="spoke" />
       <div class="spoke" />
       <div class="spoke" />
-    </div> -->
+    </div>
   </div>
   <div class="sparkles" style="pointer-events: none">
     {#if vibe == 'zoomy-stars'}
@@ -86,7 +87,9 @@
   {#if vibe === 'zoomy-stars'}
     <Space />
   {:else if vibe === 'pixelized'}
-    <SpacePixelized />
+    <ThroughSpacePixelized />
+  {:else}
+    <HorizontalPixelized />
   {/if}
 {/if}
 

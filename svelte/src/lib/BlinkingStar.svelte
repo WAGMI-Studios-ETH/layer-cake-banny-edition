@@ -3,6 +3,9 @@
   export let blinking: boolean = false;
   export let top: number;
   export let left: number;
+  export let unit: string = '%';
+  export let size: number | undefined = undefined;
+  export let className: string = '';
 
   const colors = [
     '#563C9B',
@@ -23,8 +26,8 @@
     const color = colors[Math.floor(Math.random() * colors.length)];
 
     let str = `
-            top: ${top}%;
-            left: ${left}%;
+            top: ${top}${unit};
+            left: ${left}${unit};
         `;
     if (type === 'dot') {
       str =
@@ -33,6 +36,14 @@
                 background-color: ${color};
             `;
       return str;
+    }
+    if (size) {
+      str =
+        str +
+        `
+                width: ${size}${unit};
+                height: ${size}${unit};
+            `;
     }
     str =
       str +
@@ -44,7 +55,7 @@
 </script>
 
 <span
-  class="star"
+  class="star {className}"
   class:dot={type === 'dot'}
   class:dot--blinking={blinking}
   class:star--lg={type === 'large'}
@@ -103,7 +114,7 @@
   .star {
     position: absolute;
     color: #fec8c9;
-    animation: scale 0.5s linear infinite;
+    /* animation: scale 0.5s linear infinite; */
   }
 
   .star--sm {
