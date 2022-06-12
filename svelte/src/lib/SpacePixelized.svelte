@@ -1,16 +1,16 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import BlinkingStar from './BlinkingStar.svelte';
+  import { stylesFromObject, setBackgroundLevelTransitions } from './utils';
 
   const levelColors = ['#F9329D', '#FE5EB4', '#FE6FBB', '#FE70EE', '#E270FE', '#BA70FE'];
 
-  const transition = 40;
   const dots = 55;
   const mdStars = 18;
   const smStars = 9;
 
-  const transitions = {};
-  const skylevels = [];
+  let transitions = {};
+  let skylevels = [];
 
   let stars = [];
 
@@ -42,40 +42,10 @@
     return stars;
   }
 
-  function stylesFromObject(obj: { [x: string]: any }) {
-    return Object.keys(obj)
-      .map(key => `${key}: ${obj[key]};`)
-      .join(' ');
-  }
-
-  function setBackgroundLevelTransitions() {
-    // For each level in the background, add 40 random divs
-    // that will transition to the next level.
-    for (let i = 0; i < levelColors.length; i++) {
-      //   Initialize the transition array
-      transitions[i] = [];
-      // Calculate the sky level styles
-      skylevels[i] = {
-        background: 'currentColor',
-        'z-index': levelColors.length - i,
-        height: `${(100 / levelColors.length) * i}vh`,
-        'padding-top': `${(100 / levelColors.length) * (i + 1)}vh`,
-        color: levelColors[i],
-      };
-      // Add the transitions
-      const p = Math.ceil(20 / transition);
-      for (let j = 0; j < transition; j++) {
-        const r = p * (transition - j + 1);
-        transitions[i][j] = {
-          width: Math.floor(Math.random() * r) + '%',
-          'margin-left': Math.floor(Math.random() * 25) + '%',
-        };
-      }
-    }
-  }
-
   onMount(() => {
-    setBackgroundLevelTransitions();
+    const data = setBackgroundLevelTransitions(levelColors);
+    transitions = data.transitions;
+    skylevels = data.skylevels;
     stars = getStars();
   });
 </script>
@@ -107,6 +77,7 @@
     overflow-y: hidden;
     overflow-x: hidden;
     height: 100vh;
+    position: relative;
     /* Animation moving background from left to right */
     animation: moveSky 8s linear infinite;
   }
@@ -123,9 +94,6 @@
     to {
       transform: translateX(-80%);
     }
-  }
-  .sky {
-    position: relative;
   }
   .sky-level {
     box-sizing: border-box;
