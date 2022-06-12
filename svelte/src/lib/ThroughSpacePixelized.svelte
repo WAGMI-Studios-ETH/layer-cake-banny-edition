@@ -8,18 +8,17 @@
   let skylevels = [];
 
   const levelColors = ['black', '#0F0E0E', 'black', '#0F0E0E', 'black', '#0F0E0E', 'black'];
-  // Array of very dark colors with hints of blue and purple
 
-  function getCenter(sky) {
+  function getCenter(sky: Element) {
     const w = sky.clientWidth;
     const h = sky.clientHeight;
     return {
-      x: parseInt(w / 2),
-      y: parseInt(h / 2),
+      x: w / 2,
+      y: h / 2,
     };
   }
 
-  function getDot(x, y, group) {
+  function getDot(x: number, y: number, group: number) {
     const size = Math.round(Math.random() * 8);
     if (size >= 4) {
       bitStarPositions = [
