@@ -43,8 +43,8 @@
   });
 </script>
 
-<div class="purse" bind:this={purse}>
-  <div class="coin" data-tilt style="pointer-events: none">
+<div class="purse">
+  <div class="coin" bind:this={purse} data-tilt data-tilt-full-page-listening style="pointer-events: none">
     {#if vibe == 'zoomy-stars'}
       <div class="barrier" />
     {/if}
@@ -112,7 +112,7 @@
     left: 50%;
     margin-top: -160px;
     margin-left: -160px;
-    perspective: 1000;
+    perspective: 1000px;
     filter: saturate(1.45) hue-rotate(2deg);
     z-index: 1000;
   }
@@ -171,7 +171,6 @@
     }
   }
 
-  /* NOTE: what are these spokes? */
   .coin .side {
     transform: translateX(144px);
     transform-style: preserve-3d;
@@ -193,7 +192,7 @@
     position: absolute;
     transform: rotateX(84.375deg);
     background: #222222;
-    background: linear-gradient(to bottom, #222222 0%, #222222 74%, #202020 75%, #202020 100%);
+    background: linear-gradient(to bottom, #222222 0%, #222222 74%, #202020 75%, #000000 100%);
     background-size: 100% 6.9701077567688px;
   }
   .coin .side .spoke:before {
