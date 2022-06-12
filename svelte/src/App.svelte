@@ -18,7 +18,7 @@
 
   onMount(() => {
     Tilt.init(purse, {
-      max: 25,
+      max: 40,
       speed: 500,
     });
     const search = location.hash.slice(1);
@@ -41,6 +41,15 @@
       }
     }, 50);
   });
+
+  function getRandomLeft() {
+    const leftOfBanny = Math.random() > 0.5;
+    if (leftOfBanny) {
+      return Math.floor(Math.random() * 30) + 10;
+    } else {
+      return Math.floor(Math.random() * 20) + 60;
+    }
+  }
 </script>
 
 <div class="purse">
@@ -72,12 +81,13 @@
     {#if vibe == 'zoomy-stars'}
       <img src="./sparkles.gif" alt="" />
     {:else}
-      <BlinkingStar type="small" top={20} left={15} />
-      <BlinkingStar type="small" top={30} left={30} />
-      <BlinkingStar type="small" top={45} left={75} />
-      <BlinkingStar type="small" top={45} left={95} />
-      {#each Array.from({ length: 50 }, (_, i) => i) as i}
-        <BlinkingStar type="dot" top={Math.random() * 100} left={Math.random() * 100} />
+      <BlinkingStar type="small" top={35} left={25} />
+      <BlinkingStar type="small" top={25} left={30} />
+      <BlinkingStar type="small" top={40} left={65} />
+      <BlinkingStar type="small" top={55} left={80} />
+      <BlinkingStar type="small" top={55} left={20} />
+      {#each Array.from({ length: 30 }, (_, i) => i) as i}
+        <BlinkingStar type="dot" top={Math.random() * 60 + 20} left={getRandomLeft()} />
       {/each}
     {/if}
   </div>
@@ -131,6 +141,7 @@
     z-index: 10000;
     border-radius: 50%;
     overflow: hidden;
+    transform-style: preserve-3d;
     mix-blend-mode: color-dodge;
   }
   .coin .front,
