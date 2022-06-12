@@ -172,9 +172,7 @@
   }
 
   /* NOTE: what are these spokes? */
-
-  /* } */
-  /* .coin .side {
+  .coin .side {
     transform: translateX(144px);
     transform-style: preserve-3d;
     backface-visibility: hidden;
@@ -266,5 +264,5 @@
   }
   .coin.skeleton .side .spoke:after {
     background: rgba(204, 204, 255, 0.2);
-  } */
+  }
 </style>

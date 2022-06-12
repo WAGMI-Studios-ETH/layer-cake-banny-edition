@@ -85,6 +85,7 @@ $colors: (#563c9b, #8344bd, #14577c, #0be3bd, #145b7e, #118f96, #0b6ae3, #242885
   opacity: 0;
   transform-origin: 0, 0;
   position: absolute;
+  z-index: 10;
   animation-timing-function: linear, linear !important;
   animation-iteration-count: infinite, infinite !important;
   animation-delay: -30s, -30s !important;

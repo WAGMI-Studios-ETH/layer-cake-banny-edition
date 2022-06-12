@@ -1,8 +1,14 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import BlinkingStar from './BlinkingStar.svelte';
+  import { stylesFromObject, setBackgroundLevelTransitions } from './utils';
 
   let bitStarPositions = [];
+  let transitions = {};
+  let skylevels = [];
+
+  const levelColors = ['black', '#0F0E0E', 'black', '#0F0E0E', 'black', '#0F0E0E', 'black'];
+  // Array of very dark colors with hints of blue and purple
 
   function getCenter(sky) {
     const w = sky.clientWidth;
@@ -48,6 +54,9 @@
 
   onMount(() => {
     init();
+    const data = setBackgroundLevelTransitions(levelColors);
+    transitions = data.transitions;
+    skylevels = data.skylevels;
   });
 </script>
 
@@ -65,7 +74,39 @@
     {/each}
   </div>
 </div>
+<div class="sky">
+  {#each Object.keys(transitions) as skyLevelTransition, i}
+    <div class="sky-level" style={stylesFromObject(skylevels[i])}>
+      {#each transitions[skyLevelTransition] as transition}
+        <div style={stylesFromObject(transition)} />
+      {/each}
+    </div>
+  {/each}
+</div>
 
 <style lang="scss" global>
   @import './space.scss';
+
+  .sky {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    width: 1000%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100vh;
+  }
+
+  .sky-level {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .sky-level div {
+    float: left;
+    height: 4px;
+    background: currentColor;
+  }
 </style>
