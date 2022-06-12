@@ -19,7 +19,12 @@
   onMount(() => {
     Tilt.init(purse, {
       max: 40,
-      speed: 500,
+      // @ts-ignore
+      speed: !navigator?.userAgentData?.mobile ? 500 : 100,
+      gyroscopeMinAngleX: -45, // This is the bottom limit of the device angle on X axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the left border of the element;
+      gyroscopeMaxAngleX: 45, // This is the top limit of the device angle on X axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the right border of the element;
+      gyroscopeMinAngleY: -15, // This is the bottom limit of the device angle on Y axis, meaning that a device rotated at this angle would tilt the element as if the mouse was on the top border of the element;
+      gyroscopeMaxAngleY: 90,
     });
     const search = location.hash.slice(1);
     const urlSearchParams = new URLSearchParams(search);
