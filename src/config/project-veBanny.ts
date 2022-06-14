@@ -60,7 +60,11 @@ export const sub_populations = ['10_Days', '50_Days', '100_Days', '500_Days', '1
 
 export const population_size = 1;
 
-export const population_template = (population_name: string, _layer_order: string[], _population_size: number) => {
+export const population_template = (
+  population_name: string,
+  _layer_order: string[],
+  _population_size: number,
+): PopulationConfig => {
   return {
     name: population_name,
     layer_order: _layer_order,
@@ -79,7 +83,7 @@ export function generate_populations(verbose: boolean = false) {
   const characters = Array.from(populations);
   // console.log(characters);
 
-  const ordered_characters: {}[] = [];
+  const ordered_characters: PopulationConfig[] = [];
   const configured_population = new SetEx();
 
   let not_found = 0;
@@ -91,7 +95,6 @@ export function generate_populations(verbose: boolean = false) {
     });
 
     if (index != -1) {
-      // eslint-disable-next-line @typescript-eslint/prefer-for-of
       for (let j = 0; j < sub_populations.length; j++) {
         ordered_characters.push(
           population_template(`${characters[index]}${sub_populations[j]}`, layer_order, population_size),
@@ -107,16 +110,10 @@ export function generate_populations(verbose: boolean = false) {
 
   false && console.log(ordered_characters, ordered_characters.length);
   console.warn(`Total number of characters not found: ${not_found}`);
-  return ordered_characters as unknown as PopulationConfig[];
+  return ordered_characters;
 }
 
-// const populations: PopulationConfig[] = generate_populations(false).slice(0, 3);
-const ordered = generate_populations(false) as PopulationConfig[];
-
-/*
-const ordered = generate_veBanny_populations(false) as PopulationConfig[];
-Array.from(ordered).map(m => console.log(m.name));
-*/
+const populations: PopulationConfig[] = generate_populations(false).slice(0, 3);
 
 const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
@@ -255,7 +252,7 @@ export const bannyConfig: ProjectConfig = {
       images_per_stack: 50,
     },
   ],
-  populations: generate_populations(false) as PopulationConfig[],
+  populations,
   /*
   // match to the above metadata so that different population can have different csv files for them
   populations: {

@@ -6,8 +6,9 @@ import { Trait } from '../interfaces';
 import { Stat } from './stats';
 import { generate_tezos_metadata } from './tezos-metadata';
 import { generate_ethereum_metadata } from './eth-metadata';
+import pako from 'pako';
 
-export async function generate_metadata(asset: Asset) {
+export async function generate_metadata(asset: Asset): Promise<void> {
   const mos = the_project.config.metadata_outputs;
   for (const mo of mos) {
     switch (mo) {
@@ -23,6 +24,23 @@ export async function generate_metadata(asset: Asset) {
       }
       default: {
         throw Error(`metadata kind ${mo} unsupported`);
+      }
+    }
+  }
+}
+
+export async function compress_metadata(assets: Asset[]) {
+  const mos = the_project.config.metadata_outputs;
+  for (const mo of mos) {
+    for (const asset of assets) {
+      const folder = `${asset.json_folder}/${mo}`;
+
+      const collectionMetadataFilePath = `${folder}.json`;
+
+      if (fs.existsSync(collectionMetadataFilePath)) {
+        const compressedCollectionMetadata = pako.deflate(fs.readFileSync(collectionMetadataFilePath).toString());
+        fs.writeFileSync(`${folder}.ux`, compressedCollectionMetadata);
+        // fs.rmSync(collectionMetadataFilePath);
       }
     }
   }
