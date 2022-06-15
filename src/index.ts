@@ -115,7 +115,7 @@ async function get_all_assets(
   asset_index_origin = 1,
 ): Promise<{ all_assets: Array<Asset>; all_trait_names: Array<string> }> {
   let all_assets: Asset[] = [];
-  const all_trait_names = [];
+  const all_trait_names: string[] = [];
 
   the_project.total_populations_size = 0;
   for (const population of the_project.populations) {
@@ -199,7 +199,7 @@ async function get_all_assets(
   console.log('#########################################################');
   const animation_url = the_project.config.metadata_input.animation_url;
   if (animation_url && !animation_url?.match('SVELTE_IPFS')) {
-    await compileTemplate(
+    compileTemplate(
       all_assets.map((asset, index) => ({ tokenId: asset.base_name.replace(/^0+/, '') })),
       './src/template',
       `${the_project.output_folder}/html/`,
@@ -236,7 +236,7 @@ function output_provenance_hash(all_assets: Asset[]) {
 }
 
 function get_shuffled_ordering(size: number) {
-  const array = [];
+  const array: number[] = [];
   for (let i = 0; i < size; i++) {
     array.push(i);
   }
@@ -245,7 +245,7 @@ function get_shuffled_ordering(size: number) {
 }
 
 function get_original_ordering(size: number) {
-  const array = [];
+  const array: number[] = [];
   for (let i = 0; i < size; i++) {
     array.push(i);
   }

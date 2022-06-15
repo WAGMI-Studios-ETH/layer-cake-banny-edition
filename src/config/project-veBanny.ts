@@ -40,7 +40,7 @@ const nft_artist_address = `0xAF28bcB48C40dBC86f52D459A6562F658fc94B1e`;
 const nft_artist_royality = 5;
 const nft_rights = `Juicebox Rights Reserved.`;
 
-const nft_colors = [];
+const nft_colors: string[] = [];
 
 export const layer_order = [
   'Lock_Period',
@@ -75,7 +75,7 @@ export const population_template = (
 export function generate_populations(verbose: boolean = false) {
   const populations = new SetEx();
   const file_path = `layered-assets/vebanny`;
-  const veBanny_populations = fs.readdirSync(`layered-assets/vebanny`);
+  const veBanny_populations = fs.readdirSync(file_path);
 
   console.warn(`layered-assets folder located ${veBanny_populations.length}`);
   veBanny_populations.forEach(p => populations.add(p.split(/\d/)[0].trim()));
@@ -84,7 +84,6 @@ export function generate_populations(verbose: boolean = false) {
   // console.log(characters);
 
   const ordered_characters: PopulationConfig[] = [];
-  const configured_population = new SetEx();
 
   let not_found = 0;
 
@@ -113,12 +112,12 @@ export function generate_populations(verbose: boolean = false) {
   return ordered_characters;
 }
 
-const populations: PopulationConfig[] = generate_populations(false).slice(0, 3);
+const populations: PopulationConfig[] = generate_populations(false);
 
 const layered_assets_folder = `vebanny`;
 export const bannyConfig: ProjectConfig = {
   name: layered_assets_folder,
-  stunt_populations_to: 10,
+  stunt_populations_to: 1,
   upload_images_to_ipfs: false,
   upload_metadata_to_ipfs: false,
   shuffle_assets: false,
@@ -136,7 +135,7 @@ export const bannyConfig: ProjectConfig = {
     symbol: nft_symbol,
     description: nft_description,
     birthdate: `-22100400`,
-    background_colors: [], // nft_colors
+    background_colors: nft_colors,
     minter: nft_minter,
     creators: nft_creators,
     publishers: nft_publishers,
@@ -253,14 +252,6 @@ export const bannyConfig: ProjectConfig = {
     },
   ],
   populations,
-  /*
-  // match to the above metadata so that different population can have different csv files for them
-  populations: {
-    population_metadata {
-      insert_into: true;
-    }
-  }
-  */
   anim_outputs: [],
   collage_outputs: [
     collage300,
@@ -274,3 +265,7 @@ export const bannyConfig: ProjectConfig = {
   ],
   excluded_layers_from_metadata: [],
 };
+
+if (bannyConfig.stunt_populations_to && bannyConfig.stunt_populations_to < bannyConfig.populations.length) {
+  bannyConfig.populations = bannyConfig.populations.slice(0, bannyConfig.stunt_populations_to);
+}

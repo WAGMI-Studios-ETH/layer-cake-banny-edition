@@ -24,8 +24,8 @@ export async function generate_tezos_metadata(asset: Asset, excluded_layers_from
   });
   const i = the_project.config.metadata_input;
   const name = i.include_total_population_in_name
-    ? `${asset.nftName} ${asset.base_name}/${the_project.total_populations_size}`
-    : `${asset.nftName} ${asset.base_name}`;
+    ? `${i.name} ${asset.base_name}/${the_project.total_populations_size}`
+    : `${i.name} ${asset.base_name}`;
   const md: IHash = {
     identifier: asset.batch_index + 1, // `0..n`
     name: name,
@@ -81,15 +81,6 @@ export async function generate_tezos_metadata(asset: Asset, excluded_layers_from
   }
   if (!!i.rights) {
     md.rights = i.rights;
-  }
-  let variablesToReplace = i.population_metadata?.substitute_variables;
-  if (variablesToReplace && variablesToReplace.length > 0) {
-    const metadataRow = await getMetadataRow(the_project, asset.nftName);
-    variablesToReplace.forEach(variable => {
-      if (metadataRow && md[variable]) {
-        md[variable] = replaceTemplateText(metadataRow, md[variable]);
-      }
-    });
   }
   return md;
 }
